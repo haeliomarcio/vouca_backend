@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\User;
 
 class UsuariosController extends Controller
 {
@@ -13,7 +14,8 @@ class UsuariosController extends Controller
      */
     public function index()
     {
-        //
+        $users = User::paginate(10);
+        return view('users.list', ['users' => $users]);
     }
 
     /**
@@ -79,6 +81,11 @@ class UsuariosController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $user = User::find($id);
+        if($user) {
+            $user->delete();
+        }
+        return redirect('/dashboard/usuarios')
+            ->with('success', 'Usuário '. $user->name. ' removido com sucesso');
     }
 }
