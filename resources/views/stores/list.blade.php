@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Usuários</h3>
+            <h3 class="card-title">Lojas</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -11,7 +11,7 @@
                     @include('helpers.form-search');
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="{{url('/dashboard/users/create')}}" class="btn btn-success">Novo Usuário</a>
+                    <a href="{{url('/dashboard/stores/create')}}" class="btn btn-success">Nova Loja</a>
                 </div>
             </div>
             <br />
@@ -21,23 +21,22 @@
                 <tr>
                     <th style="width: 10px">#</th>
                     <th>Name</th>
-                    <th>E-mail</th>
+                    <th>Endereço</th>
                     <th style="width: 40px">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($users as $user)
+                    @foreach ($stores as $item)
                         <tr>
-                            <td>{{ $user->id }}</td>
-                            <td>{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
+                            <td>{{ $item->id }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td>{{ $item->address }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/users/edit/'.$user->id)}}">
+                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/stores/edit/'.$item->id)}}">
                                     <i class="fas fa-pencil-alt"></i>
                                     Editar
                                 </a>
-                                <a id="confirmation-delete" data-info="{{url('/dashboard/users/delete/'.$user->id)}}" class="btn btn-danger btn-sm" href="#">
-                                <!-- <a id="confirmation-delete" class="btn btn-danger btn-sm" href="{{url('/dashboard/users/delete/'.$user->id)}}"> -->
+                                <a id="confirmation-delete" data-info="{{url('/dashboard/stores/delete/'.$item->id)}}" class="btn btn-danger btn-sm" href="#">
                                     <i class="fas fa-trash"></i>
                                     Deletar
                                 </a>
@@ -47,7 +46,7 @@
                 </tbody>
             </table>
             <br />
-            {{ $users->links() }}
+            {{ $stores->links() }}
         </div>
     </div>
 @endsection 

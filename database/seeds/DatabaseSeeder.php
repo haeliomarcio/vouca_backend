@@ -16,11 +16,11 @@ class DatabaseSeeder extends Seeder
     {
         // $this->call(UserSeeder::class);
 
-        // DB::table('users')->insert([
-        //     'name' => 'Max',
-        //     'email' => 'teste@teste.com.br',
-        //     'password' => Hash::make('123456'),
-        // ]);
+        DB::table('users')->insert([
+            'name' => 'Max',
+            'email' => 'teste@teste.com.br',
+            'password' => Hash::make('123456'),
+        ]);
 
         // for($i = 0; $i <= 100; $i++) {
         //     DB::table('users')->insert([

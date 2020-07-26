@@ -22,7 +22,6 @@ class AuthenticateController extends Controller
 
     public function login() {
         if (Auth::check()) {
-            echo 'logado'; die;
             return redirect('dashboard');
         }
         return view('login');
