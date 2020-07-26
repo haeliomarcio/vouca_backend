@@ -212,6 +212,21 @@
                         <h2 class="titulo">Fique por <br> <strong>dentro</strong></h2>
                     </div>
                     <br /><br /><br />
+                    <!-- <div class="row">
+                        <div class="col-md-8 offset-md-2">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="thumb" style="float: right;">
+                                        <img src="images/noticias/corona-virus.png" alt="Coronavirus">
+                                    </div>
+                                </div>
+                                <div class="col-md-6" style="background: #fff; ">
+                                    <span class="data">24.07.2020</span>
+                                    <p class="chamada">Coronavírus: cursos e conteúdos online gratuitos para a quarentena</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
                     <ul class="blog-list">
                         <li class="blog-item">
                             <a class="blog-link" href="#">
