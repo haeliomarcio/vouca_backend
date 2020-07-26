@@ -1,4 +1,20 @@
 @extends('layouts.site')
+@section('styles')
+ <style>
+    h2 {
+        color: #fff;
+    }
+    
+    h2::after {
+        background-color: #fff;
+    }
+
+    h3::after {
+        top: 114%;
+        width: 150px;
+    }
+ </style>
+@endsection
 @section('content')
     <div class="wrap">
         <div class="content centro" style="margin-top: 30px;">

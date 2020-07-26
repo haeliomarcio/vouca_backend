@@ -10,6 +10,7 @@
         <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
         <link rel="stylesheet" type="text/css" href="styles/style.css">
+        @yield('styles')
     </head>
 <body>
     <div class="container-fluid" style="padding: 0;">
