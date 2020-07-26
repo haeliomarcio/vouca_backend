@@ -29,6 +29,11 @@
   <style>
       .required { color: red; }
   </style>
+  <script
+    type="text/javascript"
+    src='https://cdn.tiny.cloud/1/no-api-key/tinymce/5/tinymce.min.js'
+    referrerpolicy="origin">
+  </script>
 </head>
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
@@ -166,5 +171,6 @@
 <!-- AdminLTE for demo purposes -->
 <script src="/dist/js/demo.js"></script>
 @include('helpers.alerts')
+@yield('scripts')
 </body>
 </html>
