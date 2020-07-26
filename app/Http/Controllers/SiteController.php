@@ -2,11 +2,38 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobsEmployment;
+use App\Models\News;
+use App\Models\Store;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
     public function index() {
-        return view('site.index');
+        $news = News::orderBy('id', 'desc')->take(3);
+        return view('site.index', ['news' => $news]);
+    }
+
+    public function sobre() {
+        return view('site.sobre');
+    }
+
+    public function marcas() {
+        return view('site.marcas');
+    }
+
+    public function lojas() {
+        $stores = Store::all();
+        return view('site.lojas', ['stores' => $stores]);
+    }
+
+    public function trabalheConosco() {
+        $jobs = JobsEmployment::all();
+        return view('site.trabalhe-conosco', ['jobs' => $jobs]);
+    }
+
+
+    public function contato() {
+        return view('site.contato');
     }
 }
