@@ -8,10 +8,10 @@ Route::get('login', [ 'as' => 'login', 'uses' => 'AuthenticateController@login']
 // Route::get('login', 'AuthenticateController@login');
 Route::get('/logout', 'AuthenticateController@logout');
 
-Route::get('/', function () { return view('site.index'); });
-Route::get('/sobre', function () { return view('site.sobre'); });
-Route::get('/marcas', function () { return view('site.marcas'); });
-Route::get('/trabalhe-conosco', function () { return view('site.trabalhe-conosco'); });
+Route::get('/', 'SiteController@index');
+Route::get('/sobre', 'SiteController@sobre');
+Route::get('/marcas', 'SiteController@marcas');
+Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
 
 
 Route::middleware(['auth'])->group(function () {

@@ -11,7 +11,7 @@
                     @include('helpers.form-search');
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="{{url('/dashboard/stores/create')}}" class="btn btn-success">Nova Loja</a>
+                    <a href="{{url('/dashboard/news/create')}}" class="btn btn-success">Nova Notícia</a>
                 </div>
             </div>
             <br />
@@ -20,8 +20,8 @@
                 <thead>
                 <tr>
                     <th style="width: 10px">#</th>
-                    <th>Name</th>
-                    <th>Endereço</th>
+                    <th>Título</th>
+                    <th>Data de Publicação</th>
                     <th style="width: 40px">Ações</th>
                 </tr>
                 </thead>
