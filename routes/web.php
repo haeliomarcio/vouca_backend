@@ -10,7 +10,7 @@ Route::get('/logout', 'AuthenticateController@logout');
 
 Route::get('/', function () { return view('site.index'); });
 Route::get('/sobre', function () { return view('site.sobre'); });
-Route::get('/contato', function () { return view('site.sobre'); });
+Route::get('/marcas', function () { return view('site.marcas'); });
 Route::get('/trabalhe-conosco', function () { return view('site.trabalhe-conosco'); });
 
 

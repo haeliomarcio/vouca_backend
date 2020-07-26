@@ -67,7 +67,7 @@
                                 © Grupo Vilarouca. Todos os direitos reservados.
                             </p>
                             <p class="credits">
-                                Desenvolvido por <a href="www.tecnologiagw.com" target="_blank">GW Tecnologia</a>
+                                Desenvolvido por <a href="https://www.tecnologiagw.com" target="_blank">GW Tecnologia</a>
                             </p>
                         </div>
                     </div>
