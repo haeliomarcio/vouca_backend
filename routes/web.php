@@ -19,6 +19,7 @@ Route::get('/crocs', 'SiteController@crocs');
 Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
+Route::get('/contato', 'SiteController@contato');
 
 
 Route::middleware(['auth'])->group(function () {
