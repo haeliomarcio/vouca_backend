@@ -39,7 +39,6 @@ html, body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 800px;
     background-image: url("../images/curve-left-2.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -293,6 +292,60 @@ a:active {
     background-size: 100%;
 }
 
+.wrap-boticario {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-o-boticario.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-cacaushow {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-o-cacau-show.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-arezzo {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-arezzo.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-tim {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-tim.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-crocs {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-crocs.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.wrap-magrella {
+    margin: 0;
+    padding: 1px;
+    width: 100%;
+    background-image: url("../images/top-magrella.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
 .container-sobre {
     padding: 75px 100px;
     background-color: #fff;
@@ -302,5 +355,59 @@ a:active {
     overflow: hidden;
     position: relative;
     margin-bottom: 35px;
+}
+
+.marcas {
+    width: 300px;
+    height: 300px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.limite:hover .overlay {
+    opacity: 0.9;
+    transition: 0.5s;
+}
+
+.boticario-color {
+    background-color: #6FA287;
+}
+
+.cacau-show-color {
+    background-color: #2D170F;
+}
+
+.arezzo-color {
+    background-color: #F0BD6C;
+}
+
+.tim-color {
+    background-color: #004691;
+}
+
+.crocs-color {
+    background-color: #444444;
+}
+
+.magrella-color {
+    background-color: #F36F2E;
+}
+
+.limite {
+    position: relative;
+    width: 300px;
+    height: 300px;
 }
 
