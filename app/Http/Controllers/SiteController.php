@@ -22,6 +22,30 @@ class SiteController extends Controller
         return view('site.marcas');
     }
 
+    public function oBoticario() {
+        return view('site.o-boticario');
+    }
+
+    public function cacauShow() {
+        return view('site.cacau-show');
+    }
+
+    public function arezzo() {
+        return view('site.arezzo');
+    }
+
+    public function tim() {
+        return view('site.tim');
+    }
+
+    public function crocs() {
+        return view('site.crocs');
+    }
+
+    public function magrella() {
+        return view('site.magrella');
+    }
+
     public function lojas() {
         $stores = Store::all();
         return view('site.lojas', ['stores' => $stores]);

@@ -11,6 +11,13 @@ Route::get('/logout', 'AuthenticateController@logout');
 Route::get('/', 'SiteController@index');
 Route::get('/sobre', 'SiteController@sobre');
 Route::get('/marcas', 'SiteController@marcas');
+Route::get('/o-boticario', 'SiteController@oBoticario');
+Route::get('/cacau-show', 'SiteController@cacauShow');
+Route::get('/arezzo', 'SiteController@arezzo');
+Route::get('/tim', 'SiteController@tim');
+Route::get('/crocs', 'SiteController@crocs');
+Route::get('/magrella', 'SiteController@magrella');
+Route::get('/lojas', 'SiteController@lojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
 
 

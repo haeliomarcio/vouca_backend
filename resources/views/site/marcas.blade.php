@@ -26,7 +26,7 @@
                 <h3 class="subtitulo"><strong>Marcas</strong></h3>
 
                         <div class="row">
-                            <a href="#">
+                            <a href="{{url('/o-boticario')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
@@ -39,7 +39,7 @@
                                 </div>
                             </a>
 
-                            <a href="#">
+                            <a href="{{url('/cacau-show')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
@@ -52,7 +52,7 @@
                                 </div>
                             </a>
 
-                            <a href="#">
+                            <a href="{{url('/arezzo')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="row">
-                            <a href="#">
+                            <a href="{{url('/tim')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
@@ -80,7 +80,7 @@
                                 </div>
                             </a>
 
-                            <a href="#">
+                            <a href="{{url('/crocs')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
@@ -93,7 +93,7 @@
                                 </div>
                             </a>
 
-                            <a href="#">
+                            <a href="{{url('/magrella')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
                                         <div class="limite">
