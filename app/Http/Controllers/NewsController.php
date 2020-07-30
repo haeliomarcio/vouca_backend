@@ -2,15 +2,16 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreStore;
+use App\Http\Requests\StoreNews;
+use App\Models\News;
 use Illuminate\Http\Request;
-use App\Models\Store;
+use Exception;
 
 class NewsController extends Controller
 {
 
     protected $model;
-    public function __construct(Store $model) {
+    public function __construct(News $model) {
         $this->model = $model;        
     }
     /**
@@ -22,9 +23,9 @@ class NewsController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('name', 'ilike', "%{$search}%")
+            $context = $this->model->where('title', 'ilike', "%{$search}%")
                 ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('email', 'ilike', "%{$search}%")
+                ->orWhere('introduction', 'ilike', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
@@ -48,10 +49,17 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStore $request)
+    public function store(StoreNews $request)
     {
-        $this->model->create($request);
-        return redirect('news.list')->with('success', 'Loja criado com sucesso.');
+        try {
+            $params = $request->all();
+            $params['image_path'] = $params['image'];
+            $data = $this->model->create($params);
+            $request->file('image')->store('site');
+            return redirect('/dashboard/news/list')->with('success', 'Artigo criado com sucesso.');
+        } catch(Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }   
     }
 
     /**
@@ -84,11 +92,11 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreStore $request, $id)
+    public function update(StoreNews $request, $id)
     {
         $context = $this->model->find($id);
         $context->update($request);
-        return redirect('/dashboard/news')->with('success', 'Loja atualizado com sucesso.');
+        return redirect('/dashboard/news')->with('success', 'Artigo atualizado com sucesso.');
     }
 
     /**
@@ -104,7 +112,7 @@ class NewsController extends Controller
         if($context) {
             if($context->delete()) {
                 return back()
-                ->with('success', 'Notícia '. $context->name. ' removido com sucesso');
+                ->with('success', 'Artigo '. $context->name. ' removido com sucesso');
             }
         }
         return back()

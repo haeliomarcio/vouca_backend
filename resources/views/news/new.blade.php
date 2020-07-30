@@ -8,7 +8,7 @@
         <div class="card-body">
             <br />
             @include('helpers.messages')
-            <form method="post" action="{{url('/dashboard/news/store')}}">
+            <form method="post" action="{{url('/dashboard/news/store')}}" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="form-group">
                     <label for="title">Título <span class="required">*</span></label>
@@ -17,11 +17,11 @@
                 <div class="row">
                     <div class="col">
                         <label for="image">Imagem de Capa <span class="required">*</span></label>
-                        <input type="file"  name="image" value="{{old('password')}}"  type="image" class="form-control" id="image" />
+                        <input type="file"  name="image" value="{{old('image')}}"  type="image" class="form-control" id="image" />
                     </div>
                     <div class="col">
-                        <label for="date_publish">Data da Publicação <span class="required">*</span></label>
-                        <input type="date"  name="date_publish" value="{{old('date_publish')}}"  class="form-control" id="date_publish" placeholder="-00/00/00000">
+                        <label for="publish">Data da Publicação <span class="required">*</span></label>
+                        <input type="date"  name="publish" value="{{old('publish')}}"  class="form-control" id="publish" placeholder="-00/00/00000">
                     </div>
                 </div>
                 <div class="form-group">

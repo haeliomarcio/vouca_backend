@@ -29,8 +29,8 @@
                     @foreach ($list as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td>{{ $item->name }}</td>
-                            <td>{{ $item->address }}</td>
+                            <td>{{ $item->title }}</td>
+                            <td>{{ $item->publish }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="{{url('/dashboard/stores/edit/'.$item->id)}}">
                                     <i class="fas fa-pencil-alt"></i>
