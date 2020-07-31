@@ -2,23 +2,23 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff;
+        color: #fff !important;
     }
     
     h2::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 
     h3::after {
         top: 114%;
-        width: 100px;
+        width: 65%;
     }
 </style>
 @endsection
 @section('content')
     <div class="wrap">
         <div class="content centro" style="margin-top: 30px;">
-            <h2><strong>Nossas marcas</strong></h2>
+            <h2 class="titulo"><strong>Nossas marcas</strong></h2>
         </div>
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">

@@ -18,7 +18,7 @@
         <!-- Menu Início -->
         <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #ffffff;">
             <div class="container">
-                <a href="#" class="navbar-brand">
+                <a href="{{url('/')}}" class="navbar-brand">
                     <img src="images/logo.png" height="50">
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
@@ -62,7 +62,7 @@
                 <div class="row">
                     <div class="col-lg-4 centro">
                         <div class="grupo">
-                            <a class="logo" href="#">Grupo Vilarouca</a>
+                            <a class="logo" href="{{url('/')}}">Grupo Vilarouca</a>
                             <p class="copyright">
                                 © Grupo Vilarouca. Todos os direitos reservados.
                             </p>
@@ -75,12 +75,12 @@
                         <div class="grupo">
                             <p style="font-size: 18px; color: #ffffff;"><strong>MENU</strong></p>
                             <p class="menu-footer">
-                                <a href="#">INÍCIO</a><br />
-                                <a href="#">O GRUPO</a><br />
-                                <a href="#">MARCAS</a><br />
-                                <a href="#">LOJAS</a><br />
-                                <a href="#">TRABALHE CONOSCO</a><br />
-                                <a href="#">CONTATO</a>
+                                <a href="{{url('/')}}">INÍCIO</a><br />
+                                <a href="{{url('/sobre')}}">O GRUPO</a><br />
+                                <a href="{{url('/marcas')}}">MARCAS</a><br />
+                                <a href="{{url('/lojas')}}">LOJAS</a><br />
+                                <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
+                                <a href="{{url('/contato')}}">CONTATO</a>
                             </p>
                         </div>
                     </div>

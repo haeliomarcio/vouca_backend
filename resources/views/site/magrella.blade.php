@@ -7,7 +7,7 @@
 
     h3::after {
         top: 114%;
-        width: 150px;
+        width: 65%;
         background-color: #F36F2E !important;
         display: none;
     }
