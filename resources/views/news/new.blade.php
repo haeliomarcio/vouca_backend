@@ -20,7 +20,7 @@
                         <input type="file"  name="image" value="{{old('image')}}"  type="image" class="form-control" id="image" />
                     </div>
                     <div class="col">
-                        <label for="publish">Data da Publicação <span class="required">*</span></label>
+                        <label for="publish">Data da Publicação </label>
                         <input type="date"  name="publish" value="{{old('publish')}}"  class="form-control" id="publish" placeholder="-00/00/00000">
                     </div>
                 </div>

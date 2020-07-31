@@ -4,13 +4,18 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreNews;
 use App\Models\News;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Exception;
+use Illuminate\Support\Str;
+use Illuminate\Support\Facades\Storage;
 
 class NewsController extends Controller
 {
 
     protected $model;
+    protected $prefixName = 'news';
+
     public function __construct(News $model) {
         $this->model = $model;        
     }
@@ -30,7 +35,7 @@ class NewsController extends Controller
         } else {
             $context = $this->model->paginate(10);
         }
-        return view('news.list', ['list' => $context]);
+        return view($this->prefixName.'.list', ['list' => $context]);
     }
 
     /**
@@ -40,7 +45,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('news.new');
+        return view($this->prefixName.'.new');
     }
 
     /**
@@ -53,10 +58,14 @@ class NewsController extends Controller
     {
         try {
             $params = $request->all();
-            $params['image_path'] = $params['image'];
-            $data = $this->model->create($params);
-            $request->file('image')->store('site');
-            return redirect('/dashboard/news/list')->with('success', 'Artigo criado com sucesso.');
+            $filename = $request->file('image')->store('', 'site');
+            $params['image_path'] = $filename;
+            $params['slug_title'] = Str::slug($params['title']);
+            if(empty($params['publish'])) {
+                $params['publish'] = Carbon::now()->format('Y-m-d');
+            }
+            $this->model->create($params);
+            return redirect('/dashboard/'.$this->prefixName)->with('success', 'Artigo criado com sucesso.');
         } catch(Exception $e) {
             return back()->with('error', $e->getMessage());
         }   
@@ -70,7 +79,7 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
     }
 
     /**
@@ -82,7 +91,7 @@ class NewsController extends Controller
     public function edit($id)
     {
         $context = $this->model->find($id);
-        return view('news.edit', ['data' => $context]);
+        return view($this->prefixName.'.edit', ['data' => $context]);
     }
 
     /**
@@ -95,8 +104,17 @@ class NewsController extends Controller
     public function update(StoreNews $request, $id)
     {
         $context = $this->model->find($id);
-        $context->update($request);
-        return redirect('/dashboard/news')->with('success', 'Artigo atualizado com sucesso.');
+        $params = $request->all();
+        $params['slug_title'] = Str::slug($params['title']);
+        if($request->file('image')) {
+            if(file_exists(public_path('files/'.$context->image_path))) {
+                unlink(public_path('files/'.$context->image_path));
+            }
+            $filename = $request->file('image')->store('', 'site');
+            $params['image_path'] = $filename;
+        }
+        $context->update($params);
+        return redirect('/dashboard/'.$this->prefixName)->with('success', 'Artigo atualizado com sucesso.');
     }
 
     /**
@@ -108,7 +126,6 @@ class NewsController extends Controller
     public function destroy($id)
     {
         $context = $this->model->find($id);
-        
         if($context) {
             if($context->delete()) {
                 return back()
@@ -117,6 +134,5 @@ class NewsController extends Controller
         }
         return back()
             ->with('error', 'Erro ao remover notícia');
-        
     }
 }

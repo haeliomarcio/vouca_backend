@@ -32,11 +32,11 @@
                             <td>{{ $item->title }}</td>
                             <td>{{ $item->publish }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/stores/edit/'.$item->id)}}">
+                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/news/edit/'.$item->id)}}">
                                     <i class="fas fa-pencil-alt"></i>
                                     Editar
                                 </a>
-                                <a id="confirmation-delete" data-info="{{url('/dashboard/stores/delete/'.$item->id)}}" class="btn btn-danger btn-sm" href="#">
+                                <a id="confirmation-delete" data-info="{{url('/dashboard/news/delete/'.$item->id)}}" class="btn btn-danger btn-sm" href="#">
                                     <i class="fas fa-trash"></i>
                                     Deletar
                                 </a>
