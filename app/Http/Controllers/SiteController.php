@@ -55,8 +55,12 @@ class SiteController extends Controller
         $jobs = JobsEmployment::all();
         return view('site.trabalhe-conosco', ['jobs' => $jobs]);
     }
-    
+
     public function contato() {
         return view('site.contato');
+    }
+
+    public function blog() {
+        return view('site.blog');
     }
 }

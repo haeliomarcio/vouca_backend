@@ -2,23 +2,23 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff;
+        color: #fff !important;
     }
     
     h2::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 
     h3::after {
         top: 114%;
-        width: 150px;
+        width: 65%;
     }
 </style>
 @endsection
 @section('content')
     <div class="wrap">
         <div class="content centro" style="margin-top: 30px;">
-            <h2><strong>O Grupo Vilarouca</strong></h2>
+            <h2 class="titulo"><strong>O Grupo Vilarouca</strong></h2>
         </div>
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">
@@ -33,13 +33,13 @@
                 <p>Maecenas auctor turpis nunc, vel eleifend libero fermentum ac. Ut vitae blandit magna. Nam tellus nulla, fermentum et dictum vel, lobortis sit amet mi. In consectetur dui in gravida semper. Cras commodo nunc at orci cursus feugiat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Praesent dapibus nec magna in tristique. Etiam interdum tellus ac purus laoreet, bibendum convallis purus auctor. Proin interdum nulla vel arcu vestibulum molestie.</p>
                 <p>Sed pulvinar velit in eros feugiat rhoncus. Nullam lacinia elit quis tortor tempus vulputate dignissim ac purus. Morbi nisi ligula, fringilla aliquam rhoncus nec, convallis commodo risus. In dapibus dolor quis purus iaculis, a interdum est commodo. Cras luctus fermentum ex at sodales. Vestibulum commodo magna vitae suscipit commodo. Duis at ornare urna.</p>
 
-                <h3><strong>Visão</strong></h3>
+                <h3 class="titulo"><strong>Visão</strong></h3>
                 <p style="margin-top: 30px;">Ser a maior e melhor rede mundo, oferecendo aos nossos clientes e parceiros uma relação duradoura, com foco no crescimento, rentabilidade e responsabilidade.</p>
 
-                <h3><strong>Missão</strong></h3>
+                <h3 class="titulo"><strong>Missão</strong></h3>
                 <p style="margin-top: 30px;">Proporcionar ao maior número de pessoas uma experiência memorável e excelência em produtos e serviços, sendo referência em gestão de negócios.</p>
 
-                <h3><strong>Valores</strong></h3>
+                <h3 class="titulo"><strong>Valores</strong></h3>
                 <p style="margin-top: 30px;">Nossos segredos para o sucesso</p>
             </div>
         </div>

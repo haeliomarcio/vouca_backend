@@ -20,6 +20,7 @@ Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
 Route::get('/contato', 'SiteController@contato');
+Route::get('/blog', 'SiteController@blog');
 
 
 Route::middleware(['auth'])->group(function () {

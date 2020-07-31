@@ -2,11 +2,11 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff;
+        color: #fff !important;
     }
     
     h2::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
 
     h3::after {
@@ -18,7 +18,7 @@
 @section('content')
     <div class="wrap">
         <div class="content centro" style="margin-top: 30px;">
-            <h2><strong>Contato</strong></h2>
+            <h2 class="titulo"><strong>Contato</strong></h2>
         </div>
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">
@@ -116,13 +116,13 @@
                     </form>
                     <br />
                     <div class="row">
-                        <div class="col-sm-4 centro">
+                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
                             <img src="images/ceara-contato.png">
                         </div>
-                        <div class="col-sm-4 centro">
+                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
                             <img src="images/maranhao-contato.png">
                         </div>
-                        <div class="col-sm-4 centro">
+                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
                             <img src="images/piaui-contato.png">
                         </div>
                     </div>

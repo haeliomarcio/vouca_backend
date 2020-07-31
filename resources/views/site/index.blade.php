@@ -212,56 +212,114 @@
                         <h2 class="titulo">Fique por <br> <strong>dentro</strong></h2>
                     </div>
                     <br /><br /><br />
-                    <!-- <div class="row">
-                        <div class="col-md-8 offset-md-2">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="thumb" style="float: right;">
-                                        <img src="images/noticias/corona-virus.png" alt="Coronavirus">
+
+                    <div class="row">
+                        <div class="col-md-4" >
+                            <div class="item-box-blog">
+
+                                <div class="item-box-blog-image">
+                                    <!--Date-->
+                                    <div class="item-box-blog-date bg-blue-ui white">
+                                        <span class="mon">24.07.2020</span>
                                     </div>
+                                    <!--Image-->
+                                    <figure>
+                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
+                                    </figure>
                                 </div>
-                                <div class="col-md-6" style="background: #fff; ">
-                                    <span class="data">24.07.2020</span>
-                                    <p class="chamada">Coronavírus: cursos e conteúdos online gratuitos para a quarentena</p>
+                                
+                                <div class="item-box-blog-body">
+                                    <!--Heading-->
+                                    <div class="item-box-blog-heading">
+                                        <h5 style="font">Título da notícia</h5>
+                                    </div>
+                                    <!--Data-->
+                                    <div class="item-box-blog-data" style="padding: px 15px;">
+                                        <p><i class="fa fa-user-o"></i> Admin</p>
+                                    </div>
+                                    <!--Text-->
+                                    <div class="item-box-blog-text">
+                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                                    </div>
+                                    <div class="mt">
+                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
+                                    </div>
+                                    <!--Read More Button-->
                                 </div>
                             </div>
                         </div>
-                    </div> -->
-                    <ul class="blog-list">
-                        <li class="blog-item">
-                            <a class="blog-link" href="#">
-                                <div class="thumb">
-                                    <img src="images/noticias/corona-virus.png" alt="Coronavirus">
+                        <div class="col-md-4" >
+                            <div class="item-box-blog">
+
+                                <div class="item-box-blog-image">
+                                    <!--Date-->
+                                    <div class="item-box-blog-date bg-blue-ui white">
+                                        <span class="mon">24.07.2020</span>
+                                    </div>
+                                    <!--Image-->
+                                    <figure>
+                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
+                                    </figure>
                                 </div>
-                                <div class="text">
-                                    <span class="data">24.07.2020</span>
-                                    <p class="chamada">Coronavírus: cursos e conteúdos online gratuitos para a quarentena</p>
+                                
+                                <div class="item-box-blog-body">
+                                    <!--Heading-->
+                                    <div class="item-box-blog-heading">
+                                        <h5 style="font">Título da notícia</h5>
+                                    </div>
+                                    <!--Data-->
+                                    <div class="item-box-blog-data" style="padding: px 15px;">
+                                        <p><i class="fa fa-user-o"></i> Admin</p>
+                                    </div>
+                                    <!--Text-->
+                                    <div class="item-box-blog-text">
+                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                                    </div>
+                                    <div class="mt">
+                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
+                                    </div>
+                                    <!--Read More Button-->
                                 </div>
-                            </a>
-                        </li>
-                        <li class="blog-item">
-                            <a class="blog-link" href="#">
-                                <div class="text">
-                                    <span class="data">24.07.2020</span>
-                                    <p class="chamada">Coronavírus: cursos e conteúdos online gratuitos para a quarentena</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4" >
+                            <div class="item-box-blog">
+
+                                <div class="item-box-blog-image">
+                                    <!--Date-->
+                                    <div class="item-box-blog-date bg-blue-ui white">
+                                        <span class="mon">24.07.2020</span>
+                                    </div>
+                                    <!--Image-->
+                                    <figure>
+                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
+                                    </figure>
                                 </div>
-                                <div class="thumb">
-                                    <img src="images/noticias/corona-virus.png" alt="Coronavirus">
+                                
+                                <div class="item-box-blog-body">
+                                    <!--Heading-->
+                                    <div class="item-box-blog-heading">
+                                        <h5 style="font">Título da notícia</h5>
+                                    </div>
+                                    <!--Data-->
+                                    <div class="item-box-blog-data" style="padding: px 15px;">
+                                        <p><i class="fa fa-user-o"></i> Admin</p>
+                                    </div>
+                                    <!--Text-->
+                                    <div class="item-box-blog-text">
+                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
+                                    </div>
+                                    <div class="mt">
+                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
+                                    </div>
+                                    <!--Read More Button-->
                                 </div>
-                            </a>
-                        </li>
-                        <li class="blog-item">
-                            <a class="blog-link" href="#">
-                                <div class="thumb">
-                                    <img src="images/noticias/corona-virus.png" alt="Coronavirus">
-                                </div>
-                                <div class="text">
-                                    <span class="data">24.07.2020</span>
-                                    <p class="chamada">Coronavírus: cursos e conteúdos online gratuitos para a quarentena</p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+                            </div>
+                        </div>
+                        <div style="justify-content: right; display: flex; width: 100%;">
+                            <a href="{{url('/blog')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
