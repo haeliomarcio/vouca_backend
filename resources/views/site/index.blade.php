@@ -214,110 +214,47 @@
                     <br /><br /><br />
 
                     <div class="row">
-                        <div class="col-md-4" >
-                            <div class="item-box-blog">
+                        @foreach($news as $new) 
+                            <div class="col-md-4" >
+                                <div class="item-box-blog">
 
-                                <div class="item-box-blog-image">
-                                    <!--Date-->
-                                    <div class="item-box-blog-date bg-blue-ui white">
-                                        <span class="mon">24.07.2020</span>
+                                    <div class="item-box-blog-image">
+                                        <!--Date-->
+                                        <div class="item-box-blog-date bg-blue-ui white">
+                                            <span class="mon">
+                                                {{date('d.m.Y', strtotime($new->publish))}}
+
+                                            </span>
+                                        </div>
+                                        <!--Image-->
+                                        <figure>
+                                            <img alt="Coronavírus" src="{{url('files/'.$new->image_path)}}">
+                                        </figure>
                                     </div>
-                                    <!--Image-->
-                                    <figure>
-                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
-                                    </figure>
-                                </div>
-                                
-                                <div class="item-box-blog-body">
-                                    <!--Heading-->
-                                    <div class="item-box-blog-heading">
-                                        <h5 style="font">Título da notícia</h5>
+                                    
+                                    <div class="item-box-blog-body">
+                                        <!--Heading-->
+                                        <div class="item-box-blog-heading">
+                                            <h5 style="font">{{$new->title}}</h5>
+                                        </div>
+                                        <!--Data-->
+                                        <!-- <div class="item-box-blog-data" style="padding: px 15px;">
+                                            <p><i class="fa fa-user-o"></i> Admin</p>
+                                        </div> -->
+                                        <!--Text-->
+                                        <div class="item-box-blog-text">
+                                            <p>{!!$new->introduction!!}</p>
+                                        </div>
+                                        <div class="mt">
+                                            <a href="{{url('noticias/'.$new->slug_title)}}" class="btn bg-blue-ui white read">Ler mais...</a>
+                                        </div>
+                                        <!--Read More Button-->
                                     </div>
-                                    <!--Data-->
-                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                        <p><i class="fa fa-user-o"></i> Admin</p>
-                                    </div>
-                                    <!--Text-->
-                                    <div class="item-box-blog-text">
-                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
-                                    </div>
-                                    <div class="mt">
-                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
-                                    </div>
-                                    <!--Read More Button-->
                                 </div>
                             </div>
-                        </div>
-                        <div class="col-md-4" >
-                            <div class="item-box-blog">
-
-                                <div class="item-box-blog-image">
-                                    <!--Date-->
-                                    <div class="item-box-blog-date bg-blue-ui white">
-                                        <span class="mon">24.07.2020</span>
-                                    </div>
-                                    <!--Image-->
-                                    <figure>
-                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
-                                    </figure>
-                                </div>
-                                
-                                <div class="item-box-blog-body">
-                                    <!--Heading-->
-                                    <div class="item-box-blog-heading">
-                                        <h5 style="font">Título da notícia</h5>
-                                    </div>
-                                    <!--Data-->
-                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                        <p><i class="fa fa-user-o"></i> Admin</p>
-                                    </div>
-                                    <!--Text-->
-                                    <div class="item-box-blog-text">
-                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
-                                    </div>
-                                    <div class="mt">
-                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
-                                    </div>
-                                    <!--Read More Button-->
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-4" >
-                            <div class="item-box-blog">
-
-                                <div class="item-box-blog-image">
-                                    <!--Date-->
-                                    <div class="item-box-blog-date bg-blue-ui white">
-                                        <span class="mon">24.07.2020</span>
-                                    </div>
-                                    <!--Image-->
-                                    <figure>
-                                        <img alt="Coronavírus" src="images/noticias/corona-virus.png">
-                                    </figure>
-                                </div>
-                                
-                                <div class="item-box-blog-body">
-                                    <!--Heading-->
-                                    <div class="item-box-blog-heading">
-                                        <h5 style="font">Título da notícia</h5>
-                                    </div>
-                                    <!--Data-->
-                                    <div class="item-box-blog-data" style="padding: px 15px;">
-                                        <p><i class="fa fa-user-o"></i> Admin</p>
-                                    </div>
-                                    <!--Text-->
-                                    <div class="item-box-blog-text">
-                                        <p>Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, adipiscing. Lorem ipsum dolor sit amet, consectetuer adipiscing. Lorem ipsum dolor.</p>
-                                    </div>
-                                    <div class="mt">
-                                        <a href="#" class="btn bg-blue-ui white read">Ler mais...</a>
-                                    </div>
-                                    <!--Read More Button-->
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                         <div style="justify-content: right; display: flex; width: 100%;">
-                            <a href="{{url('/blog')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
+                            <a href="{{url('/noticias')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
                         </div>
                     </div>
                 </div>

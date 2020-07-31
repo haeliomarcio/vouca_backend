@@ -7,9 +7,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-        <link rel="stylesheet" type="text/css" href="styles/bootstrap.min.css">
-        <link rel="stylesheet" type="text/css" href="styles/font-awesome.min.css">
-        <link rel="stylesheet" type="text/css" href="styles/style.css">
+        <link rel="stylesheet" type="text/css" href="{{url('styles/bootstrap.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url('styles/font-awesome.min.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url('styles/style.css')}}">
         @yield('styles')
     </head>
 <body>
@@ -19,7 +19,7 @@
         <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #ffffff;">
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
-                    <img src="images/logo.png" height="50">
+                    <img src="{{url('images/logo.png')}}" height="50">
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
                     <span class="navbar-toggler-icon text-light">

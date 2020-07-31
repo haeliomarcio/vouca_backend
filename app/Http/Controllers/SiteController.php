@@ -5,12 +5,13 @@ namespace App\Http\Controllers;
 use App\Models\JobsEmployment;
 use App\Models\News;
 use App\Models\Store;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
 class SiteController extends Controller
 {
     public function index() {
-        $news = News::orderBy('id', 'desc')->take(3);
+        $news = News::orderBy('id', 'desc')->get()->take(3);
         return view('site.index', ['news' => $news]);
     }
 
@@ -60,7 +61,18 @@ class SiteController extends Controller
         return view('site.contato');
     }
 
-    public function blog() {
-        return view('site.blog');
+    public function noticias($noticia) {
+        if(!empty($noticia)) {
+            $new = News::where('slug_title', $noticia)->get()->first();
+            return view('site.blog', ['new' => $new]);
+        } else {
+            $news = News::orderBy('id', 'desc')->paginate(9);
+            return view('site.blog', ['news' => $news]);
+        }
+        
+    }
+
+    public function sendEmail(Request $request) {
+        
     }
 }
