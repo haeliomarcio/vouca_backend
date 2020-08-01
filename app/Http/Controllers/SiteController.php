@@ -61,6 +61,14 @@ class SiteController extends Controller
         return view('site.contato');
     }
 
+    public function blog() {
+        return view('site.blog');
+    }
+
+    public function post() {
+        return view('site.post');
+    }
+
     public function noticias($noticia) {
         if(!empty($noticia)) {
             $new = News::where('slug_title', $noticia)->get()->first();

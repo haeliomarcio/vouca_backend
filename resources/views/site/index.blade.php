@@ -254,7 +254,7 @@
                             </div>
                         @endforeach
                         <div style="justify-content: right; display: flex; width: 100%;">
-                            <a href="{{url('/noticias')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
+                            <a href="{{url('/blog')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
                         </div>
                     </div>
                 </div>
