@@ -61,15 +61,14 @@ class SiteController extends Controller
         return view('site.contato');
     }
 
-    public function noticias($noticia) {
-        if(!empty($noticia)) {
-            $new = News::where('slug_title', $noticia)->get()->first();
+    public function noticias($name = null) {
+        if(!empty($name)) {
+            $new = News::where('slug_title', $name)->get()->first();
             return view('site.blog', ['new' => $new]);
         } else {
-            $news = News::orderBy('id', 'desc')->paginate(9);
+            $news = News::orderBy('id', 'desc')->paginate(5);
             return view('site.blog', ['news' => $news]);
         }
-        
     }
 
     public function sendEmail(Request $request) {

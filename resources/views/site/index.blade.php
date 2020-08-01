@@ -216,7 +216,7 @@
                     <div class="row">
                         @foreach($news as $new) 
                             <div class="col-md-4" >
-                                <div class="item-box-blog">
+                                <div class="item-box-blog" style="background: #ffffff;">
 
                                     <div class="item-box-blog-image">
                                         <!--Date-->
@@ -246,7 +246,7 @@
                                             <p>{!!$new->introduction!!}</p>
                                         </div>
                                         <div class="mt">
-                                            <a href="{{url('noticias/'.$new->slug_title)}}" class="btn bg-blue-ui white read">Ler mais...</a>
+                                            <a href="{{url('blog/'.$new->slug_title)}}" class="btn bg-blue-ui white read">Ler mais...</a>
                                         </div>
                                         <!--Read More Button-->
                                     </div>
@@ -254,7 +254,7 @@
                             </div>
                         @endforeach
                         <div style="justify-content: right; display: flex; width: 100%;">
-                            <a href="{{url('/noticias')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
+                            <a href="{{url('/blog')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
                         </div>
                     </div>
                 </div>

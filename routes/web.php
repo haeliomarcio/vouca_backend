@@ -20,8 +20,8 @@ Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
 Route::get('/contato', 'SiteController@contato');
-Route::post('contato', 'SiteController@sendEmail');
-Route::get('/noticias/{noticia?}', 'SiteController@noticias');
+Route::post('/contato', 'SiteController@sendEmail');
+Route::get('/blog/{name?}', 'SiteController@noticias');
 
 
 Route::middleware(['auth'])->group(function () {
