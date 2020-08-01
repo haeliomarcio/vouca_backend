@@ -19,6 +19,7 @@ Route::get('/crocs', 'SiteController@crocs');
 Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
+Route::get('/vaga', 'SiteController@vaga');
 Route::get('/contato', 'SiteController@contato');
 Route::get('/blog', 'SiteController@blog');
 Route::get('/post', 'SiteController@post');

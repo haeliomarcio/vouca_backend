@@ -69,6 +69,10 @@ class SiteController extends Controller
         return view('site.post');
     }
 
+    public function vaga() {
+        return view('site.vaga');
+    }
+
     public function noticias($noticia) {
         if(!empty($noticia)) {
             $new = News::where('slug_title', $noticia)->get()->first();
