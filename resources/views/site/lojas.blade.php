@@ -70,7 +70,7 @@
         }).addTo(map);
         var LeafIcon = L.Icon.extend({
             options: {
-                shadowUrl: 'leaf-shadow.png',
+                //shadowUrl: 'leaf-shadow.png',
                 iconSize:     [40, 55],
                 shadowSize:   [50, 64],
                 iconAnchor:   [22, 94],
