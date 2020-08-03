@@ -232,6 +232,28 @@
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
         });
+        
+        //////* TIM *////////
+        $('.timImg').mouseenter(function () {
+            $('.maranhaoImg2').addClass('filterMaranhao2');
+            $('.piauiImg2').addClass('filterPiaui2');
+
+        });
+        $('.timImg').mouseout(function () {
+            $('.maranhaoImg2').removeClass('filterMaranhao2');
+            $('.piauiImg2').removeClass('filterPiaui2');
+        });
+
+        //////* MAGRELLA *////////
+        $('.magrellaImg').mouseenter(function () {
+            $('.maranhaoImg2').addClass('filterMaranhao2');
+            $('.piauiImg2').addClass('filterPiaui2');
+
+        });
+        $('.magrellaImg').mouseout(function () {
+            $('.maranhaoImg2').removeClass('filterMaranhao2');
+            $('.piauiImg2').removeClass('filterPiaui2');
+        });
 
 
 
