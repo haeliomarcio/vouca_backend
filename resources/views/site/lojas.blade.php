@@ -23,31 +23,102 @@
             <h2><strong>Lojas</strong></h2>
             <br /><br />
         </div>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Estados</label>
+                            <select id="state_id" name="state_id" value="" class="form-control">
+                                <option value="">Todos</option>
+                                @foreach($states as $state)
+                                    <option value="{{$state->id}}">{{$state->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Cidades</label>
+                            <select id="city_id" name="city_id" name="" value="" class="form-control">
+                                <option value="">Todos</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="form-group">
+                            <label>Lojas</label>
+                            <select name="" value="" class="form-control">
+                                <option value="">Todos</option>
+                                @foreach($stores as $store)
+                                    <option value="{{$store->id}}">{{$store->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
         <div id="map" style="width:100%; height: 600px;"></div>
     </div>
 @endsection
 @section('scripts_bottom')
     <script>
-        var map = L.map('map').setView([51.5, -0.09], 13);
+        var map = L.map('map').setView([-4.053263, -43.0394255], 6);
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
         var LeafIcon = L.Icon.extend({
             options: {
                 shadowUrl: 'leaf-shadow.png',
-                iconSize:     [38, 95],
+                iconSize:     [40, 55],
                 shadowSize:   [50, 64],
                 iconAnchor:   [22, 94],
                 shadowAnchor: [4, 62],
                 popupAnchor:  [-3, -76]
             }
         });
-        var greenIcon = new LeafIcon({iconUrl: '/images/leaf-green.png'}),
-            redIcon = new LeafIcon({iconUrl: '/images/leaf-red.png'}),
-            orangeIcon = new LeafIcon({iconUrl: '/images/leaf-orange.png'});
+        var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'}),
+            boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'}),
+            cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
 
-        L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
-        L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
-        L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
+        // L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
+        // L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
+        // L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
+        // L.marker([-6.3601557, -39.3013629], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
+
+        axios.get('/list-lojas')
+        .then(function(response) {
+            for(item of response.data) {
+                var lat = parseFloat(item.lat);
+                var lng = parseFloat(item.lng);
+                L.marker([lat, lng], {icon: arezzo}).bindPopup(item.name).addTo(map);
+            }
+        })
+        .catch(function(error){
+            console.log(error);
+        });
+
+
+        // Field States
+        $("#state_id").change(function() {
+            var state_id = $(this).val();
+            var options = '<option value="">Todos</option>';
+            if(!state_id) {
+                $('#city_id').html(options);
+            }
+            axios.get("{{url('/states/list-city-by-id')}}" + '/' + state_id)
+            .then(function(response) {
+                for (var i = 0; i < response.data.length; i++) {
+                    options += '<option value="' +
+                    response.data[i].id + '">' +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
     </script>
 @endsection

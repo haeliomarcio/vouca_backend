@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreStore;
 use Illuminate\Http\Request;
 use App\Models\Store;
+use App\Models\State;
+use Illuminate\Support\Facades\DB;
 
 class StoresController extends Controller
 {
@@ -39,7 +41,8 @@ class StoresController extends Controller
      */
     public function create()
     {
-        return view('stores.new');
+        $states = State::all();
+        return view('stores.new', ['states' => $states]);
     }
 
     /**
@@ -50,8 +53,8 @@ class StoresController extends Controller
      */
     public function store(StoreStore $request)
     {
-        $this->model->create($request);
-        return redirect('stores.list')->with('success', 'Loja criado com sucesso.');
+        $this->model->create($request->all());
+        return redirect('/dashboard/stores')->with('success', 'Loja criado com sucesso.');
     }
 
     /**
@@ -73,8 +76,14 @@ class StoresController extends Controller
      */
     public function edit($id)
     {
-        $context = $this->model->find($id);
-        return view('stores.edit', ['store' => $context]);
+        $context = DB::table('store as sto')
+            ->select('sto.*', 'state.id as state_id')
+            ->join('city', 'city.id', 'sto.city_id')
+            ->join('state', 'state.id', 'city.state_id')
+            ->where('sto.id', $id)
+            ->get()->first();
+        $states = State::all();
+        return view('stores.edit', ['data' => $context, 'states' => $states]);
     }
 
     /**
@@ -87,7 +96,7 @@ class StoresController extends Controller
     public function update(StoreStore $request, $id)
     {
         $context = $this->model->find($id);
-        $context->update($request);
+        $context->update($request->all());
         return redirect('/dashboard/stores')->with('success', 'Loja atualizado com sucesso.');
     }
 

@@ -24,9 +24,18 @@
                 </div>
                 <div class="row">
                     <div class="col">
+                        <label for="city_id">Estados <span class="required">*</span></label>
+                        <select name="state_id" value="{{old('state_id')}}" class="form-control" id="state_id">
+                            <option value="">Selecione</option>
+                            @foreach($states as $sta)
+                                <option value="{{$sta->id}}">{{$sta->name}}</option>
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col">
                         <label for="city_id">Cidade <span class="required">*</span></label>
                         <select name="city_id" value="{{old('password')}}"  type="city" class="form-control" id="city_id">
-                            <option></option>
+                            
                         </select>
                     </div>
                     <div class="col">
@@ -50,4 +59,23 @@
             </form>
         </div>
     </div>
-@endsection 
+@endsection
+@section('scripts')
+    <script>
+        $("#state_id").change(function() {
+            axios.get("{{url('/dashboard/states/list-city-by-id')}}" + '/' + $(this).val())
+            .then(function(response) {
+                var options = '<option value=""></option>';
+                for (var i = 0; i < response.data.length; i++) {
+                    options += '<option value="' +
+                    response.data[i].id + '">' +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+    </script>
+@endsection

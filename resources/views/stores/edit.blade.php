@@ -2,30 +2,54 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Edição - Loja - {{$store->name}}</h3>
+            <h3 class="card-title">Edição - Loja - {{$data->name}}</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
             <br />
             @include('helpers.messages')
-            <form method="POST" action="{{url('/dashboard/stores/update/'.$store->id)}}">
-                {{ csrf_field() }}
+            <form method="POST" action="{{url('/dashboard/stores/update/'.$data->id)}}">
+            {{ csrf_field() }}
                 <div class="form-group">
-                    <label for="inputName">Nome <span class="required">*</span></label>
-                    <input name="name"  value="{{$store->name}}" type="text" class="form-control" id="inputName" placeholder="Nome">
+                    <label for="name">Nome <span class="required">*</span></label>
+                    <input name="name"  value="{{$data->name}}" type="text" class="form-control" id="name" placeholder="Nome">
                 </div>
                 <div class="form-group">
-                    <label for="inputEmail">Email <span class="required">*</span></label>
-                    <input name="email"  value="{{$store->email}}" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                    <label for="information">Informações <span class="required">*</span></label>
+                    <textarea name="information" class="form-control" id="information">{{$data->information}}</textarea>
+                </div>
+                <div class="form-group">
+                    <label for="address">Endereço <span class="required">*</span></label>
+                    <input name="address"  value="{{$data->address}}" type="text" class="form-control" id="address" placeholder="Endereço">
                 </div>
                 <div class="row">
-                    <div class="col">
-                        <label for="inputSenha">Senha <span class="required">*</span></label>
-                        <input name="password"  type="password" class="form-control" id="inputSenha" placeholder="**********">
+                <div class="col">
+                        <label for="state_id">Estados <span class="required">*</span></label>
+                        {{$data->state_id}}
+                        <select name="state_id" value="{{$data->state_id}}" class="form-control" id="state_id">
+                            <option value="">Selecione</option>
+                            @foreach($states as $sta)
+                                @if ($data->state_id === $sta->id)
+                                    <option value="{{$sta->id}}" selected>{{$sta->name}}</option>
+                                @else
+                                    <option value="{{$sta->id}}">{{$sta->name}}</option>
+                                @endif
+                            @endforeach
+                        </select>
                     </div>
                     <div class="col">
-                        <label for="inputConfirmaSenha">Confirmar Senha <span class="required">*</span></label>
-                        <input name="password_confirmation" type="password" class="form-control" id="inputConfirmaSenha" placeholder="**********">
+                        <label for="city_id">Cidade <span class="required">*</span></label>
+                        {{$data->city_id}}
+                        <select name="city_id" value="{{$data->city_id}}" type="city" class="form-control" id="city_id">
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="lat">Latitude <span class="required">*</span></label>
+                        <input name="lat" value="{{$data->lat}}"  type="text" class="form-control" id="lat" placeholder="-13.929354846">
+                    </div>
+                    <div class="col">
+                        <label for="lng">Longitude <span class="required">*</span></label>
+                        <input name="lng" value="{{$data->lng}}" type="text" class="form-control" id="lng" placeholder="-9.98584184">
                     </div>
                 </div>
                 <br />
@@ -41,3 +65,41 @@
         </div>
     </div>
 @endsection 
+@section('scripts')
+    <script>
+        $(document).ready(function() {
+            var state_id = $("#state_id").val();
+            var city_id = "{{$data->city_id}}";
+            axios.get("{{url('/dashboard/states/list-city-by-id')}}" + '/' + state_id)
+            .then(function(response) {
+                var options = '<option value="">Selecione</option>';
+                for (var i = 0; i < response.data.length; i++) {
+                    var selected  = city_id === `${response.data[i].id}` ? 'selected' : '';
+                    options += `<option value="` +
+                    response.data[i].id + `" ${selected}>` +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+        
+        $("#state_id").change(function() {
+            axios.get("{{url('/dashboard/states/list-city-by-id')}}" + '/' + $(this).val())
+            .then(function(response) {
+                var options = '<option value=""></option>';
+                for (var i = 0; i < response.data.length; i++) {
+                    options += '<option value="' +
+                    response.data[i].id + '">' +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+    </script>
+@endsection

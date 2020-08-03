@@ -28,7 +28,7 @@ class EnviaContato extends Mailable
      */
     public function build()
     {
-        return $this->from('haelioferreira@yahoo.com.br')
-                ->view('emails.contato');
+        $this->subject('Novo Contato - Vilarouca');
+        return $this->view('emails.contato');
     }
 }
