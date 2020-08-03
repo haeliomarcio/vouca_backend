@@ -20,6 +20,7 @@ Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
 Route::get('/list-lojas', 'SiteController@listLojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
+Route::get('/vaga', 'SiteController@vaga');
 Route::get('/contato', 'SiteController@contato');
 Route::post('/contato', 'SiteController@sendEmail');
 Route::get('/blog/{name?}', 'SiteController@noticias');
