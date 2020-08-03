@@ -24,35 +24,36 @@
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
                 <h3 class="subtitulo"><strong>Formulário</strong></h3>
-
                 <p class="text-justify" style="margin-left: 20px;">
                     Acreditamos que uma boa base para o crescimento é a comunicação, por isso estamos certos de que seu contato é muito importante para nós. Preencha os campos abaixo para que sua mensagem seja enviada.
                 </p>
                 <hr style="margin-left: 20px">
+                @include('helpers.messages')
                 <div class="container" style="padding: 0 20px 0 20px;">
-                    <form>
+                    <form method="POST" action="{{url('/contato')}}">
+                        {{ csrf_field() }}
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="nome">Nome</label>
-                                <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                                <input name="nome" type="text" value="{{old('nome')}}" class="form-control" id="nome" placeholder="Digite seu nome" required>
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="email">E-mail</label>
-                                <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                                <input  name="email" type="email" value="{{old('email')}}" class="form-control" id="email" placeholder="Digite seu e-mail" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
                                 <label for="telefone">Telefone</label>
-                                <input type="text" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                                <input  name="telefone" type="text" value="{{old('telefone')}}" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="cidade">Cidade</label>
-                                <input type="text" class="form-control" id="cidade" placeholder="Digite sua cidade" required>
+                                <input  name="cidade" type="text"  value="{{old('cidade')}}" class="form-control" id="cidade" placeholder="Digite sua cidade" required>
                             </div>
                             <div class="form-group col-md-4">
                                 <label for="estado">Estado</label>
-                                <select id="estado" class="form-control" required>
+                                <select  name="estado" id="estado" value="{{old('estado')}}" class="form-control" required>
                                     <option disabled selected>Escolher...</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
@@ -87,7 +88,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-6">
                                 <label for="sede">Sede</label>
-                                <select id="sede" class="form-control" required>
+                                <select  name="sede" id="sede" value="{{old('sede')}}" class="form-control" required>
                                     <option disabled selected>Escolher...</option>
                                     <option value="CE">Ceará</option>
                                     <option value="MA">Maranhão</option>
@@ -96,7 +97,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="assunto">Assunto</label>
-                                <select id="assunto" class="form-control" required>
+                                <select  name="assunto" id="assunto" value="{{old('assunto')}}" class="form-control" required>
                                     <option disabled selected>Escolher...</option>
                                     <option value="duvida">Dúvida</option>
                                     <option value="elogios">Elogios</option>
@@ -108,7 +109,7 @@
                         <div class="form-row">
                             <div class="form-group col-md-12">
                                 <label for="mensagem">Mensagem</label>
-                                <textarea class="form-control" id="mensagem" rows="5" required></textarea>
+                                <textarea name="mensagem" class="form-control" id="mensagem" rows="5" required>{{old('mensagem')}}</textarea>
                             </div>
                         </div>
                         

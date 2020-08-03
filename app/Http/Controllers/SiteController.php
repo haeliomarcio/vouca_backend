@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\EmailContato;
+use App\Mail\EnviaContato;
 use App\Models\JobsEmployment;
 use App\Models\News;
+use App\Models\State;
 use App\Models\Store;
-use Carbon\Carbon;
-use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class SiteController extends Controller
 {
@@ -48,13 +50,23 @@ class SiteController extends Controller
     }
 
     public function lojas() {
+        return view('site.lojas',
+        [
+            'stores' => Store::groupBy('id', 'name')->get(),
+            'states' => State::all(),
+        ]);
+    }
+
+
+    public function listLojas() {
         $stores = Store::all();
-        return view('site.lojas', ['stores' => $stores]);
+        return response()->json($stores, 200);
     }
 
     public function trabalheConosco() {
         $jobs = JobsEmployment::all();
-        return view('site.trabalhe-conosco', ['jobs' => $jobs]);
+        $states = State::all();
+        return view('site.trabalhe-conosco', ['jobs' => $jobs, 'states' => $states]);
     }
 
     public function contato() {
@@ -73,18 +85,22 @@ class SiteController extends Controller
         return view('site.vaga');
     }
 
-    public function noticias($noticia) {
+    public function noticias($noticia = null) {
         if(!empty($noticia)) {
             $new = News::where('slug_title', $noticia)->get()->first();
-            return view('site.blog', ['new' => $new]);
+            return view('site.post', ['new' => $new]);
         } else {
-            $news = News::orderBy('id', 'desc')->paginate(9);
+            $news = News::orderBy('id', 'desc')->paginate(5);
             return view('site.blog', ['news' => $news]);
         }
-        
     }
 
-    public function sendEmail(Request $request) {
-        
+    public function sendEmail(EmailContato $request) {
+       $email = Mail::to(new EnviaContato($request->all())) ;
+       if($email) {
+        return back()->with('success', 'E-mail enviado com sucesso.');
+       } else {
+        return back()->with('error', 'Não foi possível enviar o E-mail, por favor, tente mais tarde.');
+       }
     }
 }

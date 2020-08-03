@@ -38,30 +38,25 @@
                 <form>
                     <div class="form-row">
                         <div class="form-group col-md-4">
-                            <label for="estado">Estado</label>
-                            <select id="estado" class="form-control">
-                                <option value="TODOS">TODOS</option>
-                                <option value="CE">CE</option>
-                                <option value="MA">MA</option>
-                                <option value="PI">PI</option>
+                            <label for="state_id">Estado</label>
+                            <select id="state_id" class="form-control">
+                                <option value="">Todos</option>
+                                @foreach($states as $state)
+                                    <option value="{{$state->id}}">{{$state->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         <div class="form-group col-md-4">
-                            <label for="cidade">Cidade</label>
-                            <select id="cidade" class="form-control">
-                                <option value="TODOS">TODOS</option>
-                                <option value="CE">CE</option>
-                                <option value="MA">MA</option>
-                                <option value="PI">PI</option>
+                            <label for="city_id">Cidade</label>
+                            <select id="city_id" class="form-control">
+                                <option value="">Todos</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="vaga">Vaga</label>
                             <select id="vaga" class="form-control">
-                                <option value="TODOS">TODOS</option>
-                                <option value="CE">CE</option>
-                                <option value="MA">MA</option>
-                                <option value="PI">PI</option>
+                                <option value="">Todos</option>
+                                
                             </select>
                         </div>
                     </div>
@@ -97,4 +92,27 @@
             </div>
         </div>
     </div>
+@endsection
+@section('scripts_bottom')
+    <script>
+        $("#state_id").change(function() {
+            var state_id = $(this).val();
+            var options = '<option value="">Todos</option>';
+            if(!state_id) {
+                $('#city_id').html(options);
+            }
+            axios.get("{{url('/states/list-city-by-id')}}" + '/' + state_id)
+            .then(function(response) {
+                for (var i = 0; i < response.data.length; i++) {
+                    options += '<option value="' +
+                    response.data[i].id + '">' +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+    </script>
 @endsection

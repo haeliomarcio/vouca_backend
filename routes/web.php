@@ -18,14 +18,18 @@ Route::get('/tim', 'SiteController@tim');
 Route::get('/crocs', 'SiteController@crocs');
 Route::get('/magrella', 'SiteController@magrella');
 Route::get('/lojas', 'SiteController@lojas');
+Route::get('/list-lojas', 'SiteController@listLojas');
 Route::get('/trabalhe-conosco', 'SiteController@trabalheConosco');
 Route::get('/vaga', 'SiteController@vaga');
 Route::get('/contato', 'SiteController@contato');
+Route::post('/contato', 'SiteController@sendEmail');
+Route::get('/blog/{name?}', 'SiteController@noticias');
 Route::get('/blog', 'SiteController@blog');
 Route::get('/post', 'SiteController@post');
 Route::post('contato', 'SiteController@sendEmail');
-Route::get('/noticias/{noticia?}', 'SiteController@noticias');
-
+Route::prefix('states')->group(function () {
+    Route::get('list-city-by-id/{state_id}', 'StatesController@listCity');
+});
 
 Route::middleware(['auth'])->group(function () {
     Route::prefix('dashboard')->group(function () {
@@ -50,12 +54,12 @@ Route::middleware(['auth'])->group(function () {
         });
 
         Route::prefix('jobs')->group(function () {
-            Route::get('', 'JobsDeploymentController@index');
-            Route::get('create', 'JobsDeploymentController@create');
-            Route::get('edit/{id}', 'JobsDeploymentController@edit');
-            Route::post('store', 'JobsDeploymentController@store');
-            Route::post('update/{id}', 'JobsDeploymentController@update');
-            Route::get('delete/{id}', 'JobsDeploymentController@destroy');
+            Route::get('', 'JobsEmploymentController@index');
+            Route::get('create', 'JobsEmploymentController@create');
+            Route::get('edit/{id}', 'JobsEmploymentController@edit');
+            Route::post('store', 'JobsEmploymentController@store');
+            Route::post('update/{id}', 'JobsEmploymentController@update');
+            Route::get('delete/{id}', 'JobsEmploymentController@destroy');
         });
 
         Route::prefix('curriculum')->group(function () {
@@ -75,5 +79,10 @@ Route::middleware(['auth'])->group(function () {
             Route::post('update/{id}', 'UsersController@update');
             Route::get('delete/{id}', 'UsersController@destroy');
         });
+
+        Route::prefix('states')->group(function () {
+            Route::get('list-city-by-id/{state_id}', 'StatesController@listCity');
+        });
+
     });
 });

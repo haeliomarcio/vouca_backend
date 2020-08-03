@@ -2,15 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreStore;
+use App\Http\Requests\StoreNews;
+use App\Models\Curriculum;
 use Illuminate\Http\Request;
-use App\Models\Store;
+use Illuminate\Support\Str;
+use Carbon\Carbon;
+use Exception;
 
 class CurriculumController extends Controller
 {
 
     protected $model;
-    public function __construct(Store $model) {
+    protected $prefixName = 'curriculum';
+
+    public function __construct(Curriculum $model) {
         $this->model = $model;        
     }
     /**
@@ -22,14 +27,14 @@ class CurriculumController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('name', 'ilike', "%{$search}%")
+            $context = $this->model->where('title', 'ilike', "%{$search}%")
                 ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('email', 'ilike', "%{$search}%")
+                ->orWhere('introduction', 'ilike', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
         }
-        return view('curriculum.list', ['list' => $context]);
+        return view($this->prefixName.'.list', ['list' => $context]);
     }
 
     /**
@@ -39,7 +44,7 @@ class CurriculumController extends Controller
      */
     public function create()
     {
-        return view('stores.new');
+        return view($this->prefixName.'.new');
     }
 
     /**
@@ -48,10 +53,21 @@ class CurriculumController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStore $request)
+    public function store(StoreNews $request)
     {
-        $this->model->create($request);
-        return redirect('stores.list')->with('success', 'Loja criado com sucesso.');
+        try {
+            $params = $request->all();
+            $filename = $request->file('image')->store('', 'site');
+            $params['image_path'] = $filename;
+            $params['slug_title'] = Str::slug($params['title']);
+            if(empty($params['publish'])) {
+                $params['publish'] = Carbon::now()->format('Y-m-d');
+            }
+            $this->model->create($params);
+            return redirect('/dashboard/'.$this->prefixName)->with('success', 'Artigo criado com sucesso.');
+        } catch(Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }   
     }
 
     /**
@@ -62,7 +78,7 @@ class CurriculumController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
     }
 
     /**
@@ -74,7 +90,7 @@ class CurriculumController extends Controller
     public function edit($id)
     {
         $context = $this->model->find($id);
-        return view('stores.edit', ['store' => $context]);
+        return view($this->prefixName.'.edit', ['data' => $context]);
     }
 
     /**
@@ -84,11 +100,20 @@ class CurriculumController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreStore $request, $id)
+    public function update(StoreNews $request, $id)
     {
         $context = $this->model->find($id);
-        $context->update($request);
-        return redirect('/dashboard/stores')->with('success', 'Loja atualizado com sucesso.');
+        $params = $request->all();
+        $params['slug_title'] = Str::slug($params['title']);
+        if($request->file('image')) {
+            if(file_exists(public_path('files/'.$context->image_path))) {
+                unlink(public_path('files/'.$context->image_path));
+            }
+            $filename = $request->file('image')->store('', 'site');
+            $params['image_path'] = $filename;
+        }
+        $context->update($params);
+        return redirect('/dashboard/'.$this->prefixName)->with('success', 'Artigo atualizado com sucesso.');
     }
 
     /**
@@ -100,15 +125,13 @@ class CurriculumController extends Controller
     public function destroy($id)
     {
         $context = $this->model->find($id);
-        
         if($context) {
             if($context->delete()) {
                 return back()
-                ->with('success', 'Loja '. $context->name. ' removido com sucesso');
+                ->with('success', 'Artigo '. $context->name. ' removido com sucesso');
             }
         }
         return back()
-            ->with('error', 'Erro ao remover loja');
-        
+            ->with('error', 'Erro ao remover notícia');
     }
 }

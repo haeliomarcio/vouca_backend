@@ -16,4 +16,8 @@ class Store extends Model
         'lat',
         'lng',
     ];
+
+    public function city() {
+        return $this->belongsTo(City::class);
+    }
 }

@@ -11,6 +11,7 @@
         <link rel="stylesheet" type="text/css" href="{{url('styles/font-awesome.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{url('styles/style.css')}}">
         @yield('styles')
+        @yield('scripts_top')
     </head>
 <body>
     <div class="container-fluid" style="padding: 0;">
@@ -113,7 +114,9 @@
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script type="text/javascript" src="js/popper.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="js/style.js"></script>
+@yield('scripts_bottom')
 </body>
 
 <style>
@@ -258,6 +261,5 @@
 
 
     })
-    
 </script>
 </html>

@@ -4,12 +4,12 @@
      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="sobre.html">
+                    <a href="sobre">
                         <img class="d-block w-100" src="images/home-slider/slider_1.png" alt="Grupo Vilarouca">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="o-boticario.html">
+                    <a href="o-boticario">
                         <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
                     </a>
                 </div>
@@ -19,7 +19,7 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="arezzo.html">
+                    <a href="arezzo">
                         <img class="d-block w-100" src="images/home-slider/slider_4.png" alt="Arezzo">
                     </a>
                 </div>
@@ -29,12 +29,12 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="crocs.html">
+                    <a href="crocs">
                         <img class="d-block w-100" src="images/home-slider/slider_6.png" alt="Crocs">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="magrella.html">
+                    <a href="magrella">
                         <img class="d-block w-100" src="images/home-slider/slider_7.png" alt="Magrella Collection">
                     </a>
                 </div>
@@ -216,7 +216,7 @@
                     <div class="row">
                         @foreach($news as $new) 
                             <div class="col-md-4" >
-                                <div class="item-box-blog">
+                                <div class="item-box-blog" style="background: #ffffff;">
 
                                     <div class="item-box-blog-image">
                                         <!--Date-->
@@ -246,16 +246,18 @@
                                             <p>{!!$new->introduction!!}</p>
                                         </div>
                                         <div class="mt">
-                                            <a href="{{url('noticias/'.$new->slug_title)}}" class="btn bg-blue-ui white read">Ler mais...</a>
+                                            <a href="{{url('blog/'.$new->slug_title)}}" class="btn bg-blue-ui white read">Ler mais...</a>
                                         </div>
                                         <!--Read More Button-->
                                     </div>
                                 </div>
                             </div>
                         @endforeach
+                        @if (count($news) === 1)
                         <div style="justify-content: right; display: flex; width: 100%;">
                             <a href="{{url('/blog')}}" class="btn bg-blue-ui white read" role="button" style="margin-right: 15px;">Ver todas ></a>
                         </div>
+                        @endif
                     </div>
                 </div>
             </div>

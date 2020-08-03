@@ -24,85 +24,24 @@
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
                 <h3 class="subtitulo"><strong>Novidades</strong></h3>
+                @foreach($news as $new)
+                    <div class="row">
+                        <div class="col-md-12 col-xs-12">
+                            <h1 class="subtitulo" style="margin-bottom: 15px">{{$new->title}}</h1>
+                            <div class="wrapper">
+                                <div class="box">
+                                    <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="{{url('/files/'.$new->image_path)}}">
+                                </div>
+                                <p style="margin:5px">{!!$new->introduction!!}</p>
+                                <a href="{{url('/blog/'.$new->slug_title)}}" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
+                            </div>
+                            <hr>
+                        </div>
+                    </div>
+                    <br />
+                @endforeach
 
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>                  
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>                  
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>                  
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>                  
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-12 col-xs-12">
-                     <h1 class="subtitulo" style="margin-bottom: 15px">Título da notícia</h1>                  
-                     <div class="wrapper">
-                        <div class="box">
-                            <img style="float: left; margin-right: 10px; width: 150px; height: 150px;" src="images/no-pic.png">
-                        </div>
-                        <p style="margin:5px">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                        <a href="#" class="btn bg-blue-ui white read" role="button" style="float: right; margin-right: 20px;">Ler mais...</a>
-                     </div>
-					  <hr>
-                  </div>
-                </div>
+                {{ $news->links() }}
             </div>
         </div>
     </div>
