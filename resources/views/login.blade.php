@@ -16,7 +16,7 @@
                 <div class="text-center mb-4">
                     <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
                     <h1 class="h3 mb-3 font-weight-normal">Login - {{config('app.name')}}</h1>
-                    <p</p>
+                    <p><img  width= "130px" src="{{url('/images/logo.png')}}" alt="" /></p>
                 </div>
 
                 <div class="form-group">
