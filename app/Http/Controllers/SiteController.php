@@ -52,7 +52,7 @@ class SiteController extends Controller
     public function lojas() {
         return view('site.lojas',
         [
-            'stores' => Store::groupBy('id', 'name')->get(),
+            'stores' => Store::all(),
             'states' => State::all(),
         ]);
     }

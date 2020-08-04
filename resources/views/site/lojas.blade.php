@@ -2,10 +2,10 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff;
+        color: #fff !important;
     }
     h2::after {
-        background-color: #fff;
+        background-color: #fff !important;
     }
     h3::after {
         top: 114%;
@@ -20,7 +20,7 @@
 @section('content')
     <div class="wrap">
         <div class="content centro" style="margin-top: 30px;">
-            <h2><strong>Lojas</strong></h2>
+            <h2 class="titulo"><strong>Lojas</strong></h2>
             <br /><br />
         </div>
         <div class="container">
