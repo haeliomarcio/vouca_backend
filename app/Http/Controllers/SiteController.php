@@ -8,6 +8,9 @@ use App\Models\JobsEmployment;
 use App\Models\News;
 use App\Models\State;
 use App\Models\Store;
+use GuzzleHttp\Psr7\Request;
+use Illuminate\Queue\Jobs\Job;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Mail;
 
 class SiteController extends Controller
@@ -64,9 +67,66 @@ class SiteController extends Controller
     }
 
     public function trabalheConosco() {
-        $jobs = JobsEmployment::all();
+        $params = request()->input();
         $states = State::all();
+
+        $jobs = DB::table('jobs_employment as job')
+            ->select('job.*', 'cit.name as city_name', 'sta.name as state_name')
+            ->join('city as cit', 'cit.id', 'job.city_id')
+            ->join('state as sta', 'sta.id', 'cit.state_id')
+            ->when($params, function($query, $params) {
+                if(isset($params['state_id']) &&  !empty($params['state_id'])) {
+                    $query->where('sta.id', $params['state_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['city_id']) &&  !empty($params['city_id'])) {
+                    $query->where('job.city_id', $params['city_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['vaga']) &&  !empty($params['vaga'])) {
+                    $query->where('job.id', $params['vaga']);
+                }
+            })
+            ->paginate(15);
+         
+
+      
         return view('site.trabalhe-conosco', ['jobs' => $jobs, 'states' => $states]);
+    }
+
+    public function listJobs() {
+        $params = request()->input();
+        $states = State::all();
+
+        $jobs = DB::table('jobs_employment as job')
+            ->select('job.*', 'cit.name as city_name', 'sta.name as state_name')
+            ->join('city as cit', 'cit.id', 'job.city_id')
+            ->join('state as sta', 'sta.id', 'cit.state_id')
+            ->when($params, function($query, $params) {
+                if(isset($params['state_id']) &&  !empty($params['state_id'])) {
+                    $query->where('sta.id', $params['state_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['city_id']) &&  !empty($params['city_id'])) {
+                    $query->where('job.city_id', $params['city_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['vaga']) &&  !empty($params['vaga'])) {
+                    $query->where('job.id', $params['vaga']);
+                }
+            })
+            ->paginate(15);
+
+        return response()->json(['jobs' => $jobs, 'states' => $states], 200);
+    }
+
+    public function vaga($id) {
+        $job = JobsEmployment::find($id);
+        return view('site.vaga', ['job' => $job]);
     }
 
     public function contato() {
@@ -79,10 +139,6 @@ class SiteController extends Controller
 
     public function post() {
         return view('site.post');
-    }
-
-    public function vaga() {
-        return view('site.vaga');
     }
 
     public function noticias($noticia = null) {

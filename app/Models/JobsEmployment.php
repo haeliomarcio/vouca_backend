@@ -12,7 +12,12 @@ class JobsEmployment extends Model
         'title',
         'description',
         'status',
+        'city_id',
         'begin',
         'end',
     ];
+
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
 }

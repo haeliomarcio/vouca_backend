@@ -664,14 +664,26 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
-        $int = 1;
         // Cidades Ceará
         foreach($cidadesCeara as $key => $c) {
             DB::table('city')->insert([
                 'name' => $cidadesCeara[$key],
-                'state_id' => $int,
+                'state_id' => 1,
             ]);
-            $int++;
+        }
+        // Cidades Piaui
+        foreach($cidadesPiaui as $key => $c) {
+            DB::table('city')->insert([
+                'name' => $cidadesPiaui[$key],
+                'state_id' => 3,
+            ]);
+        }
+        // Cidades MAranhão
+        foreach($cidadesMaranhao as $key => $c) {
+            DB::table('city')->insert([
+                'name' => $cidadesMaranhao[$key],
+                'state_id' => 2,
+            ]);
         }
 
         $listStore = [

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\StoreJobs;
 use App\Http\Requests\StoreNews;
+use App\Models\City;
 use App\Models\JobsEmployment;
 use App\Models\State;
 use Illuminate\Http\Request;
@@ -30,7 +31,8 @@ class JobsEmploymentController extends Controller
             $search = $request->input('search');
             $context = $this->model->where('title', 'ilike', "%{$search}%")
                 ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('introduction', 'ilike', "%{$search}%")
+                ->orWhere('title', 'ilike', "%{$search}%")
+                ->orWhere('description', 'ilike', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
@@ -57,7 +59,7 @@ class JobsEmploymentController extends Controller
     public function store(StoreJobs $request)
     {
         try {
-            $params = $request->all();
+            $params = $request->all();            
             $this->model->create($params);
             return redirect('/dashboard/'.$this->prefixName)->with('success', 'Vaga criada com sucesso.');
         } catch(Exception $e) {
@@ -85,7 +87,13 @@ class JobsEmploymentController extends Controller
     public function edit($id)
     {
         $context = $this->model->find($id);
-        return view($this->prefixName.'.edit', ['data' => $context]);
+        $resultState = City::find($context->city_id);
+        $context->state_id = $resultState->state_id;
+
+        return view($this->prefixName.'.edit', [
+            'data' => $context, 
+            'states' => State::all()]
+        );
     }
 
     /**
