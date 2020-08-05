@@ -39,7 +39,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-4">
                             <label for="state_id">Estado</label>
-                            <select id="state_id" class="form-control">
+                            <select name="state_id" id="state_id" class="form-control">
                                 <option value="">Todos</option>
                                 @foreach($states as $state)
                                     <option value="{{$state->id}}">{{$state->name}}</option>
@@ -48,15 +48,17 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="city_id">Cidade</label>
-                            <select id="city_id" class="form-control">
+                            <select name="city_id" id="city_id" class="form-control">
                                 <option value="">Todos</option>
                             </select>
                         </div>
                         <div class="form-group col-md-4">
                             <label for="vaga">Vaga</label>
-                            <select id="vaga" class="form-control">
+                            <select name="vaga" id="vaga" class="form-control">
                                 <option value="">Todos</option>
-                                
+                                @foreach($jobs as $job) 
+                                    <option value="{{$job->id}}">{{$job->title}}</option>  
+                                @endforeach
                             </select>
                         </div>
                     </div>
@@ -69,34 +71,63 @@
                             <th scope="col">Cidade/Estado</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody id="tabela">
+                        <!-- @foreach($jobs as $job) 
                         <tr data-href="#">
-                            <td style="color: #0a6961; font-weight: bold;">Analista Financeiro</td>
-                            <td>Iguatu/CE</td>
+                            <td style="color: #0a6961; font-weight: bold;">{{$job->title}}</td>
+                            <td>{{$job->city_name}}/{{$job->state_name}}</td>
                         </tr>
-                        <tr data-href="#">
-                            <td style="color: #0a6961; font-weight: bold;">Operador de Caixa</td>
-                            <td>Cedro/CE</td>
-                        </tr>
-                        <tr data-href="#">
-                            <td style="color: #0a6961; font-weight: bold;">Operador de Caixa</td>
-                            <td>Iguatu/CE</td>
-                        </tr>
-                        <tr data-href="#">
-                            <td style="color: #0a6961; font-weight: bold;">Vendedor</td>
-                            <td>Quixeramobim/CE</td>
-                        </tr>
+                        @endforeach -->
                     </tbody>
                 </table>
-
+                {{ $jobs->links() }}
             </div>
         </div>
     </div>
 @endsection
 @section('scripts_bottom')
     <script>
+
+        function listJobs() {
+            var state_id = $("#state_id").val();
+            var city_id = $("#city_id").val();
+            var vaga = $("#vaga").val();
+            $('#tabela').html('');
+            var row = '';
+            axios.get(`{{url('/list-jobs/')}}?state_id=${state_id}&city_id=${city_id}&vaga=${vaga}`)
+            .then(function(response) {
+                for (item of response.data.jobs.data) {
+                    row += '<tr>';
+                    row += '<td style="color: #0a6961; font-weight: bold;">';
+                    row += `<a style="color: #0a6961;" href="{{url('/vaga/${item.id}')}}">${item.title}</a>`;
+                    row += '</td>';
+                    row += '<td>';
+                    row += item.city_name + '/' + item.state_name;
+                    row += '</td>';
+                    row += '</tr>';
+                }
+                $('#tabela').html(row);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+
+        $(document).ready(function(){
+            listJobs();
+        });
+
+        $("#city_id").change(function() {
+            listJobs();
+        });
+
+        $("#vaga").change(function() {
+            listJobs();
+        });
+
         $("#state_id").change(function() {
             var state_id = $(this).val();
+            listJobs();
             var options = '<option value="">Todos</option>';
             if(!state_id) {
                 $('#city_id').html(options);

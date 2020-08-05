@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JobsEmployment;
+use App\Models\News;
+use App\Models\Store;
+use App\User;
 use Illuminate\Http\Request;
 
 class DashboardController extends Controller
@@ -13,7 +17,12 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        return view('dashboard');
+        return view('dashboard', [
+            'total_stores' => Store::count(),
+            'total_users' => User::count(),
+            'total_news' => News::count(),
+            'total_jobs' => JobsEmployment::count(),
+        ]);
     }
 
     /**

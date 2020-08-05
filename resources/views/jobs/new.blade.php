@@ -20,7 +20,7 @@
                 </div>
                 <div class="row">
                     <div class="col">
-                        <label for="city_id">Estados <span class="required">*</span></label>
+                        <label for="state_id">Estados <span class="required">*</span></label>
                         <select name="state_id" value="{{old('state_id')}}" class="form-control" id="state_id">
                             <option value="">Selecione</option>
                             @foreach($states as $sta)

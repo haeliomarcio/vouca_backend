@@ -8,7 +8,7 @@
         <div class="card-body">
             <br />
             @include('helpers.messages')
-            <form method="POST" action="{{url('/dashboard/stores/update/'.$data->id)}}">
+            <form method="POST" action="{{url('/dashboard/jobs/update/'.$data->id)}}">
             {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Título da Vaga <span class="required">*</span></label>
@@ -24,6 +24,26 @@
                         placeholder="Descrição">{{$data->description}}</textarea>
                 </div>
                 <div class="row">
+                    <div class="col">
+                        <label for="state_id">Estados <span class="required">*</span></label>
+                        <select name="state_id" value="{{$data->state_id}}" class="form-control" id="state_id">
+                            <option value="">Selecione</option>
+                            @foreach($states as $sta)
+                                @if($data->state_id === $sta->id)
+                                    <option value="{{$sta->id}}" selected>{{$sta->name}}</option>
+                                @else
+                                    <option value="{{$sta->id}}">{{$sta->name}}</option>
+                                @endif
+                                
+                            @endforeach
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="city_id">Cidade <span class="required">*</span></label>
+                        <select name="city_id" value="{{$data->city_id}}"  type="city" class="form-control" id="city_id">
+
+                        </select>
+                    </div>
                     <div class="col">
                         <label for="status">Status <span class="required">*</span></label>
                         <select name="status" value="{{$data->status}}" class="form-control" id="status">
@@ -54,3 +74,40 @@
         </div>
     </div>
 @endsection 
+@section('scripts')
+    <script>
+        $(document).ready(function(){
+            var city_id = "{{$data->city_id}}";
+            axios.get("{{url('/dashboard/states/list-city-by-id')}}" + '/' + $('#state_id').val())
+            .then(function(response) {
+                var options = '<option value="">Selecione</option>';
+                for (var i = 0; i < response.data.length; i++) {
+                    var selected = (parseInt(city_id) === parseInt(response.data[i].id) ? 'selected' : '');
+                    options += '<option value="' +
+                    response.data[i].id + `"${selected}>` +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+
+        $("#state_id").change(function() {
+            axios.get("{{url('/dashboard/states/list-city-by-id')}}" + '/' + $(this).val())
+            .then(function(response) {
+                var options = '<option value="">Selecione</option>';
+                for (var i = 0; i < response.data.length; i++) {
+                    options += '<option value="' +
+                    response.data[i].id + '">' +
+                    response.data[i].name + '</option>';
+                }
+                $('#city_id').html(options);
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        });
+    </script>
+@endsection
