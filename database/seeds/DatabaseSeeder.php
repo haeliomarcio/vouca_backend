@@ -678,7 +678,7 @@ class DatabaseSeeder extends Seeder
                 'state_id' => 3,
             ]);
         }
-        // Cidades MAranhão
+        // Cidades Maranhão
         foreach($cidadesMaranhao as $key => $c) {
             DB::table('city')->insert([
                 'name' => $cidadesMaranhao[$key],

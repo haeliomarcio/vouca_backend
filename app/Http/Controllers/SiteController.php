@@ -62,7 +62,27 @@ class SiteController extends Controller
 
 
     public function listLojas() {
-        $stores = Store::all();
+        $params = request()->input();
+        $stores = DB::table('store as sto')
+            ->select('sto.*')
+            ->join('city as cit', 'cit.id', 'sto.city_id')
+            ->join('state as sta', 'sta.id', 'cit.state_id')
+            ->when($params, function($query, $params) {
+                if(isset($params['state_id']) &&  !empty($params['state_id'])) {
+                    $query->where('sta.id', $params['state_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['city_id']) &&  !empty($params['city_id'])) {
+                    $query->where('sto.city_id', $params['city_id']);
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['store']) &&  !empty($params['store'] && $params['store'] != 'undefined')) {
+                    $query->where('sto.name', 'ilike', "{$params['store']}");
+                }
+            })
+            ->get();
         return response()->json($stores, 200);
     }
 

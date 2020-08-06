@@ -59,7 +59,7 @@
                 </div>
             </form>
         </div>
-        <div id="map" style="width:100%; height: 600px;"></div>
+        <div id="map" style="width:100%; height: 400px;"></div>
     </div>
 @endsection
 @section('scripts_bottom')
@@ -68,6 +68,7 @@
         L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         }).addTo(map);
+
         var LeafIcon = L.Icon.extend({
             options: {
                 //shadowUrl: 'leaf-shadow.png',
@@ -78,31 +79,67 @@
                 popupAnchor:  [-3, -76]
             }
         });
+        
         var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'}),
             boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'}),
-            cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
+            cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'}),
+            crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'}),
+            magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'}),
+            tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
 
         // L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
         // L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
         // L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
         // L.marker([-6.3601557, -39.3013629], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
+        function listStores() {  
+            var state_id = $("#state_id").val();
+            var city_id = $("#city_id").val();
+            var store = $("#store").val();
 
-        axios.get('/list-lojas')
-        .then(function(response) {
-            for(item of response.data) {
-                var lat = parseFloat(item.lat);
-                var lng = parseFloat(item.lng);
-                L.marker([lat, lng], {icon: arezzo}).bindPopup(item.name).addTo(map);
+            axios.get(`{{url('/list-lojas/')}}?state_id=${state_id}&city_id=${city_id}&store=${store}`)
+            .then(function(response) {
+                for(item of response.data) {
+                    var lat = parseFloat(item.lat);
+                    var lng = parseFloat(item.lng);
+                    var name = item.name;
+                    L.marker([lat, lng], {icon: getIcons(item.name)}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                }
+            })
+            .catch(function(error){
+                console.log(error);
+            });
+        }
+        function getIcons(name) {
+            switch (name) {
+            case 'O BOTICARIO':
+                return boticario;
+                break;
+            case 'CACAU SHOW':
+                return cacauShow;
+                break;
+            case 'AREZZO':
+                return arezzo;
+                // expected output: "Mangoes and papayas are $2.79 a pound."
+                break;
+            case 'MAGRELLA COLLECTION':
+                return magrella;
+                break;
+            case 'CROCS':
+                return crocs;
+                break
+            default:
+                return arezzo;
             }
-        })
-        .catch(function(error){
-            console.log(error);
-        });
+        }
+
+        listStores();
 
 
         // Field States
         $("#state_id").change(function() {
             var state_id = $(this).val();
+            map.removeControl({});
+            listStores();
             var options = '<option value="">Todos</option>';
             if(!state_id) {
                 $('#city_id').html(options);
