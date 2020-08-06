@@ -112,7 +112,7 @@ class SiteController extends Controller
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['magrella']) &&  !empty($params['magrella']) && $params['magrella'] == 'true') {
-                        $query->orWhere('sto.name', 'like', 'Magrella');
+                        $query->orWhere('sto.name', 'like', '%MAGRELLA%');
                     }
                 });
             }) 
