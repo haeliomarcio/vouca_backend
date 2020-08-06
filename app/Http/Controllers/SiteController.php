@@ -123,6 +123,36 @@ class SiteController extends Controller
         return response()->json($stores, 200);
     }
 
+    public function findStore() {
+        $params = request()->input();
+        
+        DB::enableQueryLog();
+        $stores = DB::table('store as sto')
+            ->select('sto.*')
+            ->join('city as cit', 'cit.id', 'sto.city_id')
+            ->join('state as sta', 'sta.id', 'cit.state_id')
+            ->when($params, function($query, $params) {
+                if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
+                    $query->orWhere('sta.name', 'ilike', 'Ceará');
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
+                    $query->orWhere('sta.name', 'ilike', 'Maranhão');
+                }
+            })
+            ->when($params, function($query, $params) {
+                if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
+                    $query->orWhere('sta.name', 'ilike', 'Piauí');
+                }
+            })
+            ->where('sto.name', 'ilike', $params['store'])
+            ->get();
+
+             // dd(DB::getQueryLog());
+        return response()->json($stores, 200);
+    }
+
     public function trabalheConosco() {
         $params = request()->input();
         $states = State::all();
