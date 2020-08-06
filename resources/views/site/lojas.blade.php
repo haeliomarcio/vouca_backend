@@ -50,7 +50,7 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect">
                                         <label class="btn btn-default">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="ceara" name="ceara" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                 <h5>CEARÁ</h5>
                                             </div>
@@ -63,7 +63,7 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect">
                                         <label class="btn btn-default">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="maranhao" name="maranhao" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                 <h5>MARANHÃO</h5>
                                             </div>
@@ -76,7 +76,7 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect">
                                         <label class="btn btn-default">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="piaui" name="piaui" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                 <h5>PIAUÍ</h5>
                                             </div>
@@ -99,9 +99,9 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
                                         <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="logo_boticario" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/boticario.png">
+                                                <img id="img_boticario" src="images/marcas/marcas/boticario.png">
                                             </div>
                                         </label>
                                     </div>
@@ -112,9 +112,9 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
                                         <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="logo_cacaushow" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/cacau-show.png">
+                                                <img id="img_cacaushow" src="images/marcas/marcas/cacau-show.png">
                                             </div>
                                         </label>
                                     </div>
@@ -125,9 +125,9 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
                                         <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="logo_arezzo" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/arezzo.png">
+                                                <img id="img_arezzo" src="images/marcas/marcas/arezzo.png">
                                             </div>
                                         </label>
                                     </div>
@@ -138,9 +138,22 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
                                         <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox" id="logo_tim" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/tim.png">
+                                                <img id="img_tim" src="images/marcas/marcas/tim.png">
+                                            </div>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="items col-sm-4" style="float: left;">
+                                <div class="info-block block-info clearfix">
+                                    <div data-toggle="buttons" class="btn-group bizlocmoduleselect" style="width: 100%; height: 100px;">
+                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                            <div class="bizcontent">
+                                                <input type="checkbox" id="logo_crocs" name="var_id[]" autocomplete="off" value="">
+                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                <img id="img_crocs" src="images/marcas/marcas/crocs.png">
                                             </div>
                                         </label>
                                     </div>
@@ -151,22 +164,9 @@
                                     <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
                                         <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
                                             <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
+                                                <input type="checkbox"  id="logo_magrella" name="var_id[]" autocomplete="off" value="">
                                                 <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/crocs.png">
-                                            </div>
-                                        </label>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img src="images/marcas/marcas/magrella.png">
+                                                <img  id="img_magrella" src="images/marcas/marcas/magrella.png">
                                             </div>
                                         </label>
                                     </div>
@@ -219,11 +219,22 @@
 @endsection
 @section('scripts_bottom')
     <script>
-        var map = L.map('map').setView([-4.053263, -43.0394255], 6);
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        }).addTo(map);
+        // var map = L.map('map').setView([-4.053263, -43.0394255], 6);
+        var map = L.map('map', {
+            center: [-4.053263, -43.0394255],
+            zoom: 6,
+            scrollWheelZoom: false
+        });
+        
+        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        // }).addTo(map);
 
+        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+                attribution: '©OpenStreetMap, ©CartoDB'
+        }).addTo(map);    
+
+        var mapMarkers = [];
         var LeafIcon = L.Icon.extend({
             options: {
                 //shadowUrl: 'leaf-shadow.png',
@@ -235,35 +246,46 @@
             }
         });
         
-        var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'}),
-            boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'}),
-            cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'}),
-            crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'}),
-            magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'}),
-            tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
-
-        // L.marker([51.5, -0.09], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
-        // L.marker([51.495, -0.083], {icon: redIcon}).bindPopup("I am a red leaf.").addTo(map);
-        // L.marker([51.49, -0.1], {icon: orangeIcon}).bindPopup("I am an orange leaf.").addTo(map);
-        // L.marker([-6.3601557, -39.3013629], {icon: greenIcon}).bindPopup("I am a green leaf.").addTo(map);
+        var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
+        var boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
+        var cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
+        var crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'});
+        var magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'});
+        var tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
+        
         function listStores() {  
-            var state_id = $("#state_id").val();
-            var city_id = $("#city_id").val();
-            var store = $("#store").val();
+            var ceara = $("#ceara").prop('checked');
+            var maranhao = $("#maranhao").prop('checked');
+            var piaui = $("#piaui").prop('checked');
 
-            axios.get(`{{url('/list-lojas/')}}?state_id=${state_id}&city_id=${city_id}&store=${store}`)
+            var boticario = $("#logo_boticario").prop('checked');
+            var cacaushow = $("#logo_cacaushow").prop('checked');
+            var arezzo = $("#logo_arezzo").prop('checked');
+            var tim = $("#logo_tim").prop('checked');
+            var crocs = $("#logo_crocs").prop('checked');
+            var magrella = $("#logo_magrella").prop('checked');
+
+            axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
             .then(function(response) {
                 for(item of response.data) {
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
-                    L.marker([lat, lng], {icon: getIcons(item.name)}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                    var marker = L.marker([lat, lng], {icon: getIcons(item.name)}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                    mapMarkers.push(marker);
                 }
             })
             .catch(function(error){
                 console.log(error);
             });
         }
+
+        function removeAllMarker() {
+            for(var i = 0; i < mapMarkers.length; i++){
+                map.removeLayer(mapMarkers[i]);
+            }
+        }
+
         function getIcons(name) {
             switch (name) {
             case 'O BOTICARIO':
@@ -283,17 +305,28 @@
                 return crocs;
                 break
             default:
-                return arezzo;
+                return tim;
             }
         }
 
         listStores();
 
+        $("#ceara").change(function() {
+            removeAllMarker();
+            listStores();
+        });
+        $("#maranhao").change(function() {
+            removeAllMarker();
+            listStores();
+        });
+        $("#piaui").change(function() {
+            removeAllMarker();
+            listStores();
+        });
 
         // Field States
         $("#state_id").change(function() {
             var state_id = $(this).val();
-            map.removeControl({});
             listStores();
             var options = '<option value="">Todos</option>';
             if(!state_id) {
@@ -322,5 +355,79 @@
                 }).show();
             });
         });
+
+        $("#logo_boticario").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_boticario");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/boticario-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/boticario.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        $("#logo_cacaushow").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_cacaushow");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/cacau-show-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/cacau-show.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        $("#logo_arezzo").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_arezzo");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/arezzo-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/arezzo.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        $("#logo_tim").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_tim");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/tim-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/tim.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        $("#logo_crocs").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_crocs");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/crocs-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/crocs.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        $("#logo_magrella").change(function() {
+            var check = $(this).prop('checked');
+            var img  = $("#img_magrella");
+            if(check) {
+                img.prop('src', 'images/marcas/marcas/magrella-white.png');
+            } else {
+                img.prop('src', 'images/marcas/marcas/magrella.png');
+            }
+            removeAllMarker();
+            listStores();
+        });
+
+        
     </script>
 @endsection

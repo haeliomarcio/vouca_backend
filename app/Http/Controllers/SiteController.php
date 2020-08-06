@@ -63,26 +63,63 @@ class SiteController extends Controller
 
     public function listLojas() {
         $params = request()->input();
+        
+        DB::enableQueryLog();
         $stores = DB::table('store as sto')
             ->select('sto.*')
             ->join('city as cit', 'cit.id', 'sto.city_id')
             ->join('state as sta', 'sta.id', 'cit.state_id')
             ->when($params, function($query, $params) {
-                if(isset($params['state_id']) &&  !empty($params['state_id'])) {
-                    $query->where('sta.id', $params['state_id']);
+                if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
+                    $query->orWhere('sta.name', 'ilike', 'Ceará');
                 }
             })
             ->when($params, function($query, $params) {
-                if(isset($params['city_id']) &&  !empty($params['city_id'])) {
-                    $query->where('sto.city_id', $params['city_id']);
+                if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
+                    $query->orWhere('sta.name', 'ilike', 'Maranhão');
                 }
             })
             ->when($params, function($query, $params) {
-                if(isset($params['store']) &&  !empty($params['store'] && $params['store'] != 'undefined')) {
-                    $query->where('sto.name', 'ilike', "{$params['store']}");
+                if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
+                    $query->orWhere('sta.name', 'ilike', 'Piauí');
                 }
             })
+            ->where(function($query) use ($params){
+                $query->when($params, function($query, $params) {
+                    if(isset($params['boticario']) &&  !empty($params['boticario']) && $params['boticario'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'O Boticario');
+                    }
+                })
+                ->when($params, function($query, $params) {
+                    if(isset($params['cacaushow']) &&  !empty($params['cacaushow']) && $params['cacaushow'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'Cacau Show');
+                    }
+                })
+                ->when($params, function($query, $params) {
+                    if(isset($params['arezzo']) &&  !empty($params['arezzo']) && $params['arezzo'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'Arezzo');
+                    }
+                })
+                ->when($params, function($query, $params) {
+                    if(isset($params['tim']) &&  !empty($params['tim']) && $params['tim'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'Tim');
+                    }
+                })
+                ->when($params, function($query, $params) {
+                    if(isset($params['crocs']) &&  !empty($params['crocs']) && $params['crocs'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'Crocs');
+                    }
+                })
+                ->when($params, function($query, $params) {
+                    if(isset($params['magrella']) &&  !empty($params['magrella']) && $params['magrella'] == 'true') {
+                        $query->orWhere('sto.name', 'ilike', 'Magrella');
+                    }
+                });
+            }) 
+            
             ->get();
+
+            // dd(DB::getQueryLog());
         return response()->json($stores, 200);
     }
 
@@ -109,10 +146,7 @@ class SiteController extends Controller
                     $query->where('job.id', $params['vaga']);
                 }
             })
-            ->paginate(15);
-         
-
-      
+            ->paginate(15);      
         return view('site.trabalhe-conosco', ['jobs' => $jobs, 'states' => $states]);
     }
 
