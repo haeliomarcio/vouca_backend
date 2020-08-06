@@ -71,48 +71,48 @@ class SiteController extends Controller
             ->join('state as sta', 'sta.id', 'cit.state_id')
             ->when($params, function($query, $params) {
                 if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
-                    $query->orWhere('sta.name', 'ilike', 'Ceará');
+                    $query->orWhere('sta.name', 'like', '%Ceará%');
                 }
             })
             ->when($params, function($query, $params) {
                 if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
-                    $query->orWhere('sta.name', 'ilike', 'Maranhão');
+                    $query->orWhere('sta.name', 'like', '%Maranhão%');
                 }
             })
             ->when($params, function($query, $params) {
                 if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
-                    $query->orWhere('sta.name', 'ilike', 'Piauí');
+                    $query->orWhere('sta.name', 'like', '%Piauí%');
                 }
             })
             ->where(function($query) use ($params){
                 $query->when($params, function($query, $params) {
                     if(isset($params['boticario']) &&  !empty($params['boticario']) && $params['boticario'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'O Boticario');
+                        $query->orWhere('sto.name', 'like', '%O Boticario%');
                     }
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['cacaushow']) &&  !empty($params['cacaushow']) && $params['cacaushow'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'Cacau Show');
+                        $query->orWhere('sto.name', 'like', '%Cacau Show%');
                     }
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['arezzo']) &&  !empty($params['arezzo']) && $params['arezzo'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'Arezzo');
+                        $query->orWhere('sto.name', 'like', 'Arezzo');
                     }
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['tim']) &&  !empty($params['tim']) && $params['tim'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'Tim');
+                        $query->orWhere('sto.name', 'like', 'Tim');
                     }
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['crocs']) &&  !empty($params['crocs']) && $params['crocs'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'Crocs');
+                        $query->orWhere('sto.name', 'like', 'Crocs');
                     }
                 })
                 ->when($params, function($query, $params) {
                     if(isset($params['magrella']) &&  !empty($params['magrella']) && $params['magrella'] == 'true') {
-                        $query->orWhere('sto.name', 'ilike', 'Magrella');
+                        $query->orWhere('sto.name', 'like', 'Magrella');
                     }
                 });
             }) 
@@ -133,20 +133,20 @@ class SiteController extends Controller
             ->join('state as sta', 'sta.id', 'cit.state_id')
             ->when($params, function($query, $params) {
                 if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
-                    $query->orWhere('sta.name', 'ilike', 'Ceará');
+                    $query->orWhere('sta.name', 'like', 'Ceará');
                 }
             })
             ->when($params, function($query, $params) {
                 if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
-                    $query->orWhere('sta.name', 'ilike', 'Maranhão');
+                    $query->orWhere('sta.name', 'like', 'Maranhão');
                 }
             })
             ->when($params, function($query, $params) {
                 if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
-                    $query->orWhere('sta.name', 'ilike', 'Piauí');
+                    $query->orWhere('sta.name', 'like', 'Piauí');
                 }
             })
-            ->where('sto.name', 'ilike', $params['store'])
+            ->where('sto.name', 'like', $params['store'])
             ->get();
 
              // dd(DB::getQueryLog());
