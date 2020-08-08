@@ -119,7 +119,7 @@ class SiteController extends Controller
             
             ->get();
 
-            // dd(DB::getQueryLog());
+            //  dd(DB::getQueryLog());
         return response()->json($stores, 200);
     }
 
@@ -149,7 +149,7 @@ class SiteController extends Controller
             ->where('sto.name', 'like', $params['store'])
             ->get();
 
-             // dd(DB::getQueryLog());
+             //  dd(DB::getQueryLog());
         return response()->json($stores, 200);
     }
 

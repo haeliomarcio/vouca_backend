@@ -53,13 +53,6 @@
             }
         });
         
-        var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
-        var boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
-        var cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
-        var crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'});
-        var magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'});
-        var tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
-        
         function listStores() {  
             axios.get(`{{url('/find-store/')}}?store=O Boticario`)
             .then(function(response) {
@@ -67,7 +60,7 @@
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
-                    var marker = L.marker([lat, lng], {icon: boticario}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                    var marker = L.marker([lat, lng], {icon: icon_boticario}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
                     mapMarkers.push(marker);
                 }
             })
