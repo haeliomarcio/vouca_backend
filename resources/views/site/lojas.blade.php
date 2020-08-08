@@ -231,18 +231,18 @@
         // }).addTo(map);
 
         var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-                attribution: '©OpenStreetMap, ©CartoDB'
+                attribution: 'GrupoVilarouca'
         }).addTo(map);    
 
         var mapMarkers = [];
         var LeafIcon = L.Icon.extend({
             options: {
                 //shadowUrl: 'leaf-shadow.png',
-                iconSize:     [40, 55],
-                shadowSize:   [50, 64],
-                iconAnchor:   [22, 94],
-                shadowAnchor: [4, 62],
-                popupAnchor:  [-3, -76]
+                // iconSize:     [40, 55],                
+                // shadowSize:   [50, 64],
+                // iconAnchor:   [22, 94],
+                // shadowAnchor: [4, 62],
+                // popupAnchor:  [-3, -76]
             }
         });
         

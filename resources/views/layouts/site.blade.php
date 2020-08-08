@@ -13,14 +13,35 @@
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
         @yield('styles')
         @yield('scripts_top')
+
+        <style>
+            #menu li a{
+                color: #ffffff;
+            }
+            #menu li.sociais a{
+                float: left;
+            }
+            #menu li.sociais a i{
+                font-size: 20px;
+            }
+            #menu li a::after { 
+                content: "";
+                width: 800px;
+                height: 5px;
+                border-width: 0 0.3em 0.25em 0;
+                background-color: yellow;
+                border-bottom: 3px solid yellow;
+            }
+        </style>
     </head>
 <body>
     <div class="container-fluid" style="padding: 0;">
         
         <!-- Menu Início -->
-        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #ffffff;">
+        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #d79d32;">
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
                     <img src="{{url('images/logo.png')}}" height="50">
@@ -34,23 +55,33 @@
                 <div id="menu" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto  nav-menu">
                         <li class="nav-item">
-                            <a href="{{url('/')}}" class="nav-link font-weight-bold" style="font-size: 14px;">INÍCIO</a>
+                            <a href="{{url('/')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 14px;">O GRUPO</a>
+                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 14px;">O Grupo</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/marcas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">MARCAS</a>
+                            <a href="{{url('/marcas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Marcas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">LOJAS</a>
+                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Lojas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 14px;">TRABALHE CONOSCO</a>
+                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Trabalhe Conosco</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">CONTATO</a>
+                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Contato</a>
                         </li>
+                        <li class="nav-item sociais">
+                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+                            &nbsp;
+                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                        </li>
+                        
                     </ul>
                 </div>
             </div>
@@ -119,6 +150,37 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="js/style.js"></script>
+<script>
+    var icon_arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
+    var icon_boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
+    var icon_cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
+    var icon_crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'});
+    var icon_magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'});
+    var icon_tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
+
+    function getIcons(name) {
+        switch (name) {
+        case 'O BOTICARIO':
+            return icon_boticario;
+            break;
+        case 'CACAU SHOW':
+            return icon_cacauShow;
+            break;
+        case 'AREZZO':
+            return icon_arezzo;
+            break;
+        case 'MAGRELLA COLLECTION':
+            return icon_magrella;
+            break;
+        case 'CROCS':
+            return icon_crocs;
+            break
+        default:
+            return icon_tim;
+        }
+    }
+    
+</script>
 @yield('scripts_bottom')
 </body>
 
@@ -177,9 +239,9 @@
 
         ///////* MARANHAO *///////
         $('.maranhaoImg2').mouseenter(function () {
-//                                $('.cacau-show').hide('slow');
-//                                $('.magrella').hide('slow');
-//                                $('.tim').hide('slow');
+        //                                $('.cacau-show').hide('slow');
+        //                                $('.magrella').hide('slow');
+        //                                $('.tim').hide('slow');
             $('.cacau-show').removeClass('marcaAtivo').addClass('marcaInativo');
             $('.magrella').removeClass('marcaAtivo').addClass('marcaInativo');
             $('.tim').removeClass('marcaAtivo').addClass('marcaInativo');
@@ -189,9 +251,9 @@
         });
 
         $('.maranhaoImg2').mouseout(function () {
-//                                $('.cacau-show').show('slow');
-//                                $('.magrella').show('slow');
-//                                $('.tim').show('slow');
+        //                                $('.cacau-show').show('slow');
+        //                                $('.magrella').show('slow');
+        //                                $('.tim').show('slow');
             $('.cacau-show').removeClass('marcaInativo').addClass('marcaAtivo');
             $('.magrella').removeClass('marcaInativo').addClass('marcaAtivo');
             $('.tim').removeClass('marcaInativo').addClass('marcaAtivo');
@@ -203,9 +265,9 @@
 
         ///////* PIAUI *///////
         $('.piauiImg2').mouseenter(function () {
-//                                $('.cacau-show').hide('slow');
-//                                $('.magrella').hide('slow');
-//                                $('.tim').hide('slow');
+        //                                $('.cacau-show').hide('slow');
+        //                                $('.magrella').hide('slow');
+        //                                $('.tim').hide('slow');
             $('.cacau-show').removeClass('marcaAtivo').addClass('marcaInativo');
             $('.magrella').removeClass('marcaAtivo').addClass('marcaInativo');
             $('.tim').removeClass('marcaAtivo').addClass('marcaInativo');
@@ -215,9 +277,9 @@
         });
 
         $('.piauiImg2').mouseout(function () {
-//                                $('.cacau-show').show('slow');
-//                                $('.magrella').show('slow');
-//                                $('.tim').show('slow');
+        //                                $('.cacau-show').show('slow');
+        //                                $('.magrella').show('slow');
+        //                                $('.tim').show('slow');
             $('.cacau-show').removeClass('marcaInativo').addClass('marcaAtivo');
             $('.magrella').removeClass('marcaInativo').addClass('marcaAtivo');
             $('.tim').removeClass('marcaInativo').addClass('marcaAtivo');
@@ -260,9 +322,6 @@
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
         });
-
-
-
     })
 </script>
 </html>

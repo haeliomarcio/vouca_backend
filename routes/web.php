@@ -32,7 +32,9 @@ Route::post('contato', 'SiteController@sendEmail');
 Route::prefix('states')->group(function () {
     Route::get('list-city-by-id/{state_id}', 'StatesController@listCity');
 });
-
+Route::get('/email', function() {
+    return view('emails.contato');
+});
 Route::middleware(['auth'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', 'DashboardController@index');

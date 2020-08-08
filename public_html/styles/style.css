@@ -1,3 +1,21 @@
+@font-face {
+    font-family: vilaRoucaBold;
+    src: url(../fonts/UniviaPro-Bold.woff);
+}
+@font-face {
+    font-family: vilaRoucaLight;
+    src: url(../fonts/UniviaPro-Light.woff);
+}
+@font-face {
+    font-family: vilaRoucaBook;
+    src: url(../fonts/UniviaPro-Book.woff2);
+}
+@font-face {
+    font-family: vilaRoucaUltra;
+    src: url(../fonts/UniviaPro-Ultra.woff);
+}
+
+
 /* Remover margens da página */
 html, body {
     margin: 0;
@@ -12,6 +30,7 @@ html, body {
 }
 
 .nav-menu>li {
+    font-family: vilaRoucaBold;
     padding: 0 0 0 30px;
 }
 
@@ -139,7 +158,7 @@ html, body {
 .footer {
     width: 100%;
     padding: 60px 0;
-    background: #1f1f1f;
+    background: #d79d32;
     overflow: hidden;
     display: block;
     border: 0;
@@ -163,7 +182,7 @@ html, body {
     margin: 0 0 30px;
     display: block;
     border: 0;
-    background-image: url("../images/logo-white.png");
+    background-image: url("../images/logo.png");
     background-repeat: no-repeat;
     background-size: contain;
     text-indent: -9999px;
