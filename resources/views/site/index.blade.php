@@ -1,41 +1,41 @@
 @extends('layouts.site')
 @section('content')
      <!-- Slider Início -->
-     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="10000">
+     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000">
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <a href="sobre">
+                    <a href="{{url('/sobre')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_1.png" alt="Grupo Vilarouca">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="o-boticario">
+                    <a href="{{url('/o-boticario')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="cacau-show.html">
-                        <img class="d-block w-100" src="images/home-slider/slider_3.png" alt="Cacau Show">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="arezzo">
+                    <a href="{{url('/arezzo')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_4.png" alt="Arezzo">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="tim.html">
+                    <a href="{{url('/tim')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_5.png" alt="Tim">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="crocs">
+                    <a href="{{url('/crocs')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_6.png" alt="Crocs">
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="magrella">
+                    <a href="{{url('/magrella')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_7.png" alt="Magrella Collection">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{url('/cacau-show')}}">
+                        <img class="d-block w-100" src="images/home-slider/slider_3.png" alt="Cacau Show">
                     </a>
                 </div>
             </div>

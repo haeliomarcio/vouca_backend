@@ -32,10 +32,12 @@
 @endsection
 @section('content')
     <div class="wrap">
+        <!--
         <div class="content centro" style="margin-top: 30px;">
             <h2 class="titulo"><strong>Lojas</strong></h2>
             <br /><br />
         </div>
+        -->
         <div class="container" style="background-color: #fff; margin-top: 100px; padding-bottom: 20px;">
             
             <div class="row">

@@ -41,43 +41,49 @@
     <div class="container-fluid" style="padding: 0;">
         
         <!-- Menu Início -->
-        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #d79d32;">
+        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #d79122; height: 120px;">
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
-                    <img src="{{url('images/logo.png')}}" height="80">
+                    <img src="{{url('images/logo-nova-white.png')}}" height="70">
+
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
                     <span class="navbar-toggler-icon text-light">
-                        <i class="fa fa-navicon" style="color:#0a6961; font-size:28px;"></i>
+                        <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i>
                     </span>
                 </button>
 
                 <div id="menu" class="collapse navbar-collapse">
                     <ul class="navbar-nav ml-auto  nav-menu">
+                        <!--
                         <li class="nav-item">
-                            <a href="{{url('/')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Início</a>
+                            <a href="{{url('/')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Início</a>
+                        </li>
+                        -->
+                        <li class="nav-item">
+                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Grupo Vilarouca</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 14px;">O Grupo</a>
+                            <a href="{{url('/marcas')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Marcas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/marcas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Marcas</a>
+                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Lojas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Lojas</a>
+                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Trabalhe Conosco</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Trabalhe Conosco</a>
+                            <a href="#" class="nav-link font-weight-bold" style="font-size: 16px;">FAJI</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">Contato</a>
+                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Contato</a>
                         </li>
                         <li class="nav-item sociais">
-                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">
+                            <a href="https://www.facebook.com/grupovilarouca" target="_blank" class="nav-link font-weight-bold" style="font-size: 16px;">
                                 <i class="fab fa-facebook-square"></i>
                             </a>
                             &nbsp;
-                            <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 14px;">
+                            <a href="https://www.instagram.com/grupovilarouca" target="_blank" class="nav-link font-weight-bold" style="font-size: 16px;">
                                 <i class="fab fa-instagram"></i>
                             </a>
                         </li>
@@ -111,7 +117,7 @@
                             <p style="font-size: 18px; color: #ffffff;"><strong>MENU</strong></p>
                             <p class="menu-footer">
                                 <a href="{{url('/')}}">INÍCIO</a><br />
-                                <a href="{{url('/sobre')}}">O GRUPO</a><br />
+                                <a href="{{url('/sobre')}}">GRUPO VILAROUCA</a><br />
                                 <a href="{{url('/marcas')}}">MARCAS</a><br />
                                 <a href="{{url('/lojas')}}">LOJAS</a><br />
                                 <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
@@ -121,21 +127,7 @@
                     </div>
                     <div class="col-lg-4 centro">
                         <div class="grupo">
-                            <p style="font-size: 18px; color: #ffffff;"><strong>REDES SOCIAIS</strong></p>
-                            <div class="redes-sociais">
-                                <a href="#" class="facebook">
-                                    <i class="fa fa-facebook"></i>
-                                </a>
-                                <a href="#" class="twitter">
-                                    <i class="fa fa-twitter"></i>
-                                </a>
-                                <a href="#" class="instagram">
-                                    <i class="fa fa-instagram"></i>
-                                </a>
-                                <a href="#" class="youtube">
-                                    <i class="fa fa-youtube"></i>
-                                </a>
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
