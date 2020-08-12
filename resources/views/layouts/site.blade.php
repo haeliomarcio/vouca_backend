@@ -44,7 +44,7 @@
         <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #d79d32;">
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
-                    <img src="{{url('images/logo.png')}}" height="50">
+                    <img src="{{url('images/logo.png')}}" height="80">
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
                     <span class="navbar-toggler-icon text-light">
