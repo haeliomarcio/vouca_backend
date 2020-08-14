@@ -45,6 +45,7 @@
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
                     <img src="{{url('images/logo-nova-white.png')}}" height="70">
+
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
                     <span class="navbar-toggler-icon text-light">
