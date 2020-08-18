@@ -9,8 +9,8 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{url('/o-boticario')}}">
-                        <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
+                    <a href="https://api.whatsapp.com/send?phone=5588999010191&text=Ol%C3%A1!" target="_blank">
+                        <img class="d-block w-100" src="images/home-slider/slider_8.png" alt="Atendimento">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -19,8 +19,8 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{url('/tim')}}">
-                        <img class="d-block w-100" src="images/home-slider/slider_5.png" alt="Tim">
+                    <a href="{{url('/cacau-show')}}">
+                        <img class="d-block w-100" src="images/home-slider/slider_3.png" alt="Cacau Show">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -34,8 +34,13 @@
                     </a>
                 </div>
                 <div class="carousel-item">
-                    <a href="{{url('/cacau-show')}}">
-                        <img class="d-block w-100" src="images/home-slider/slider_3.png" alt="Cacau Show">
+                    <a href="{{url('/o-boticario')}}">
+                        <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
+                    </a>
+                </div>
+                <div class="carousel-item">
+                    <a href="{{url('/tim')}}">
+                        <img class="d-block w-100" src="images/home-slider/slider_5.png" alt="Tim">
                     </a>
                 </div>
             </div>
@@ -58,14 +63,11 @@
                     <div class="col-sm-2"></div>
                     <div class="col-sm-8">
                         <div class="row">
-                            <div class = "col mx-auto text-center oboticario" style="height: 70px; align-items: center;display: flex;">
-                                <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" style="width: 100px;">
-                            </div>
                             <div class = "col mx-auto text-center arezzo" style="height: 70px; align-items: center;display: flex;">
                                 <img class="arezzoImg" src = "images/marcas/marcas/arezzo.png" style="width: 100px;">
                             </div>
-                            <div class = "col mx-auto text-center tim" style="height: 70px; align-items: center;display: flex;">
-                                <img class="timImg" src = "images/marcas/marcas/tim.png" style="width: 100px;">
+                            <div class = "col mx-auto text-center cacau-show" style="height: 70px; align-items: center;display: flex;">
+                                <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" style="width: 100px;">
                             </div>
                             <div class = "col mx-auto text-center crocs" style="height: 70px; align-items: center;display: flex;">
                                 <img class="crocsImg" src = "images/marcas/marcas/crocs.png" style="width: 100px;">
@@ -73,8 +75,11 @@
                             <div class = "col mx-auto text-center magrella" style="height: 70px; align-items: center;display: flex;">
                                 <img class="magrellaImg" src = "images/marcas/marcas/magrella.png" style="width: 100px;">
                             </div>
-                            <div class = "col mx-auto text-center cacau-show" style="height: 70px; align-items: center;display: flex;">
-                                <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" style="width: 100px;">
+                            <div class = "col mx-auto text-center oboticario" style="height: 70px; align-items: center;display: flex;">
+                                <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" style="width: 100px;">
+                            </div>
+                            <div class = "col mx-auto text-center tim" style="height: 70px; align-items: center;display: flex;">
+                                <img class="timImg" src = "images/marcas/marcas/tim.png" style="width: 100px;">
                             </div>
                         </div>
                     </div>
@@ -82,58 +87,60 @@
                 </div>
 
                 <div class = "row">
-                    <div class="col-md-2"></div>
+                    <div class="col-md-1"></div>
 
-                    <div class = "col-md-6 p-0" style = "height: 500px; margin-top: 85px;">
+                    <div class = "col-md-7 p-0" style = "height: 480px; margin-top: 85px;">
                         <div style="z-index: 0;position: absolute; margin-left: -60px;">
-                            <img src="images/home-mapa/MAPA COMPLETO.png" style="width: 697px;">
+                            <img src="images/home-mapa/MAPA COMPLETO.png" style="width: 850px;">
                         </div>
                         <div class = "row">
                             <!-- MAPA MARANHÃO -->                        
-                            <div class="col-md-3" style="margin-top: 12;margin-left: 392;">
+                            <div class="col-md-3" style="margin-top: 13;margin-left: 492;">
                                 <div>
-                                    <img  class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="121">
+                                    <img  class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="148">
                                 </div>
                             </div>
 
                             <!-- MAPA PIAUI -->
-                            <div class="col-md-3 " style="margin-top: -119;margin-left: 440;">
+                            <div class="col-md-3 " style="margin-top: -147;margin-left: 549;">
                                 <div>
-                                    <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="99">
+                                    <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="122">
                                 </div>
                             </div>
 
                             <!-- MAPA CEARA -->
-                            <div class="col-md-3" style="margin-left: 521;margin-top: -127;">
+                            <div class="col-md-3" style="margin-left: 648;margin-top: -155;">
                                 <div>
-                                    <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="72">
+                                    <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="88">
                                 </div>
                             </div>
 
                             <!-- MAPA RIO GRANDE DO NORTE -->
-                            <div class="col-md-3" style="margin-left: 574;margin-top: -109;">
+                            <div class="col-md-3" style="margin-left: 712;margin-top: -135;">
                                 <div>
-                                    <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="65">
+                                    <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="82">
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                    <div class="col-md-4" style="height: 500px; margin-top: 85px; background: url('../images/area-atuacao-bg.png') no-repeat center center; background-size: cover;">
-                        <div class="row" style="margin-top: 50;">
-                            <div class="col">
-                                <span style="font-size: 40px; color: #fff; font-family: vilaRoucaBold;"><u>Área de atuação</u></span>
+                    <div class="col-md-4" style="height: 480px; max-width: 28%; margin-top: 85px; margin-left: 50px; background: url('../images/area-atuacao-bg.png') no-repeat center center; background-size: cover;">
+                        <div style="margin-left: 20px;">
+                            <div class="row" style="margin-top: 50;">
+                                <div class="col">
+                                    <span style="font-size: 35px; color: #fff; font-family: vilaRoucaLight;">Área de atuação</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" style="margin-top: 50;">
-                            <div class="col">
-                                <span style="font-size: 40px; color: #fff; font-family: vilaRoucaLight;">Presentes em<br /><strong style="font-family: vilaRoucaBold;">4</strong> estados</span>
+                            <div class="row" style="margin-top: 50;">
+                                <div class="col">
+                                    <span style="font-size: 35px; color: #fff; font-family: vilaRoucaLight;">Presentes em<br /><strong style="font-family: vilaRoucaBold;">4</strong> estados</span>
+                                </div>
                             </div>
-                        </div>
-                        <div class="row" style="margin-top: 50;">
-                            <div class="col">
-                                <span style="font-size: 40px; color: #fff; font-family: vilaRoucaLight;">Com mais de<br /><strong style="font-family: vilaRoucaBold;">50</strong> PDVS</span>
+                            <div class="row" style="margin-top: 50;">
+                                <div class="col">
+                                    <span style="font-size: 35px; color: #fff; font-family: vilaRoucaLight;">Com mais de<br /><strong style="font-family: vilaRoucaBold;">50</strong> PDVS</span>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -194,6 +201,25 @@
                     </div>
                     <div class = "col mx-auto text-center cacau-show" style="height: 70px; align-items: center;display: flex;">
                         <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" style="width: 100px;">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12" style="height: 400px; margin-top: 85px; background: url('../images/area-atuacao-bg.png') no-repeat center center; background-size: cover;">
+                        <div style="margin-left: 20px;">
+                            <div class="row" style="margin-top: 50;">
+                                <div class="col">
+                                    <span style="font-size: 30px; color: #fff; font-family: vilaRoucaBold;"><u>Área de atuação</u></span>
+                                </div>
+                            </div>
+                            <div class="row" style="margin-top: 50;">
+                                <div class="col">
+                                    <span style="font-size: 30px; color: #fff; font-family: vilaRoucaLight;">Presentes em <strong style="font-family: vilaRoucaBold;">4</strong> estados</span>
+                                </div>
+                                <div class="col">
+                                    <span style="font-size: 30px; color: #fff; font-family: vilaRoucaLight;">Com mais de <strong style="font-family: vilaRoucaBold;">50</strong> PDVS</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div><!-- .container-fluid -->
