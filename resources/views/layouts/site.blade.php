@@ -53,7 +53,7 @@
                     </span>
                 </button>
 
-                <div id="menu" class="collapse navbar-collapse">
+                <div id="menu" class="collapse navbar-collapse" style="background-color: #d79122; z-index: 1000;">
                     <ul class="navbar-nav ml-auto  nav-menu">
                         <!--
                         <li class="nav-item">
@@ -78,7 +78,7 @@
                         <li class="nav-item">
                             <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Contato</a>
                         </li>
-                        <li class="nav-item sociais">
+                        <li class="nav-item sociais centro">
                             <a href="https://www.facebook.com/grupovilarouca" target="_blank" class="nav-link font-weight-bold" style="font-size: 16px;">
                                 <i class="fab fa-facebook-square"></i>
                             </a>
@@ -188,7 +188,7 @@
             display: none;
         }
     }
-	
+    
 	.marcaInativo {filter: drop-shadow(2px 2px 2px gray) opacity(30%); transition: .2s}
 	.marcaAtivo {filter: drop-shadow(2px 2px 2px gray); transition: .2s}
 	
@@ -206,7 +206,12 @@
 	.piauiImg2{transition: .4s;}
 	/*.piauiImg2:hover{width: 75%}*/
 	.piauiZoomIn2{width: 75%}
-	.filterPiaui2{filter: opacity(30%);}
+    .filterPiaui2{filter: opacity(30%);}
+    
+    .rnImg2{transition: .4s;}
+	/*.rnImg2:hover{width: 70%}*/
+	.rnZoomIn2{width: 70%}
+	.filterRN2{filter: opacity(30%);}
 
 </style>
 
@@ -221,11 +226,13 @@
             $('.tim').show('slow');
             $('.maranhaoImg2').addClass('filterMaranhao2');
             $('.piauiImg2').addClass('filterPiaui2');
+            $('.rnImg2').addClass('filterRN2');
 
         });
         $('.cearaImg2').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
+            $('.rnImg2').removeClass('filterRN2');
         });
 
 
@@ -234,24 +241,26 @@
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
-            $('.cacau-show').removeClass('marcaAtivo').addClass('marcaInativo');
-            $('.magrella').removeClass('marcaAtivo').addClass('marcaInativo');
-            $('.tim').removeClass('marcaAtivo').addClass('marcaInativo');
+            $('.cacau-show').addClass('marcaInativo');
+            $('.magrella').addClass('marcaInativo');
+            $('.tim').addClass('marcaInativo');
 
             $('.cearaImg2').addClass('filterCeara2');
             $('.piauiImg2').addClass('filterPiaui2');
+            $('.rnImg2').addClass('filterRN2');
         });
 
         $('.maranhaoImg2').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
-            $('.cacau-show').removeClass('marcaInativo').addClass('marcaAtivo');
-            $('.magrella').removeClass('marcaInativo').addClass('marcaAtivo');
-            $('.tim').removeClass('marcaInativo').addClass('marcaAtivo');
+            $('.cacau-show').removeClass('marcaInativo');
+            $('.magrella').removeClass('marcaInativo');
+            $('.tim').removeClass('marcaInativo');
 
             $('.cearaImg2').removeClass('filterCeara2');
             $('.piauiImg2').removeClass('filterPiaui2');
+            $('.rnImg2').removeClass('filterRN2');
         });
 
 
@@ -260,25 +269,60 @@
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
-            $('.cacau-show').removeClass('marcaAtivo').addClass('marcaInativo');
-            $('.magrella').removeClass('marcaAtivo').addClass('marcaInativo');
-            $('.tim').removeClass('marcaAtivo').addClass('marcaInativo');
+            $('.cacau-show').addClass('marcaInativo');
+            $('.magrella').addClass('marcaInativo');
+            $('.tim').addClass('marcaInativo');
 
             $('.cearaImg2').addClass('filterCeara2');
             $('.maranhaoImg2').addClass('filterMaranhao2');
+            $('.rnImg2').addClass('filterRN2');
         });
 
         $('.piauiImg2').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
-            $('.cacau-show').removeClass('marcaInativo').addClass('marcaAtivo');
-            $('.magrella').removeClass('marcaInativo').addClass('marcaAtivo');
-            $('.tim').removeClass('marcaInativo').addClass('marcaAtivo');
+            $('.cacau-show').removeClass('marcaInativo');
+            $('.magrella').removeClass('marcaInativo');
+            $('.tim').removeClass('marcaInativo');
 
 
             $('.cearaImg2').removeClass('filterCeara2');
             $('.maranhaoImg2').removeClass('filterMaranhao2');
+            $('.rnImg2').removeClass('filterRN2');
+        });
+
+
+        ///////* RIO-GRANDE-DO-NORTE *///////
+        $('.rnImg2').mouseenter(function () {
+        //                                $('.cacau-show').hide('slow');
+        //                                $('.magrella').hide('slow');
+        //                                $('.tim').hide('slow');
+            $('.cacau-show').addClass('marcaInativo');
+            $('.magrella').addClass('marcaInativo');
+            $('.tim').addClass('marcaInativo');
+            $('.crocs').addClass('marcaInativo');
+            $('.arezzo').addClass('marcaInativo');
+
+            $('.cearaImg2').addClass('filterCeara2');
+            $('.maranhaoImg2').addClass('filterMaranhao2');
+            $('.piauiImg2').addClass('filterPiaui2');
+        });
+
+        $('.rnImg2').mouseout(function () {
+        //                                $('.cacau-show').show('slow');
+        //                                $('.magrella').show('slow');
+        //                                $('.tim').show('slow');
+            $('.cacau-show').removeClass('marcaInativo');
+            $('.magrella').removeClass('marcaInativo');
+            $('.tim').removeClass('marcaInativo');
+            $('.crocs').removeClass('marcaInativo');
+            $('.arezzo').removeClass('marcaInativo');
+
+
+            $('.cearaImg2').removeClass('filterCeara2');
+            $('.maranhaoImg2').removeClass('filterMaranhao2');
+            $('.piauiImg2').removeClass('filterPiaui2');
         });
 
 

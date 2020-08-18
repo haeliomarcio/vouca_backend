@@ -1,11 +1,11 @@
 @extends('layouts.site')
 @section('styles')
 <style>
-    h3 {
+    h2 {
         color: #2D170F !important;
     }
 
-    h3::after {
+    h2::after {
         top: 114%;
         width: 65%;
         background-color: #2D170F !important;
@@ -14,19 +14,51 @@
 </style>
 @endsection
 @section('content')
-    <div class="wrap-cacaushow">
+    <div class="wrap">
+        <div class="content" style="margin-top: 50px; margin-left: 90px">
+            <h2 class="titulo"><strong>Cacau Show</strong></h2>
+        </div>
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
-                <h3 class="subtitulo centro"><strong>Cacau Show</strong></h3>
                 <div class="row centro" style="margin-bottom: 10px;">
-                    <div style="width: 75%;">
-                        <img class="img-fluid" src="images/lojas/cacau-show-loja.png">
+                    <div class="col-sm-8">
+                        <div style="width: 90%;">
+                            <img class="img-fluid" src="images/lojas/cacau-show-loja.png">
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="row">
+                            <div class="col-sm-2 centro" style="align-items: center;">
+                                <i class="fas fa-award" style="font-size: 32;"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <span style="font-size: 24;">Parceria desde XXXX</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-2 centro" style="align-items: center;">
+                                <i class="fas fa-map-marked-alt" style="font-size: 32;"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <span style="font-size: 24;">Presente nos Estados: XXXXX</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-2 centro" style="align-items: center;">
+                                <i class="fas fa-funnel-dollar" style="font-size: 32;"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <span style="font-size: 24;">Atuando com XXXX PDVS</span>
+                            </div>
+                        </div>
                     </div>
                 </div>    
-                <div id="map" style="width:100%; height: 400px;"></div>
             </div>
         </div>
+        <div id="map" style="width:100%; height: 600px;"></div>
     </div>
 @endsection
 @section('scripts_bottom')

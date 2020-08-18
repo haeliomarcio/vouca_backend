@@ -1,8 +1,8 @@
 @extends('layouts.site')
 @section('styles')
 <style>
-    h2 {
-        color: #fff !important;
+    h4 {
+        color: #d79122 !important;
     }
     h2::after {
         background-color: #fff !important;
@@ -13,10 +13,10 @@
     }
 
     .searchable-container{margin:20px 0 0 0}
-    .searchable-container label.btn-default.active{background-color:#0a6961;color:#FFF}
+    .searchable-container label.btn-default.active{background-color:#d79122;color:#FFF}
     .searchable-container label.btn-default{width:100%;border:1px solid #efefef;margin:5px; box-shadow:5px 8px 8px 0 #ccc; display: flex; align-items: center; justify-content: center;}
     .searchable-container label .bizcontent{width:100%;}
-    .searchable-container .btn-group{width:100%; height: 60px;}
+    .searchable-container .btn-group{width:100%; height: 55px;}
     .searchable-container .btn span.glyphicon{
         opacity: 0;
     }
@@ -41,136 +41,153 @@
         <div class="container" style="background-color: #fff; margin-top: 100px; padding-bottom: 20px;">
             
             <div class="row">
-                <div class="col-sm-6">
+                <div class="col-sm-3">
                     <div class="form-group">
                         <div class="searchable-container">
-                            <div class="items col-sm-12">
-                                <h4 class="subtitulo">SELECIONE UM ESTADO</h4>
-                            </div>
-                            <div class="items col-sm-12">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                        <label class="btn btn-default">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="ceara" name="ceara" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <h5>CEARÁ</h5>
-                                            </div>
-                                        </label>
+                            <div class="row">
+                                <div class="items col-sm-12">
+                                    <h4 class="subtitulo">SELECIONE UM ESTADO</h4>
+                                </div>
+                                <div class="items col-sm-12">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                                            <label class="btn btn-default">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="ceara" name="ceara" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <h6 style="font-family: vilaRoucaBold;">CEARÁ</h6>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-12">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                        <label class="btn btn-default">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="maranhao" name="maranhao" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <h5>MARANHÃO</h5>
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-12">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                                            <label class="btn btn-default">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="maranhao" name="maranhao" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <h6 style="font-family: vilaRoucaBold;">MARANHÃO</h6>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-12">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                        <label class="btn btn-default">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="piaui" name="piaui" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <h5>PIAUÍ</h5>
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-12">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                                            <label class="btn btn-default">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="piaui" name="piaui" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <h6 style="font-family: vilaRoucaBold;">PIAUÍ</h6>
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="items col-sm-12">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect">
+                                            <label class="btn btn-default">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="rn" name="rn" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <h6 style="font-family: vilaRoucaBold;">RIO GRANDE DO NORTE</h6>
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-
-                <div class="col-sm-6">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-4">
                     <div class="form-group">
                         <div class="searchable-container">
-                            <div class="items col-sm-12">
-                                <h4 class="subtitulo">SELECIONE UMA LOJA</h4>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="logo_boticario" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img id="img_boticario" src="images/marcas/marcas/boticario.png">
-                                            </div>
-                                        </label>
+                            <div class="row">
+                                <div class="items col-sm-12">
+                                    <h4 class="subtitulo">SELECIONE UMA LOJA</h4>
+                                </div>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_arezzo" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_arezzo" src="images/marcas/marcas/arezzo.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="logo_cacaushow" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img id="img_cacaushow" src="images/marcas/marcas/cacau-show.png">
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox"  id="logo_magrella" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_magrella" src="images/marcas/marcas/magrella.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="logo_arezzo" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img id="img_arezzo" src="images/marcas/marcas/arezzo.png">
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_cacaushow" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_cacaushow" src="images/marcas/marcas/cacau-show.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="logo_tim" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img id="img_tim" src="images/marcas/marcas/tim.png">
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_boticario" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_boticario" src="images/marcas/marcas/boticario.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizlocmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox" id="logo_crocs" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img id="img_crocs" src="images/marcas/marcas/crocs.png">
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizlocmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_crocs" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_crocs" src="images/marcas/marcas/crocs.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="items col-sm-4" style="float: left;">
-                                <div class="info-block block-info clearfix">
-                                    <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 100%; height: 100px;">
-                                        <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                            <div class="bizcontent">
-                                                <input type="checkbox"  id="logo_magrella" name="var_id[]" autocomplete="off" value="">
-                                                <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                <img  id="img_magrella" src="images/marcas/marcas/magrella.png">
-                                            </div>
-                                        </label>
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_tim" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_tim" src="images/marcas/marcas/tim.png">
+                                                </div>
+                                            </label>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -216,7 +233,7 @@
             </form>
             -->
         </div>
-        <div id="map" style="width:100%; height: 400px;"></div>
+        <div id="map" style="width:100%; height: 600px;"></div>
     </div>
 @endsection
 @section('scripts_bottom')
