@@ -15,9 +15,18 @@ class CreateCurriculumTable extends Migration
     {
         Schema::create('curriculum', function (Blueprint $table) {
             $table->id();
-            $table->string('name_pearson');
-            $table->text('description');
+            $table->string('name');
+            $table->string('cpf');
+            $table->string('telephone');
+            $table->string('email');
+            $table->string('cep');
+            $table->string('address');
+            $table->string('number');
+            $table->string('district');
+            $table->string('city');
+            $table->string('state');
             $table->string('document_path');
+            $table->text('description');
             $table->unsignedBigInteger('jobs_deployment_id');
             $table->foreign('jobs_deployment_id')->references('id')->on('jobs_employment');
             $table->timestamps();
@@ -34,3 +43,4 @@ class CreateCurriculumTable extends Migration
         Schema::dropIfExists('curriculum');
     }
 }
+
