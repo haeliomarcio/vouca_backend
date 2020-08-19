@@ -7,6 +7,9 @@
     h2::after {
         background-color: #d79122 !important;
     }  
+    h3 {
+        color: #d79122 !important;
+    }
 </style>
 @endsection
 @section('content')
@@ -26,7 +29,7 @@
                 </div>
 
                 <p class="text-justify" style="margin-top: 20px; margin-left: 20px;">
-                    Buscamos sempre novos talentos para compor nosso quadro de colaboradores. O crescimento pessoal e profissional vem através de experiências que são adquiridas de acordo com o surgimento de novas oportunidades. Acreditando nisso, seguimos há quase 40 anos no mercado oferecendo nosso melhor a todos os nossos clientes. <strong>#vemservilarouca</strong>
+                    Buscamos sempre novos talentos para compor nosso quadro de colaboradores. O crescimento pessoal e profissional vem através de experiências que são adquiridas de acordo com o surgimento de novas oportunidades. Acreditando nisso, seguimos há quase 40 anos no mercado oferecendo nosso melhor a todos os nossos clientes.
                 </p>
 
                 <h3 class="subtitulo" style="margin-top: 40px;"><strong>Nossas oportunidades</strong></h3>

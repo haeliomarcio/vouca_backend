@@ -2,11 +2,15 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff !important;
+        color: #d79122 !important;
     }
     
     h2::after {
-        background-color: #fff !important;
+        background-color: #d79122 !important;
+    }
+
+    h3 {
+        color: #d79122 !important;
     }
 
     h3::after {
@@ -17,13 +21,13 @@
 @endsection
 @section('content')
     <div class="wrap">
-        <div class="content centro" style="margin-top: 30px;">
+        <div class="content" style="margin-top: 50px; margin-left: 90px">
             <h2 class="titulo"><strong>Contato</strong></h2>
         </div>
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
-                <h3 class="subtitulo"><strong>Formulário</strong></h3>
+                <!-- <h3 class="subtitulo"><strong>Formulário</strong></h3> -->
                 <p class="text-justify" style="margin-left: 20px;">
                     Acreditamos que uma boa base para o crescimento é a comunicação, por isso estamos certos de que seu contato é muito importante para nós. Preencha os campos abaixo para que sua mensagem seja enviada.
                 </p>
@@ -93,6 +97,7 @@
                                     <option value="CE">Ceará</option>
                                     <option value="MA">Maranhão</option>
                                     <option value="PI">Piauí</option>
+                                    <option value="RN">Rio Grande do Norte</option>
                                 </select>
                             </div>
                             <div class="form-group col-md-6">
@@ -113,18 +118,18 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary" style="background-color: #0a6961; border-color: #0a6961;">Enviar</button>
+                        <button type="submit" class="btn btn-primary" style="background-color: #d79122; border-color: #d79122;">Enviar</button>
                     </form>
-                    <br />
+                    <br /><br />
                     <div class="row">
-                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
-                            <img src="images/ceara-contato.png">
+                        <div class="col-sm-12">
+                            <h3 class="subtitulo" style="margin: 0 0 20px;"><i class="fas fa-phone"></i><strong>SAC</strong></h3>
                         </div>
-                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
-                            <img src="images/maranhao-contato.png">
+                        <div class="col-sm-12">
+                            <span>E-mail: sac@grupovilarouca.com.br</span>
                         </div>
-                        <div class="col-sm-4 centro" style="margin: 5px 0 5px 0;">
-                            <img src="images/piaui-contato.png">
+                        <div class="col-sm-12">
+                            <span>Telefone: 08002808525</span>
                         </div>
                     </div>
                 </div>
