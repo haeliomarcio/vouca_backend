@@ -73,7 +73,13 @@ html, body {
     justify-content: center;
 }
 
+@keyframes animationTitle{
+    from { margin-left: -500px; opacity: 0.0; }
+    to { margin-left: 0px; opacity: 0.9; }
+}
+
 .titulo {
+    animation: animationTitle 1s;
     padding: 20px 0 0 20px;
     font-size: 27px;
     font-weight: normal;

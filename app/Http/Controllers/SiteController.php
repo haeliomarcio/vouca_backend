@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\EmailContato;
+use App\Http\Requests\SendCurriculumStore;
 use App\Mail\EnviaContato;
+use App\Models\Curriculum;
 use App\Models\JobsEmployment;
 use App\Models\News;
 use App\Models\State;
@@ -242,5 +244,13 @@ class SiteController extends Controller
        } else {
         return back()->with('error', 'Não foi possível enviar o E-mail, por favor, tente mais tarde.');
        }
+    }
+
+    public function sendCurriculum(SendCurriculumStore $request) {
+        $params = request()->input();
+        $filename = $request->file('file')->store('', 'site_curriculum');
+        $params['document_path'] = $filename;
+        Curriculum::create($params);
+        return back()->width('success', 'Currículo Enviado com Sucesso.');
     }
 }

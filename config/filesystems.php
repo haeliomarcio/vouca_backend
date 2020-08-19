@@ -62,6 +62,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'site_curriculum' => [
+            'driver' => 'local',
+            'root' => public_path('curriculum'),
+            'url' => env('APP_URL').'/curriculum',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

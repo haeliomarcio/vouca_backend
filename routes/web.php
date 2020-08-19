@@ -28,6 +28,8 @@ Route::get('/blog/{name?}', 'SiteController@noticias');
 Route::get('/blog', 'SiteController@blog');
 Route::get('/post', 'SiteController@post');
 Route::get('/find-store', 'SiteController@findStore');
+
+Route::post('send-curriculum', 'SiteController@sendCurriculum');
 Route::post('contato', 'SiteController@sendEmail');
 Route::prefix('states')->group(function () {
     Route::get('list-city-by-id/{state_id}', 'StatesController@listCity');

@@ -31,11 +31,16 @@
                 <h3 class="subtitulo"><strong>Formulário</strong></h3>
 
                 <div class="container" style="padding: 0 20px 0 20px;">
-                    <form>
+                    <form id="form" action="{{url('send-curriculum')}}" method="POST" enctype="multipart/form-data">
+                        {{ csrf_field() }}
                         <div class="form-row">
-                            <div class="form-group col-md-6">
+                            <div class="form-group col-md-12">
                                 <label for="nome">Nome</label>
                                 <input name="name" type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <label for="telefone">CPF</label>
+                                <input name="cpf" type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
                             </div>
                             <div class="form-group col-md-3">
                                 <label for="telefone">Telefone</label>
@@ -44,6 +49,10 @@
                             <div class="form-group col-md-3">
                                 <label for="email">E-mail</label>
                                 <input  name="email" type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                            </div>
+                            <div id="focus-cep" class="form-group col-md-3">
+                                <label for="email">CEP</label>
+                                <input  name="cep" type="text" class="form-control" id="cep" placeholder="00000000" required>
                             </div>
                         </div>
                         <div class="form-row">
@@ -117,4 +126,49 @@
             </div>
         </div>
     </div>
+@endsection
+
+@section('scripts_bottom')
+    <script>
+        
+        
+        $(document).ready(function() {
+            
+            $("#cep").focusout(function() {
+                var cep = $("#cep").val();
+                
+                    axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(function(response) {
+                        if(response.data.logradouro) {
+                            $("#rua").val(response.data.logradouro);
+                            $("#bairro").val(response.data.bairro);
+                            $("#cidade").val(response.data.localidade);
+                            $("#estado").val(response.data.uf);
+                        }
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+            });
+
+            $("#cpf").focusout(function() {
+                var cep = $("#cep").val();
+                
+                    axios.get(`https://viacep.com.br/ws/${cep}/json/`)
+                    .then(function(response) {
+                        if(response.data.logradouro) {
+                            $("#rua").val(response.data.logradouro);
+                            $("#bairro").val(response.data.bairro);
+                            $("#cidade").val(response.data.localidade);
+                            $("#estado").val(response.data.uf);
+                        }
+                    })
+                    .catch(function(error) {
+                        console.log(error);
+                    });
+            });
+        });
+        
+
+    </script>
 @endsection
