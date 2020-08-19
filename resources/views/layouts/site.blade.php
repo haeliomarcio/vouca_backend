@@ -142,6 +142,7 @@
 <script type="text/javascript" src="/js/bootstrap.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 <script type="text/javascript" src="/js/style.js"></script>
+<script src="/js/jquery.mask.min.js"></script>
 <script>
     var icon_arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
     var icon_boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
@@ -220,7 +221,7 @@
     $(document).ready(function () {
 
         /////////* CEARA *//////
-        $('.cearaImg2').mouseenter(function () {
+        $('#cearaImg2').mouseenter(function () {
             $('.cacau-show').show('slow');
             $('.magrella').show('slow');
             $('.tim').show('slow');
@@ -229,7 +230,7 @@
             $('.rnImg2').addClass('filterRN2');
 
         });
-        $('.cearaImg2').mouseout(function () {
+        $('#cearaImg2').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
             $('.rnImg2').removeClass('filterRN2');
@@ -237,7 +238,7 @@
 
 
         ///////* MARANHAO *///////
-        $('.maranhaoImg2').mouseenter(function () {
+        $('#maranhaoImg2').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -250,7 +251,7 @@
             $('.rnImg2').addClass('filterRN2');
         });
 
-        $('.maranhaoImg2').mouseout(function () {
+        $('#maranhaoImg2').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
@@ -265,7 +266,7 @@
 
 
         ///////* PIAUI *///////
-        $('.piauiImg2').mouseenter(function () {
+        $('#piauiImg2').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -278,7 +279,7 @@
             $('.rnImg2').addClass('filterRN2');
         });
 
-        $('.piauiImg2').mouseout(function () {
+        $('#piauiImg2').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
@@ -294,7 +295,7 @@
 
 
         ///////* RIO-GRANDE-DO-NORTE *///////
-        $('.rnImg2').mouseenter(function () {
+        $('#rnImg2').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -309,10 +310,7 @@
             $('.piauiImg2').addClass('filterPiaui2');
         });
 
-        $('.rnImg2').mouseout(function () {
-        //                                $('.cacau-show').show('slow');
-        //                                $('.magrella').show('slow');
-        //                                $('.tim').show('slow');
+        $('#rnImg2').mouseout(function () {
             $('.cacau-show').removeClass('marcaInativo');
             $('.magrella').removeClass('marcaInativo');
             $('.tim').removeClass('marcaInativo');

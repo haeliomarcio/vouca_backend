@@ -57,15 +57,8 @@ return [
 
         'site' => [
             'driver' => 'local',
-            'root' => public_path('files'),
-            'url' => env('APP_URL').'/files',
-            'visibility' => 'public',
-        ],
-
-        'site_curriculum' => [
-            'driver' => 'local',
-            'root' => public_path('curriculum'),
-            'url' => env('APP_URL').'/curriculum',
+            'root' => base_path('public_html/files'),
+            'url' => env('APP_URL').'/../public_html/files',
             'visibility' => 'public',
         ],
 

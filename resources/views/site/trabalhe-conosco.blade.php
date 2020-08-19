@@ -8,13 +8,13 @@
         background-color: #d79122 !important;
     }  
     h3 {
-        color: #d79122 !important;
+        color: #0a6961 !important;
     }
 </style>
 @endsection
 @section('content')
     <div class="wrap">
-        <div class="content" style="margin-top: 50px; margin-left: 90px">
+        <div class="content" style="margin-top: 50px; margin-left: 90px;">
             <h2 class="titulo"><strong>Trabalhe conosco</strong></h2>
         </div>
 

@@ -248,9 +248,10 @@ class SiteController extends Controller
 
     public function sendCurriculum(SendCurriculumStore $request) {
         $params = request()->input();
-        $filename = $request->file('file')->store('', 'site_curriculum');
+        $filename = $request->file('file')->store('', 'site');
         $params['document_path'] = $filename;
+        $params['number'] = $params['number_address'];
         Curriculum::create($params);
-        return back()->width('success', 'Currículo Enviado com Sucesso.');
+        return back()->with('success', 'Currículo Enviado com Sucesso.');
     }
 }

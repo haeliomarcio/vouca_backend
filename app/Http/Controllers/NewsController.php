@@ -128,6 +128,7 @@ class NewsController extends Controller
         $context = $this->model->find($id);
         if($context) {
             if($context->delete()) {
+                Storage::disk('site')->delete($context->path_image);
                 return back()
                 ->with('success', 'Artigo '. $context->name. ' removido com sucesso');
             }
