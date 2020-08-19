@@ -24,25 +24,37 @@ class SendCurriculumStore extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:3',
-            'description' => 'required|min:6',
-            'status' => 'required',
-            'begin' => 'required',
-            'end' => 'required',
-            'city_id' => 'required',
+            'name' => 'required',
+            'cpf' => 'required|min:14',
+            'telephone' => 'required',
+            'email' => 'required|email',
+            'cep' => 'required',
+            'address' => 'required',
+            'number_address' => 'required',
+            'district' => 'required',
+            'city' => 'required',
+            'state' => 'required',
+            'description' => 'required',
+            'file' => 'required|mimes:pdf,doc, docx',
+            'jobs_deployment_id' => 'required',
         ];
     }
 
     public function attributes()
     {
         return [
-            'title' => 'Título',
+            'name' => 'Nome',
+            'cpf' => 'CPF',
+            'telephone' => 'Telefone',
+            'email' => 'E-mail',
+            'cep' => 'CEP',
+            'address' => 'Endereço',
+            'number_address' => 'Número',
+            'district' => 'Bairro',
+            'city' => 'Cidade',
+            'state' => 'Estado',
             'description' => 'Descrição',
-            'status' => 'Status',
-            'begin' => 'Iníco',
-            'end' => 'Fim',
-            'state_id' => 'Estado',
-            'city_id' => 'Cidade',
+            'file' => 'Currículo',
         ];
     }
 }

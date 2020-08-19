@@ -29,6 +29,7 @@ Route::get('/blog', 'SiteController@blog');
 Route::get('/post', 'SiteController@post');
 Route::get('/find-store', 'SiteController@findStore');
 
+// Store Site
 Route::post('send-curriculum', 'SiteController@sendCurriculum');
 Route::post('contato', 'SiteController@sendEmail');
 Route::prefix('states')->group(function () {

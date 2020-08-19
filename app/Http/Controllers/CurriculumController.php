@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Exception;
+use Illuminate\Support\Facades\Storage;
 
 class CurriculumController extends Controller
 {
@@ -27,9 +28,12 @@ class CurriculumController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('title', 'ilike', "%{$search}%")
+            $context = $this->model->where('name', 'ilike', "%{$search}%")
                 ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('introduction', 'ilike', "%{$search}%")
+                ->orWhere('description', 'ilike', "%{$search}%")
+                ->orWhere('address', 'ilike', "%{$search}%")
+                ->orWhere('city', 'ilike', "%{$search}%")
+                ->orWhere('state', 'ilike', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
@@ -90,6 +94,7 @@ class CurriculumController extends Controller
     public function edit($id)
     {
         $context = $this->model->find($id);
+        /// echo '<pre>'; print_r(['data' => $context]); die;
         return view($this->prefixName.'.edit', ['data' => $context]);
     }
 
@@ -127,6 +132,7 @@ class CurriculumController extends Controller
         $context = $this->model->find($id);
         if($context) {
             if($context->delete()) {
+                Storage::disk('site')->delete($context->document_path);
                 return back()
                 ->with('success', 'Artigo '. $context->name. ' removido com sucesso');
             }

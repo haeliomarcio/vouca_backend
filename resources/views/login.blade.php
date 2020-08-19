@@ -5,6 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - {{config('app.name')}}</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        body {
+            color: #fff;
+            background: #333333;
+
+            overflow: hidden;
+        }
+        .btn {
+            color: #fff;
+            border: 1px solid #fff;
+            background-color: none !important;
+        }
+        .btn:hover {
+            color: #ccc;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -15,8 +32,9 @@
                 @csrf
                 <div class="text-center mb-4">
                     <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
-                    <h1 class="h3 mb-3 font-weight-normal">Login - {{config('app.name')}}</h1>
-                    <p><img  width= "130px" src="{{url('/images/logo.png')}}" alt="" /></p>
+                    <!-- <h1 class="h3 mb-3 font-weight-normal">Login - {{config('app.name')}}</h1> -->
+                    <p><img  width= "200px" src="{{url('/images/logo-nova-white.png')}}" alt="" /></p>
+                    <br>
                 </div>
 
                 <div class="form-group">
@@ -26,11 +44,13 @@
                     <input type="password"  value="123456" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
                 </div>
                 <div class="checkbox mb-3">
-                    <label>
+                    <!-- <label>
                         <input type="checkbox" value="remember-me"> Esqueceu sua senha?
-                    </label>
+                    </label> -->
                 </div>
-                <button class="btn btn-lg btn-primary btn-block" type="submit">Acessar</button>
+                <div class="col-md-4 offset-md-4">
+                    <button class="btn btn-lg btn-block" type="submit">Acessar</button>
+                </div>
                 <p class="mt-5 mb-3 text-muted text-center">&copy; 2020</p>
             </form>
         </div>

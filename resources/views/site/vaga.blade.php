@@ -29,52 +29,53 @@
                 </div>
                 <hr />
                 <h3 class="subtitulo"><strong>Formulário</strong></h3>
-
+                @include('helpers.messages')
                 <div class="container" style="padding: 0 20px 0 20px;">
-                    <form id="form" action="{{url('send-curriculum')}}" method="POST" enctype="multipart/form-data">
+                    <form id="form" action="{{url('/send-curriculum')}}" method="POST" enctype="multipart/form-data">
                         {{ csrf_field() }}
+                        <input type="hidden" name="jobs_deployment_id" value="{{$job->id}}" />
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="nome">Nome</label>
-                                <input name="name" type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                                <label for="nome" class="required">Nome</label>
+                                <input name="name" type="text" value="{{old('name')}}" class="form-control" id="nome" placeholder="Digite seu nome" required>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="telefone">CPF</label>
-                                <input name="cpf" type="text" class="form-control" id="cpf" placeholder="000.000.000-00" required>
+                                <label for="cpf" class="required">CPF</label>
+                                <input name="cpf" type="text"  value="{{old('cpf')}}" class="form-control" id="cpf" placeholder="000.000.000-00" required>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="telefone">Telefone</label>
-                                <input name="telephone" type="text" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
+                                <label for="telefone" class="required">Telefone</label>
+                                <input name="telephone" type="text"  value="{{old('telephone')}}" class="form-control" id="telefone" placeholder="Digite seu telefone" required>
                             </div>
                             <div class="form-group col-md-3">
-                                <label for="email">E-mail</label>
-                                <input  name="email" type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                                <label for="email" class="required">E-mail</label>
+                                <input  name="email" type="email" value="{{old('email')}}" class="form-control" id="email" placeholder="Digite seu e-mail" required>
                             </div>
                             <div id="focus-cep" class="form-group col-md-3">
-                                <label for="email">CEP</label>
-                                <input  name="cep" type="text" class="form-control" id="cep" placeholder="00000000" required>
+                                <label for="cep" class="required">CEP</label>
+                                <input  name="cep" type="text"  value="{{old('cep')}}" class="form-control" id="cep" placeholder="00000000" required>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-4">
-                                <label for="rua">Endereço</label>
-                                <input name="address" type="text" class="form-control" id="rua" placeholder="Digite a rua que você mora" required>
+                                <label for="rua" class="required">Endereço</label>
+                                <input name="address" type="text" value="{{old('address')}}"  class="form-control" id="rua" placeholder="Digite a rua que você mora" required>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="numero">Número</label>
-                                <input name="number" type="text" class="form-control" id="numero" placeholder="Digite o número da sua residência" required>
+                                <label for="numero" class="required">Número</label>
+                                <input name="number_address" type="text" value="{{old('number_address')}}" class="form-control" id="numero" placeholder="Digite o número da sua residência" required>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="bairro">Bairro</label>
-                                <input name="district" type="text" class="form-control" id="bairro" placeholder="Digite o bairro que você mora" required>
+                                <label for="bairro" class="required">Bairro</label>
+                                <input name="district" type="text"  value="{{old('district')}}" class="form-control" id="bairro" placeholder="Digite o bairro que você mora" required>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="cidade">Cidade</label>
-                                <input name="city" type="text" class="form-control" id="cidade" placeholder="Digite a cidade que você mora" required>
+                                <label for="cidade" class="required">Cidade</label>
+                                <input name="city" type="text"  value="{{old('city')}}" class="form-control" id="cidade" placeholder="Digite a cidade que você mora" required>
                             </div>
                             <div class="form-group col-md-2">
-                                <label for="estado">Estado</label>
-                                <select name="state" id="estado" class="form-control" required>
+                                <label for="estado" class="required">Estado</label>
+                                <select name="state" id="estado"  value="{{old('state')}}" class="form-control" required>
                                     <option disabled selected>Escolher...</option>
                                     <option value="AC">AC</option>
                                     <option value="AL">AL</option>
@@ -108,13 +109,13 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="descricao">Fale-nos sobre você</label>
-                                <textarea  name="description" class="form-control" id="descricao" rows="5" required></textarea>
+                                <label for="descricao" class="required">Fale-nos sobre você</label>
+                                <textarea  name="description"  class="form-control" id="descricao" rows="5" required> {{old('description')}}</textarea>
                             </div>
                         </div>
                         <div class="form-row">
                             <div class="form-group">
-                                <label for="anexo">Anexar curriculo</label>
+                                <label for="anexo" class="required">Anexar curriculo</label>
                                 <input name="file" type="file" class="form-control-file" id="anexo" required>
                             </div>
                         </div>
@@ -133,9 +134,13 @@
         
         
         $(document).ready(function() {
-            
+            $('#cpf').mask('000.000.000-00');
+            $('#telefone').mask('(00) 00000.0000');
+            $('#cep').mask('00.000-000');
             $("#cep").focusout(function() {
                 var cep = $("#cep").val();
+                cep = cep.replace('.', '');
+                cep = cep.replace('-', '');
                 
                     axios.get(`https://viacep.com.br/ws/${cep}/json/`)
                     .then(function(response) {
