@@ -2,11 +2,15 @@
 @section('styles')
 <style>
     h2 {
-        color: #fff !important;
+        color: #d79122 !important;
     }
     
     h2::after {
-        background-color: #fff !important;
+        background-color: #d79122 !important;
+    }
+
+    h3 {
+        color: #d79122 !important;
     }
 
     h3::after {
@@ -17,15 +21,17 @@
 @endsection
 @section('content')
     <div class="wrap">
-        <div class="content centro" style="margin-top: 30px;">
+        <!--
+        <div class="content" style="margin-top: 50px; margin-left: 90px;">
             <h2 class="titulo"><strong>Seja Grupo Vilarouca</strong></h2>
         </div>
+        -->
 
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
-                <div style="border-left: 5px solid; border-color: #6fa287;">
-                    <h3 style="margin-left: 5px;" class="subtitulo"><strong>Vaga selecionada: {{$job->title}}</strong></h3>
-                    <h3 style="margin-left: 5px;" class="subtitulo"><strong>Cidade: {{$job->city->name}}/{{$job->city->state->name}}</strong></h3>
+                <div style="border-left: 5px solid; border-color: #d79122;">
+                    <h3 style="margin-left: 10px;" class="subtitulo"><strong>Vaga selecionada: {{$job->title}}</strong></h3>
+                    <h3 style="margin-left: 10px;" class="subtitulo"><strong>Cidade: {{$job->city->name}}/{{$job->city->state->name}}</strong></h3>
                 </div>
                 <hr />
                 <h3 class="subtitulo"><strong>Formulário</strong></h3>
@@ -108,7 +114,7 @@
                         </div>
                         <div class="form-row">
                             <div class="form-group col-md-12">
-                                <label for="descricao">Fale-nos sobre você</label>
+                                <label for="descricao">Fale sobre você</label>
                                 <textarea  name="description" class="form-control" id="descricao" rows="5" required></textarea>
                             </div>
                         </div>
@@ -119,7 +125,7 @@
                             </div>
                         </div>
                         <br />
-                        <button type="submit" class="btn btn-primary" style="background-color: #0a6961; border-color: #0a6961;">Enviar</button>
+                        <button type="submit" class="btn btn-primary" style="background-color: #d79122; border-color: #d79122;">Enviar</button>
                     </form>
                 </div>
 

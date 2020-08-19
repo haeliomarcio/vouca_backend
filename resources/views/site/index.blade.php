@@ -43,6 +43,11 @@
                         <img class="d-block w-100" src="images/home-slider/slider_5.png" alt="Tim">
                     </a>
                 </div>
+                <div class="carousel-item">
+                    <a href="#">
+                        <img class="d-block w-100" src="images/home-slider/slider_9.png" alt="FAJI">
+                    </a>
+                </div>
             </div>
             <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
