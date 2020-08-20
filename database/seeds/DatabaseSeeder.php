@@ -688,7 +688,7 @@ class DatabaseSeeder extends Seeder
 
         $listStore = [
             [
-                'name' => 'CACAU SHOW',
+                'brand_id' => 2,
                 'address' => 'RUA:DR.JOÃO PESSOA, 618 CENTRO',
                 'information' => 'RUA:DR.JOÃO PESSOA, 618 CENTRO',
                 'city_id' => '77',
@@ -696,7 +696,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.299174,
             ],
             [
-                'name' => 'CACAU SHOW',
+                'brand_id' => 2,
                 'address' => 'RUA: FLORIANO PEIXOTO, 506 CENTRO',
                 'information' => 'RUA: FLORIANO PEIXOTO, 506 CENTRO',
                 'city_id' => '77',
@@ -704,7 +704,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.297737,
             ],
             [
-                'name' => 'CACAU SHOW',
+                'brand_id' => 2,
                 'address' => 'RUA SANTA LUZIA, 328 CENTRO',
                 'information' => 'RUA SANTA LUZIA, 328 CENTRO',
                 'city_id' => '77',
@@ -712,7 +712,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.318303,
             ],
             [
-                'name' => 'CACAU SHOW',
+                'brand_id' => 2,
                 'address' => 'AV. PADRE CICERO, 2555 TRIANGULO',
                 'information' => 'AV. PADRE CICERO, 2555 TRIANGULO',
                 'city_id' => '77',
@@ -720,7 +720,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.324213,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:RODRIGUES JUNIOR, 1227, CENTRO',
                 'information' => 'RUA:RODRIGUES JUNIOR, 1227, CENTRO',
                 'city_id' => '149',
@@ -728,7 +728,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.014824,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:MONSENHOR SALVIANO PINTO, 407A',
                 'information' => 'RUA:MONSENHOR SALVIANO PINTO, 407A',
                 'city_id' => '151',
@@ -736,7 +736,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.294774,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:Fº GURGEL VALENTE, 182',
                 'information' => 'RUA:Fº GURGEL VALENTE, 182',
                 'city_id' => '4',
@@ -744,7 +744,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.455160,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:QUEIROZ PESSOA, 86',
                 'information' => 'RUA:QUEIROZ PESSOA, 86',
                 'city_id' => '22',
@@ -752,7 +752,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.027435,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: NELSINHO LEAL, 71 CENTRO',
                 'information' => 'RUA: NELSINHO LEAL, 71 CENTRO',
                 'city_id' => '100',
@@ -760,7 +760,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.526471,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV. DOS QUIXELOS, SUPER LAGOA',
                 'information' => 'AV. DOS QUIXELOS, SUPER LAGOA',
                 'city_id' => '77',
@@ -768,7 +768,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.307163,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:ANT.PEDRO BENEVIDES, 42',
                 'information' => 'RUA:ANT.PEDRO BENEVIDES, 42',
                 'city_id' => '115',
@@ -776,7 +776,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.627728,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:SANTA ROSA, 24',
                 'information' => 'RUA:SANTA ROSA, 24',
                 'city_id' => '135',
@@ -784,7 +784,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -40.696257,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: PROF. JOÃO COELHO, 31, CENTRO',
                 'information' => 'RUA: PROF. JOÃO COELHO, 31, CENTRO',
                 'city_id' => '77',
@@ -792,7 +792,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.301422,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:EPITÁCIO PESSOA, 172',
                 'information' => 'RUA:EPITÁCIO PESSOA, 172',
                 'city_id' => '126',
@@ -800,7 +800,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -38.914492,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'PRAÇA HENRIQUE ANDRADE, 13 CENTRO',
                 'information' => 'PRAÇA HENRIQUE ANDRADE, 13 CENTRO',
                 'city_id' => '172',
@@ -808,7 +808,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -40.294039,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV.Fº FRANÇA CAMBRAIA, 279',
                 'information' => 'AV.Fº FRANÇA CAMBRAIA, 279',
                 'city_id' => '165',
@@ -816,7 +816,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.372377,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:MONSENHOR MACEDO, 146A',
                 'information' => 'RUA:MONSENHOR MACEDO, 146A',
                 'city_id' => '101',
@@ -824,7 +824,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -38.964714,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:VALDER VIANA, 123',
                 'information' => 'RUA:VALDER VIANA, 123',
                 'city_id' => '45',
@@ -832,7 +832,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.061416,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV: CARLOS ROBERTO COSTA, 334',
                 'information' => 'AV: CARLOS ROBERTO COSTA, 334',
                 'city_id' => '77',
@@ -840,7 +840,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.306365,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:DONDON FEITOSA, 73',
                 'information' => 'RUA:DONDON FEITOSA, 73',
                 'city_id' => '172',
@@ -848,7 +848,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -40.294082,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: EPITACIO PESSOA, 122 CENTRO',
                 'information' => 'RUA: EPITACIO PESSOA, 122 CENTRO',
                 'city_id' => '77',
@@ -856,7 +856,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.298070,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: ELICIO ABREU, 23',
                 'information' => 'RUA: ELICIO ABREU, 23',
                 'city_id' => '137',
@@ -864,7 +864,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.716785,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:DUQUE DE CAXIAS, 30',
                 'information' => 'RUA:DUQUE DE CAXIAS, 30',
                 'city_id' => '183',
@@ -872,7 +872,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.298258,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:DEOCLECIANO ARAGÃO, 154 CENTRO',
                 'information' => 'RUA:DEOCLECIANO ARAGÃO, 154 CENTRO',
                 'city_id' => '124',
@@ -880,7 +880,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -40.775485,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA DR. RUI MAIA, 541 CENTRO',
                 'information' => 'RUA DR. RUI MAIA, 541 CENTRO',
                 'city_id' => '149',
@@ -888,7 +888,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.018568,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: EPITACIO PESSOA, 122 CENTRO',
                 'information' => 'RUA: EPITACIO PESSOA, 122 CENTRO',
                 'city_id' => '77',
@@ -896,7 +896,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.012681,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'PRAÇA DA GRAÇA, 745 A',
                 'information' => 'PRAÇA DA GRAÇA, 745 A',
                 'city_id' => '551',
@@ -904,7 +904,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.779228,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV.DEP. PINHEIRO MACHADO, 1397 SL 101',
                 'information' => 'AV.DEP. PINHEIRO MACHADO, 1397 SL 101',
                 'city_id' => '551',
@@ -912,7 +912,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.753863,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:CORONEL JOSÉ NARCISIO',
                 'information' => 'RUA:CORONEL JOSÉ NARCISIO',
                 'city_id' => '551',
@@ -920,7 +920,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.777283,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:ANT. DAMASCENO, 03 CENTRO',
                 'information' => 'RUA:ANT. DAMASCENO, 03 CENTRO',
                 'city_id' => '459',
@@ -928,7 +928,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.557420,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV: SENADOR JOAQUIM PIRES, 1043',
                 'information' => 'AV: SENADOR JOAQUIM PIRES, 1043',
                 'city_id' => '519',
@@ -936,7 +936,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.657141,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV: SÃO SEBASTIÃO, 3429',
                 'information' => 'AV: SÃO SEBASTIÃO, 3429',
                 'city_id' => '551',
@@ -944,7 +944,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -41.747105,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'AV.NOGUEIRA ACIOLY, 1310',
                 'information' => 'AV.NOGUEIRA ACIOLY, 1310',
                 'city_id' => '76',
@@ -952,7 +952,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -38.860654,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA:DR.PAULO RAMOS, 936 CENTRO',
                 'information' => 'RUA:DR.PAULO RAMOS, 936 CENTRO',
                 'city_id' => '200',
@@ -960,7 +960,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -46.045697,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: BARÃO DO RIO BRANCO, 604',
                 'information' => 'RUA: BARÃO DO RIO BRANCO, 604',
                 'city_id' => '357',
@@ -968,7 +968,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.418644,
             ],
             [
-                'name' => 'O BOTICARIO',
+                'brand_id' => 5,
                 'address' => 'RUA: BARÃO DO RIO BRANCO, 604 A',
                 'information' => 'RUA: BARÃO DO RIO BRANCO, 604 A',
                 'city_id' => '357',
@@ -976,7 +976,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.418644,
             ],
             [
-                'name' => 'MAGRELLA COLLECTION',
+                'brand_id' => 4,
                 'address' => 'RUA:DR.JOÃO PESSOA, 618 CENTRO',
                 'information' => 'RUA:DR.JOÃO PESSOA, 618 CENTRO',
                 'city_id' => '77',
@@ -984,7 +984,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.299174,
             ],
             [
-                'name' => 'TIM',
+                'brand_id' => 6,
                 'address' => 'RUA: FLORIANO PEIXOTO, 526',
                 'information' => 'RUA: FLORIANO PEIXOTO, 526',
                 'city_id' => '77',
@@ -992,7 +992,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -39.297494,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV PROFESSOR CARLOS CUNHA, 1000 LOJA 129',
                 'information' => 'AV PROFESSOR CARLOS CUNHA, 1000 LOJA 129',
                 'city_id' => '371',
@@ -1000,7 +1000,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -44.285499,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV DANIEL DE LA TOUCHE, 987 LOJA 320 G',
                 'information' => 'AV DANIEL DE LA TOUCHE, 987 LOJA 320 G',
                 'city_id' => '371',
@@ -1008,7 +1008,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -44.255305,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV ININGA, 1201 LOJA V 122 - JOQUEI CLUB',
                 'information' => 'AV ININGA, 1201 LOJA V 122 - JOQUEI CLUB',
                 'city_id' => '614',
@@ -1016,7 +1016,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.794967,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV RAUL LOPES, 1000 LOJA 206',
                 'information' => 'AV RAUL LOPES, 1000 LOJA 206',
                 'city_id' => '614',
@@ -1024,7 +1024,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.794542,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV NOSSA SENHORA DE FATIMA, 680',
                 'information' => 'AV NOSSA SENHORA DE FATIMA, 680',
                 'city_id' => '614',
@@ -1032,7 +1032,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.791020,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV SÃO LUIS REI DE FRANÇA, 08 LOJA 2064',
                 'information' => 'AV SÃO LUIS REI DE FRANÇA, 08 LOJA 2064',
                 'city_id' => '371',
@@ -1040,7 +1040,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -44.225499,
             ],
             [
-                'name' => 'AREZZO',
+                'brand_id' => 1,
                 'address' => 'AV MARECHAL CASTELO BRANCO, 911 LOJA 211',
                 'information' => 'AV MARECHAL CASTELO BRANCO, 911 LOJA 211',
                 'city_id' => '614',
@@ -1048,7 +1048,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -44.229122,
             ],
             [
-                'name' => 'CROCS',
+                'brand_id' => 3,
                 'address' => 'AV WASHINGTON SOARES, 85 LOJA 212',
                 'information' => 'AV WASHINGTON SOARES, 85 LOJA 212',
                 'city_id' => '59',
@@ -1056,7 +1056,7 @@ class DatabaseSeeder extends Seeder
                 'lng' => -38.481135,
             ],
             [
-                'name' => 'CROCS',
+                'brand_id' => 3,
                 'address' => 'AV DANIEL DE LA TOUCHE, 987 LOJA 301 L',
                 'information' => 'AV DANIEL DE LA TOUCHE, 987 LOJA 301 L',
                 'city_id' => '371',
@@ -1074,7 +1074,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 6, 'name' => 'TIM', 'image' => 'icons/tim.png'], // 6
         ];
 
-        foreach($$brands as $b) {
+        foreach($brands as $b) {
             DB::table('brand')->insert([
                 'name' => $b['name'],
                 'image' => $b['image'],
@@ -1083,7 +1083,7 @@ class DatabaseSeeder extends Seeder
 
         foreach($listStore as $store) {
             DB::table('store')->insert([
-                'brand_id' => $stre['brand_id'],
+                'brand_id' => $store['brand_id'],
                 'address' => $store['address'],
                 'information' => $store['information'],
                 'city_id' => $store['city_id'],
