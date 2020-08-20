@@ -1074,7 +1074,7 @@ class DatabaseSeeder extends Seeder
             ['id' => 6, 'name' => 'TIM', 'image' => 'icons/tim.png'], // 6
         ];
 
-        foreach($$brands as $b) {
+        foreach($brands as $b) {
             DB::table('brand')->insert([
                 'name' => $b['name'],
                 'image' => $b['image'],
@@ -1083,7 +1083,7 @@ class DatabaseSeeder extends Seeder
 
         foreach($listStore as $store) {
             DB::table('store')->insert([
-                'brand_id' => $stre['brand_id'],
+                'brand_id' => $store['brand_id'],
                 'address' => $store['address'],
                 'information' => $store['information'],
                 'city_id' => $store['city_id'],
