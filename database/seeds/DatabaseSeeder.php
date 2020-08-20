@@ -17,7 +17,8 @@ class DatabaseSeeder extends Seeder
         $states = [
             '1' => 'Ceará',
             '2' => 'Maranhão',
-            '3' => 'Piauí'
+            '3' => 'Piauí',
+            '4' => 'Rio Grande do Norte'
         ];
 
         $cidadesCeara = [
@@ -852,6 +853,14 @@ class DatabaseSeeder extends Seeder
             DB::table('city')->insert([
                 'name' => $cidadesMaranhao[$key],
                 'state_id' => 2,
+            ]);
+        }
+
+        // Cidades RioGrandeDoNorte
+        foreach($cidadesRioGrandeDoNorte as $key => $c) {
+            DB::table('city')->insert([
+                'name' => $cidadesRioGrandeDoNorte[$key],
+                'state_id' => 4,
             ]);
         }
 
