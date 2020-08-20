@@ -28,6 +28,7 @@ Route::get('/blog/{name?}', 'SiteController@noticias');
 Route::get('/blog', 'SiteController@blog');
 Route::get('/post', 'SiteController@post');
 Route::get('/find-store', 'SiteController@findStore');
+Route::get('/faji', 'SiteController@faji');
 
 // Store Site
 Route::post('send-curriculum', 'SiteController@sendCurriculum');

@@ -54,6 +54,10 @@ class SiteController extends Controller
         return view('site.magrella');
     }
 
+    public function faji() {
+        return view('site.faji');
+    }
+
     public function lojas() {
         return view('site.lojas',
         [
