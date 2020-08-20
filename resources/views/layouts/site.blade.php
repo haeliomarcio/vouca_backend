@@ -121,6 +121,7 @@
                                 <a href="{{url('/marcas')}}">MARCAS</a><br />
                                 <a href="{{url('/lojas')}}">LOJAS</a><br />
                                 <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
+                                <a href="{{url('/faji')}}">FAJI</a><br />
                                 <a href="{{url('/contato')}}">CONTATO</a>
                             </p>
                         </div>
