@@ -62,6 +62,13 @@ return [
             'visibility' => 'public',
         ],
 
+        'icons' => [
+            'driver' => 'local',
+            'root' => base_path('public_html/icons'),
+            'url' => env('APP_URL').'/../public_html/icons',
+            'visibility' => 'public',
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

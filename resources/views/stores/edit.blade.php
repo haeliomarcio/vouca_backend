@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Edição - Loja - {{$data->name}}</h3>
+            <h3 class="card-title">Edição - Loja</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -11,8 +11,17 @@
             <form method="POST" action="{{url('/dashboard/stores/update/'.$data->id)}}">
             {{ csrf_field() }}
                 <div class="form-group">
-                    <label for="name">Nome <span class="required">*</span></label>
-                    <input name="name"  value="{{$data->name}}" type="text" class="form-control" id="name" placeholder="Nome">
+                    <label for="information">Informações <span class="required">*</span></label>
+                    <select name="brand_id" value="{{$data->brand_id}}" class="form-control" id="brand_id">
+                        <option value="">Selecione</option>
+                        @foreach($brands as $bra)
+                            @if ($data->brand_id === $bra->id)
+                                <option value="{{$bra->id}}" selected>{{$bra->name}}</option>
+                            @else
+                                <option value="{{$bra->id}}">{{$bra->name}}</option>
+                            @endif
+                        @endforeach
+                    </select>
                 </div>
                 <div class="form-group">
                     <label for="information">Informações <span class="required">*</span></label>

@@ -88,6 +88,15 @@ Route::middleware(['auth'])->group(function () {
             Route::get('delete/{id}', 'UsersController@destroy');
         });
 
+        Route::prefix('brands')->group(function () {
+            Route::get('', 'BrandsController@index');
+            Route::get('create', 'BrandsController@create');
+            Route::get('edit/{id}', 'BrandsController@edit');
+            Route::post('store', 'BrandsController@store');
+            Route::post('update/{id}', 'BrandsController@update');
+            Route::get('delete/{id}', 'BrandsController@destroy');
+        });
+
         Route::prefix('states')->group(function () {
             Route::get('list-city-by-id/{state_id}', 'StatesController@listCity');
         });

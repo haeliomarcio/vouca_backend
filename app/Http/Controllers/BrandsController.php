@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreStore;
+use App\Http\Requests\StoreBrands;
 use App\Models\Brand;
 use Illuminate\Http\Request;
-use App\Models\Store;
-use App\Models\State;
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Storage;
+use Exception;
 
-class StoresController extends Controller
+
+class BrandsController extends Controller
 {
 
     protected $model;
-    public function __construct(Store $model) {
+    protected $prefixName = 'brands';
+
+    public function __construct(Brand $model) {
         $this->model = $model;        
     }
     /**
@@ -25,14 +27,14 @@ class StoresController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model
+            $context = $this->model->where('title', 'ilike', "%{$search}%")
                 ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('email', 'ilike', "%{$search}%")
+                ->orWhere('name', 'ilike', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);
         }
-        return view('stores.list', ['stores' => $context]);
+        return view($this->prefixName.'.list', ['list' => $context]);
     }
 
     /**
@@ -42,8 +44,7 @@ class StoresController extends Controller
      */
     public function create()
     {
-        $states = State::all();
-        return view('stores.new', ['states' => $states, 'brands' => Brand::all()]);
+        return view($this->prefixName.'.new');
     }
 
     /**
@@ -52,10 +53,17 @@ class StoresController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(StoreStore $request)
+    public function store(StoreBrands $request)
     {
-        $this->model->create($request->all());
-        return redirect('/dashboard/stores')->with('success', 'Loja criado com sucesso.');
+        try {
+            $params = $request->all();
+            $filename = $request->file('image')->store('', 'icons');
+            $params['image'] = 'icons/'.$filename;
+            $this->model->create($params);
+            return redirect('/dashboard/'.$this->prefixName)->with('success', 'Marca criada com sucesso.');
+        } catch(Exception $e) {
+            return back()->with('error', $e->getMessage());
+        }   
     }
 
     /**
@@ -66,7 +74,7 @@ class StoresController extends Controller
      */
     public function show($id)
     {
-        //
+        // 
     }
 
     /**
@@ -77,14 +85,8 @@ class StoresController extends Controller
      */
     public function edit($id)
     {
-        $context = DB::table('store as sto')
-            ->select('sto.*', 'state.id as state_id')
-            ->join('city', 'city.id', 'sto.city_id')
-            ->join('state', 'state.id', 'city.state_id')
-            ->where('sto.id', $id)
-            ->get()->first();
-        $states = State::all();
-        return view('stores.edit', ['data' => $context, 'states' => $states, 'brands' => Brand::all()]);
+        $context = $this->model->find($id);
+        return view($this->prefixName.'.edit', ['data' => $context]);
     }
 
     /**
@@ -94,11 +96,19 @@ class StoresController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(StoreStore $request, $id)
+    public function update(StoreBrands $request, $id)
     {
         $context = $this->model->find($id);
-        $context->update($request->all());
-        return redirect('/dashboard/stores')->with('success', 'Loja atualizado com sucesso.');
+        $params = $request->all();
+        if($request->file('image')) {
+            if(file_exists(public_path('icons/'.$context->image_path))) {
+                unlink(public_path('icons/'.$context->image_path));
+            }
+            $filename = $request->file('image')->store('', 'icons');
+            $params['image'] = 'icons/'.$filename;
+        }
+        $context->update($params);
+        return redirect('/dashboard/'.$this->prefixName)->with('success', 'Marca atualizada com sucesso.');
     }
 
     /**
@@ -110,15 +120,14 @@ class StoresController extends Controller
     public function destroy($id)
     {
         $context = $this->model->find($id);
-        
         if($context) {
             if($context->delete()) {
+                Storage::disk('icons')->delete($context->path_image);
                 return back()
-                ->with('success', 'Loja '. $context->name. ' removido com sucesso');
+                ->with('success', 'Marca '. $context->name. ' removido com sucesso');
             }
         }
         return back()
-            ->with('error', 'Erro ao remover loja');
-        
+            ->with('error', 'Erro ao remover marca');
     }
 }
