@@ -76,6 +76,10 @@
             
           </li>
           <li class="nav-item">
+            <a href="{{url('/dashboard/brands')}}" class="nav-link">
+              <i class="nav-icon far fa-building"></i>Marcas</a>
+          </li>
+          <li class="nav-item">
             <a href="{{url('/dashboard/stores')}}" class="nav-link">
               <i class="nav-icon far fa-building"></i>Lojas</a>
           </li>

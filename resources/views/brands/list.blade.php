@@ -2,7 +2,7 @@
 @section('content')
     <div class="card">
         <div class="card-header">
-            <h3 class="card-title">Lojas</h3>
+            <h3 class="card-title">Marcas</h3>
         </div>
         <!-- /.card-header -->
         <div class="card-body">
@@ -21,22 +21,22 @@
                 <tr>
                     <th style="width: 10px">#</th>
                     <th>Nome</th>
-                    <th>Endereço</th>
+                    <th>Ponteiro</th>
                     <th style="width: 40px">Ações</th>
                 </tr>
                 </thead>
                 <tbody>
-                    @foreach ($stores as $item)
+                    @foreach ($list as $item)
                         <tr>
                             <td>{{ $item->id }}</td>
-                            <td>{{ $item->brand->name }}</td>
-                            <td>{{ $item->address }}</td>
+                            <td>{{ $item->name }}</td>
+                            <td><a href="{{ url($item->image) }}" target="_blank">Imagem</a></td>
                             <td style="width: 180px;" class="project-actions text-right">
-                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/stores/edit/'.$item->id)}}">
+                                <a class="btn btn-info btn-sm" href="{{url('/dashboard/brands/edit/'.$item->id)}}">
                                     <i class="fas fa-pencil-alt"></i>
                                     Editar
                                 </a>
-                                <a id="confirmation-delete" data-info="{{url('/dashboard/stores/delete/'.$item->id)}}" class="btn btn-danger btn-sm" href="#">
+                                <a id="confirmation-delete" data-info="{{url('/dashboard/brands/delete/'.$item->id)}}" class="btn btn-danger btn-sm" href="#">
                                     <i class="fas fa-trash"></i>
                                     Deletar
                                 </a>
@@ -46,7 +46,7 @@
                 </tbody>
             </table>
             <br />
-            {{ $stores->links() }}
+            {{ $list->links() }}
         </div>
     </div>
 @endsection 

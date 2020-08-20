@@ -265,12 +265,12 @@
             }
         });
         
-        var arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
-        var boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
-        var cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
-        var crocs = new LeafIcon({iconUrl: '/images/icons/crocs.png'});
-        var magrella = new LeafIcon({iconUrl: '/images/icons/magrella.png'});
-        var tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
+        var arezzo = new LeafIcon({iconUrl: '/icons/arezzo.png'});
+        var boticario = new LeafIcon({iconUrl: '/icons/boticario.png'});
+        var cacauShow = new LeafIcon({iconUrl: '/icons/cacau-show.png'});
+        var crocs = new LeafIcon({iconUrl: '/icons/crocs.png'});
+        var magrella = new LeafIcon({iconUrl: '/Icons/magrella.png'});
+        var tim = new LeafIcon({iconUrl: '/icons/tim.png'});
         
         function listStores() {  
             var ceara = $("#ceara").prop('checked');
@@ -290,7 +290,7 @@
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
-                    var marker = L.marker([lat, lng], {icon: getIcons(item.name)}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                    var marker = L.marker([lat, lng], {icon: new LeafIcon({iconUrl: item.image})}).bindPopup(item.information).addTo(map);
                     mapMarkers.push(marker);
                 }
             })

@@ -126,7 +126,10 @@
                             <h3 class="subtitulo" style="margin: 0 0 20px;"><i class="fas fa-phone"></i><strong>SAC</strong></h3>
                         </div>
                         <div class="col-sm-12">
-                            <span>E-mail: sac@grupovilarouca.com.br</span>
+                            <span>Rua Epitácio Pessoa, 122, Centro, IGUATU-CE CEP 63500-044</span>
+                            <br />
+                            <span>E-mail: sac@grupovilarouca.com.br</span> 
+                            
                         </div>
                         <div class="col-sm-12">
                             <span>Telefone: 08002808525</span>
