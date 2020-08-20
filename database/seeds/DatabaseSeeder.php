@@ -1063,11 +1063,27 @@ class DatabaseSeeder extends Seeder
                 'lat' => -2.527410,
                 'lng' => -44.255305,
             ],
-        ];        
+        ];   
+        
+        $brands = [
+            ['id' => 1, 'name' => 'AREZZO', 'image' => 'icons/arezzo.png'], // 1
+            ['id' => 2, 'name' => 'CACAU SHOW', 'image' => 'icons/cacau-show.png'], // 2
+            ['id' => 3, 'name' => 'CROCS', 'image' => 'icons/crocs.png'], // 3
+            ['id' => 4, 'name' => 'MAGRELLA', 'image' => 'icons/magrella.png'], // 4
+            ['id' => 5, 'name' => 'O BOTICARIO', 'image' => 'icons/boticario.png'], // 5
+            ['id' => 6, 'name' => 'TIM', 'image' => 'icons/tim.png'], // 6
+        ];
+
+        foreach($$brands as $b) {
+            DB::table('brand')->insert([
+                'name' => $b['name'],
+                'image' => $b['image'],
+            ]);
+        }
 
         foreach($listStore as $store) {
             DB::table('store')->insert([
-                'name' => $store['name'],
+                'brand_id' => $stre['brand_id'],
                 'address' => $store['address'],
                 'information' => $store['information'],
                 'city_id' => $store['city_id'],
@@ -1076,5 +1092,12 @@ class DatabaseSeeder extends Seeder
             ]);
         }
 
+        DB::table('jobs_employment')->insert([
+            'title' => 'Banco de Talentos',
+            'description' => 'Banco de Talentos',
+            'status' => 0,
+            'date_begin' => '2020-01-01',
+            'city_id' => 1,
+        ]);
     }
 }

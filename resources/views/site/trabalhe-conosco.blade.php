@@ -20,10 +20,6 @@
 
         <div class="container" style="background-color: #fff; margin-top: 50px;">
             <div class="container container-sobre">
-                <!--
-                <h3 class="subtitulo"><strong>Seja Grupo Vilarouca</strong></h3>
-                -->
-
                 <div class="centro">
                     <img src="images/grupo-vilarouca-equipe.png" style="width: 100%;">
                 </div>
@@ -71,12 +67,6 @@
                         </tr>
                     </thead>
                     <tbody id="tabela">
-                        <!-- @foreach($jobs as $job) 
-                        <tr data-href="#">
-                            <td style="color: #0a6961; font-weight: bold;">{{$job->title}}</td>
-                            <td>{{$job->city_name}}/{{$job->state_name}}</td>
-                        </tr>
-                        @endforeach -->
                     </tbody>
                 </table>
                 {{ $jobs->links() }}
@@ -93,6 +83,16 @@
             var vaga = $("#vaga").val();
             $('#tabela').html('');
             var row = '';
+            // Vaga Banco de Talentos
+            row += '<tr>';
+            row += '<td style="color: #0a6961; font-weight: bold;">';
+            row += `<a style="color: #0a6961;" href="{{url('/vaga/${1}')}}">Banco de Talentos</a>`;
+            row += '</td>';
+            row += '<td>';
+            row += 'Todas as Cidades';
+            row += '</td>';
+            row += '</tr>';
+            
             axios.get(`{{url('/list-jobs/')}}?state_id=${state_id}&city_id=${city_id}&vaga=${vaga}`)
             .then(function(response) {
                 for (item of response.data.jobs.data) {

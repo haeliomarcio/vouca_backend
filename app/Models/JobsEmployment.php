@@ -13,8 +13,8 @@ class JobsEmployment extends Model
         'description',
         'status',
         'city_id',
-        'begin',
-        'end',
+        'date_begin',
+        'date_end',
     ];
 
     public function city(){

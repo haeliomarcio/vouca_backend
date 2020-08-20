@@ -9,7 +9,7 @@ class Store extends Model
     protected $table = 'store';
     protected $fillable = [
         'id',
-        'name',
+        'brand_id',
         'information',
         'address',
         'city_id',
@@ -17,6 +17,10 @@ class Store extends Model
         'lng',
     ];
 
+    public function brand() {
+        return $this->belongsTo(Brand::class, 'brand_id');
+    }
+    
     public function city() {
         return $this->belongsTo(City::class);
     }

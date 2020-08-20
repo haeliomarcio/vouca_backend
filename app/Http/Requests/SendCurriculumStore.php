@@ -25,7 +25,7 @@ class SendCurriculumStore extends FormRequest
     {
         return [
             'name' => 'required',
-            'cpf' => 'required|min:14',
+            'cpf' => 'required|min:14|cpf',
             'telephone' => 'required',
             'email' => 'required|email',
             'cep' => 'required',

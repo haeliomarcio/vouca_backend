@@ -16,7 +16,7 @@
                 </div>
                 <div class="form-group">
                     <label for="description">Descrição <span class="required">*</span></label>
-                    <textarea rows="6" name="description"  value="{{old('description')}}" class="form-control" id="description" placeholder="Descrição"></textarea>
+                    <textarea rows="6" name="description"  value="{{old('description')}}" class="form-control" id="description" placeholder="Descrição">{{old('description')}}</textarea>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -43,12 +43,12 @@
                         </select>
                     </div>
                     <div class="col">
-                        <label for="begin">Início de Publicação <span class="required">*</span></label>
-                        <input name="begin" value="{{old('begin')}}"  type="date" class="form-control" id="begin">
+                        <label for="date_begin">Início de Publicação <span class="required">*</span></label>
+                        <input name="date_begin" value="{{old('date_begin')}}"  type="date" class="form-control" id="date_begin">
                     </div>
                     <div class="col">
-                        <label for="end">Fim de Publicação  <span class="required">*</span></label>
-                        <input name="end" value="{{old('end')}}" type="date" class="form-control" id="end" >
+                        <label for="date_end">Fim de Publicação  <span class="required">*</span></label>
+                        <input name="date_end" value="{{old('date_end')}}" type="date" class="form-control" id="date_end" >
                     </div>
                 </div>
                 <br />

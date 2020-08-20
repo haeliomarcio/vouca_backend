@@ -10,6 +10,7 @@ use App\Models\JobsEmployment;
 use App\Models\News;
 use App\Models\State;
 use App\Models\Store;
+use Carbon\Carbon;
 use GuzzleHttp\Psr7\Request;
 use Illuminate\Queue\Jobs\Job;
 use Illuminate\Support\Facades\DB;
@@ -182,7 +183,9 @@ class SiteController extends Controller
                     $query->where('job.id', $params['vaga']);
                 }
             })
-            ->paginate(15);      
+            ->where('status', 1)
+            ->where('date_begin', '<=', Carbon::now()->format('Y-m-d'))
+            ->paginate(15);     
         return view('site.trabalhe-conosco', ['jobs' => $jobs, 'states' => $states]);
     }
 
@@ -209,6 +212,8 @@ class SiteController extends Controller
                     $query->where('job.id', $params['vaga']);
                 }
             })
+            ->where('status', 1)
+            ->where('date_begin', '<=', Carbon::now()->format('Y-m-d'))
             ->paginate(15);
 
         return response()->json(['jobs' => $jobs, 'states' => $states], 200);
