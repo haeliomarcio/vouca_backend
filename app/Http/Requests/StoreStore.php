@@ -24,7 +24,7 @@ class StoreStore extends FormRequest
     public function rules()
     {
         return [
-            'name' => 'required|min:3',
+            'brand_id' => 'required',
             'information' => 'required|min:10',
             'address' => 'required|min:6',
             'city_id' => 'required',
@@ -36,7 +36,7 @@ class StoreStore extends FormRequest
     public function attributes()
     {
         return [
-            'name' => 'Nome',
+            'brand_id' => 'Marca',
             'information' => 'Informações',
             'address' => 'Endereço',
             'city_id' => 'Cidade',

@@ -18,8 +18,8 @@ class CreateJobsEmploymentTable extends Migration
             $table->string('title');
             $table->text('description');
             $table->integer('status');
-            $table->date('begin');
-            $table->date('end');
+            $table->date('date_begin');
+            $table->date('date_end')->nullable();
             $table->unsignedBigInteger('city_id');
             $table->timestamps();
             $table->foreign('city_id')->references('id')->on('city');

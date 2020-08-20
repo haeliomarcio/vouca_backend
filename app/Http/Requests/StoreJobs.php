@@ -28,8 +28,7 @@ class StoreJobs extends FormRequest
             'title' => 'required|min:3',
             'description' => 'required|min:6',
             'status' => 'required',
-            'begin' => 'required',
-            'end' => 'required',
+            'date_begin' => 'required',
             'city_id' => 'required',
         ];
     }
@@ -40,8 +39,7 @@ class StoreJobs extends FormRequest
             'title' => 'Título',
             'description' => 'Descrição',
             'status' => 'Status',
-            'begin' => 'Iníco',
-            'end' => 'Fim',
+            'date_begin' => 'Iníco',
             'state_id' => 'Estado',
             'city_id' => 'Cidade',
         ];

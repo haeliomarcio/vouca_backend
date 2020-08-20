@@ -53,12 +53,12 @@
                         </select>
                     </div>
                     <div class="col">
-                        <label for="begin">Início de Publicação <span class="required">*</span></label>
-                        <input name="begin" value="{{$data->begin}}"  type="date" class="form-control" id="begin">
+                        <label for="date_begin">Início de Publicação <span class="required">*</span></label>
+                        <input name="date_begin" value="{{$data->date_begin}}"  type="date" class="form-control" id="date_begin">
                     </div>
                     <div class="col">
-                        <label for="end">Fim de Publicação <span class="required">*</span></label>
-                        <input name="end" value="{{$data->end}}" type="date" class="form-control" id="end" >
+                        <label for="date_end">Fim de Publicação <span class="required">*</span></label>
+                        <input name="date_end" value="{{$data->date_end}}" type="date" class="form-control" id="date_end" >
                     </div>
                 </div>
                 <br />

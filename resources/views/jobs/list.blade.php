@@ -30,7 +30,7 @@
                         <tr>
                             <td>{{ $item->id }}</td>
                             <td>{{ $item->title }}</td>
-                            <td>{{ $item->status }}</td>
+                            <td>{{ $item->status ? 'Ativo' : 'Desativado' }}</td>
                             <td style="width: 180px;" class="project-actions text-right">
                                 <a class="btn btn-info btn-sm" href="{{url('/dashboard/jobs/edit/'.$item->id)}}">
                                     <i class="fas fa-pencil-alt"></i>

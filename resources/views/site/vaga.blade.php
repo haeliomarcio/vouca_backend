@@ -21,17 +21,11 @@
 @endsection
 @section('content')
     <div class="wrap">
-        <!--
-        <div class="content" style="margin-top: 50px; margin-left: 90px;">
-            <h2 class="titulo"><strong>Seja Grupo Vilarouca</strong></h2>
-        </div>
-        -->
-
         <div class="container" style="background-color: #fff; margin-top: 100px;">
             <div class="container container-sobre">
                 <div style="border-left: 5px solid; border-color: #d79122;">
                     <h3 style="margin-left: 10px;" class="subtitulo"><strong>Vaga selecionada: {{$job->title}}</strong></h3>
-                    <h3 style="margin-left: 10px;" class="subtitulo"><strong>Cidade: {{$job->city->name}}/{{$job->city->state->name}}</strong></h3>
+                    <h3 style="margin-left: 10px;" class="subtitulo"><strong>Cidade: {{ $job->id !== 1 ? $job->city->name . '/' . $job->city->state->name : 'Todas as Cidades'}}</strong></h3>
                 </div>
                 <hr />
                 <h3 class="subtitulo"><strong>Formulário</strong></h3>
