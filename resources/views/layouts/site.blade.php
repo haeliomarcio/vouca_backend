@@ -73,7 +73,7 @@
                             <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Trabalhe Conosco</a>
                         </li>
                         <li class="nav-item">
-                            <a href="#" class="nav-link font-weight-bold" style="font-size: 16px;">FAJI</a>
+                            <a href="{{url('/faji')}}" class="nav-link font-weight-bold" style="font-size: 16px;">FAJI</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Contato</a>
@@ -328,33 +328,63 @@
         $('.cacau-showImg').mouseenter(function () {
             $('.maranhaoImg2').addClass('filterMaranhao2');
             $('.piauiImg2').addClass('filterPiaui2');
+            $('.rnImg2').addClass('filterRN2');
 
         });
         $('.cacau-showImg').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
+            $('.rnImg2').removeClass('filterRN2');
         });
         
         //////* TIM *////////
         $('.timImg').mouseenter(function () {
             $('.maranhaoImg2').addClass('filterMaranhao2');
             $('.piauiImg2').addClass('filterPiaui2');
+            $('.rnImg2').addClass('filterRN2');
 
         });
         $('.timImg').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
+            $('.rnImg2').removeClass('filterRN2');
         });
 
         //////* MAGRELLA *////////
         $('.magrellaImg').mouseenter(function () {
             $('.maranhaoImg2').addClass('filterMaranhao2');
             $('.piauiImg2').addClass('filterPiaui2');
+            $('.rnImg2').addClass('filterRN2');
 
         });
         $('.magrellaImg').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
+            $('.rnImg2').removeClass('filterRN2');
+        });
+
+        //////* AREZZO *////////
+        $('.arezzoImg').mouseenter(function () {
+            $('.rnImg2').addClass('filterRN2');
+        });
+        $('.arezzoImg').mouseout(function () {
+            $('.rnImg2').removeClass('filterRN2');
+        });
+
+        //////* CROCS *////////
+        $('.crocsImg').mouseenter(function () {
+            $('.rnImg2').addClass('filterRN2');
+        });
+        $('.crocsImg').mouseout(function () {
+            $('.rnImg2').removeClass('filterRN2');
+        });
+
+        //////* O BOTICARIO *////////
+        $('.oboticarioImg').mouseenter(function () {
+            $('.rnImg2').addClass('filterRN2');
+        });
+        $('.oboticarioImg').mouseout(function () {
+            $('.rnImg2').removeClass('filterRN2');
         });
     })
 </script>
