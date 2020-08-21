@@ -97,7 +97,7 @@
 
         <br />
         <!-- Footer Início -->
-        <div class="row">
+        <div class="row" style="width: 100%;">
             <div class="col-sm-4">
                 <img src="images/footer-bg.png" style="width: 100%;">
             </div>
