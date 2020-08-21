@@ -504,3 +504,11 @@ figure img{
 img.map, map area{
     outline: none;
 }
+
+.map-top {
+    position: absolute;
+    z-index: 1000;
+    left: -60px;
+    top: -2px;
+    opacity: 0;
+}

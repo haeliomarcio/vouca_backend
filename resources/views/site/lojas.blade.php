@@ -242,17 +242,33 @@
         var map = L.map('map', {
             center: [-4.053263, -43.0394255],
             zoom: 6,
-            scrollWheelZoom: false
+            scrollWheelZoom: false,
         });
-        
+
+        function style(feature) {
+            return {
+                fillColor: getColor(feature.properties.density),
+                weight: 2,
+                opacity: 1,
+                color: 'white',
+                dashArray: '3',
+                fillOpacity: 0.7
+            };
+        }
         // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
         //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         // }).addTo(map);
 
-        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+        // var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+        //         attribution: 'GrupoVilarouca'
+        // }).addTo(map);    
+        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
                 attribution: 'GrupoVilarouca'
         }).addTo(map);    
-
+        // var positron = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png', {
+        //         attribution: 'GrupoVilarouca'
+        // }).addTo(map);    
+        
         var mapMarkers = [];
         var LeafIcon = L.Icon.extend({
             options: {
