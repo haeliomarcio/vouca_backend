@@ -139,5 +139,34 @@
 
             </div>
         </div>
+        <div id="map" style="width:100%; height: 600px;"></div>
     </div>
+@endsection
+@section('scripts_bottom')
+    <script>
+        var map = L.map('map', {
+            center: [-6.361741, -39.3002579],
+            zoom: 6,
+            scrollWheelZoom: false
+        });
+
+        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
+                attribution: '©OpenStreetMap, ©CartoDB'
+        }).addTo(map);    
+
+        var LeafIcon = L.Icon.extend({
+            options: {
+                iconSize:     [68, 95], 
+                shadowSize:   [50, 64], 
+                iconAnchor:   [22, 94], 
+                shadowAnchor: [4, 62],  
+                popupAnchor:  [-3, -76] 
+            }
+        });
+
+        var icon = new LeafIcon({iconUrl: "{{url('/images/icon-vilarouca.png')}}"});
+                
+        L.marker([-6.361741, -39.300257], {icon: icon}).bindPopup('Rua Epitácio Pessoa, 122, Centro, IGUATU-CE CEP 63500-044').addTo(map);
+        
+    </script>
 @endsection

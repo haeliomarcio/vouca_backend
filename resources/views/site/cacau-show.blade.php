@@ -93,13 +93,20 @@
         var tim = new LeafIcon({iconUrl: '/images/icons/tim.png'});
         
         function listStores() {  
-            axios.get(`{{url('/find-store/')}}?store=Cacau Show`)
+            axios.get(`{{url('/find-store/')}}?store=CACAU SHOW`)
             .then(function(response) {
                 for(item of response.data) {
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
-                    var marker = L.marker([lat, lng], {icon: cacauShow}).bindPopup(item.lat + " - " + item.lng + ' - ' + item.name).addTo(map);
+                    var marker = L.marker([lat, lng], {icon: new LeafIcon({
+                            iconUrl: item.image,
+                            iconSize:     [68, 95], 
+                            shadowSize:   [50, 64], 
+                            iconAnchor:   [22, 94], 
+                            shadowAnchor: [4, 62],  
+                            popupAnchor:  [-3, -76] 
+                        })}).bindPopup(item.information).addTo(map);
                     mapMarkers.push(marker);
                 }
             })

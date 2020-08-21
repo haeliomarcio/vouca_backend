@@ -841,13 +841,7 @@ class DatabaseSeeder extends Seeder
                 'state_id' => 1,
             ]);
         }
-        // Cidades Piaui
-        foreach($cidadesPiaui as $key => $c) {
-            DB::table('city')->insert([
-                'name' => $cidadesPiaui[$key],
-                'state_id' => 3,
-            ]);
-        }
+
         // Cidades Maranhão
         foreach($cidadesMaranhao as $key => $c) {
             DB::table('city')->insert([
@@ -855,6 +849,15 @@ class DatabaseSeeder extends Seeder
                 'state_id' => 2,
             ]);
         }
+
+        // Cidades Piaui
+        foreach($cidadesPiaui as $key => $c) {
+            DB::table('city')->insert([
+                'name' => $cidadesPiaui[$key],
+                'state_id' => 3,
+            ]);
+        }
+        
 
         // Cidades RioGrandeDoNorte
         foreach($cidadesRioGrandeDoNorte as $key => $c) {
@@ -878,16 +881,16 @@ class DatabaseSeeder extends Seeder
                 'address' => 'AV PROFESSOR CARLOS CUNHA, 1000 LOJA 129',
                 'information' => '(98) 3581-3650',
                 'city_id' => '187',
-                'lat' => -2.5090419,
-                'lng' => -44.2864985,
+                'lat' => -2.5107088,
+                'lng' => -44.2876865,
             ],
             [
                 'brand_id' => 1,
                 'address' => 'AV DANIEL DE LA TOUCHE, 987 LOJA 320 G',
                 'information' => '(86) 3230-2228',
                 'city_id' => '187',
-                'lat' => -2.5165253,
-                'lng' => -44.2464014,
+                'lat' => -2.5277,
+                'lng' => -44.2574656,
             ],
             [
                 'brand_id' => 1,

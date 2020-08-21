@@ -272,10 +272,10 @@
         var mapMarkers = [];
         var LeafIcon = L.Icon.extend({
             options: {
-                //shadowUrl: 'leaf-shadow.png',
+                // shadowUrl: 'leaf-shadow.png',
                 // iconSize:     [40, 55],                
                 // shadowSize:   [50, 64],
-                // iconAnchor:   [22, 94],
+                // iconAnchor:   [10, 60],
                 // shadowAnchor: [4, 62],
                 // popupAnchor:  [-3, -76]
             }
@@ -306,7 +306,15 @@
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
-                    var marker = L.marker([lat, lng], {icon: new LeafIcon({iconUrl: item.image})}).bindPopup(item.information).addTo(map);
+                    var marker = L.marker([lat, lng], {
+                        icon: new LeafIcon({
+                            iconUrl: item.image,
+                            iconSize:     [68, 95], // size of the icon
+                            shadowSize:   [50, 64], // size of the shadow
+                            iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+                            shadowAnchor: [4, 62],  // the same for the shadow
+                            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAncho
+                        })}).bindPopup(item.information).addTo(map);
                     mapMarkers.push(marker);
                 }
             })
