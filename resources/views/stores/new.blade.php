@@ -11,7 +11,7 @@
             <form method="post" action="{{url('/dashboard/stores/store')}}">
                 {{ csrf_field() }}
                 <div class="form-group">
-                    <label for="information">Informações <span class="required">*</span></label>
+                    <label for="information">Marca <span class="required">*</span></label>
                     <select name="brand_id" class="form-control" id="brand_id">
                         <option value="">Selecione</option>
                         @foreach($brands as $bra)

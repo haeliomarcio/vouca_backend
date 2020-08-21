@@ -47,7 +47,7 @@
                         <input name="date_begin" value="{{old('date_begin')}}"  type="date" class="form-control" id="date_begin">
                     </div>
                     <div class="col">
-                        <label for="date_end">Fim de Publicação  <span class="required">*</span></label>
+                        <label for="date_end">Fim de Publicação</label>
                         <input name="date_end" value="{{old('date_end')}}" type="date" class="form-control" id="date_end" >
                     </div>
                 </div>

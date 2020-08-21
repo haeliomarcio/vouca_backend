@@ -8,7 +8,7 @@
         <div class="card-body">
             <div class="row">
                 <div class="col-md-6">
-                    @include('helpers.form-search');
+                    @include('helpers.form-search')
                 </div>
                 <div class="col-md-6 text-right">
                     <a href="{{url('/dashboard/users/create')}}" class="btn btn-success">Novo Usuário</a>
