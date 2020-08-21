@@ -97,6 +97,33 @@
 
         <br />
         <!-- Footer Início -->
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="images/footer-bg.png" style="width: 100%;">
+            </div>
+            <div class="col-sm-8 centro" style="align-items: center;">
+                <div class="row">
+                    <div class = "col mx-auto text-center arezzo" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/arezzo.png" style="width: 100px;">
+                    </div>
+                    <div class = "col mx-auto text-center cacau-show" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/cacau-show.png" style="width: 100px;">
+                    </div>
+                    <div class = "col mx-auto text-center crocs" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/crocs.png" style="width: 100px;">
+                    </div>
+                    <div class = "col mx-auto text-center magrella" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/magrella.png" style="width: 100px;">
+                    </div>
+                    <div class = "col mx-auto text-center oboticario" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/boticario.png" style="width: 100px;">
+                    </div>
+                    <div class = "col mx-auto text-center tim" style="height: 70px; align-items: center;display: flex;">
+                        <img src = "images/marcas/marcas/tim.png" style="width: 100px;">
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="complemento-footer"></div>
         <footer class="footer">
             <div class="container">
