@@ -98,13 +98,30 @@
                         <div style="z-index: 0;position: absolute; margin-left: -60px;">
                             <img src="images/home-mapa/MAPA COMPLETO.png" style="width: 850px;" >
                         </div>
+                        <div class="map-top">
+                            <!-- <img src="images/home-mapa/MAPA COMPLETO.png" style="width: 850px;" usemap="#image-map">
+                            <map name="image-map">
+                                <area  id="maranhaoImg2" target="" alt="" title="" href="javascript:void(0)" coords="92,122,80,126,70,129,62,135,60,142,62,150,58,155,48,150,40,143,35,132,46,136,22,122,23,113,26,103,12,103,3,101,10,95,22,91,30,87,41,76,49,69,51,60,55,56,52,47,55,37,60,26,70,24,81,23,88,23,94,32,96,40,94,49,90,60,92,72,107,70,118,70,123,71,134,74,142,76,129,81,122,89,120,96,121,101,121,110,117,117,106,115,97,115" shape="poly">
+                                <area target="" alt="" title="" href="javascript:void(0)" coords="79,137,62,135,56,134,48,139,44,146,33,146,23,146,13,144,2,141,2,134,2,127,6,118,15,112,24,110,33,107,40,104,50,105,58,105,64,97,63,87,66,78,70,74,76,70,68,59,63,45,64,36,69,27,79,22,86,22,96,22,104,33,106,39,104,53,97,58,99,64,105,70,106,76,108,84,109,89,110,98,117,102,120,107,117,111,105,124,114,117,112,126,98,126,92,131" shape="poly">
+                                <area target="" alt="" title=""  href="javascript:void(0)" coords="46,115,42,111,30,108,8,98,19,104,13,93,13,85,6,78,3,68,16,63,25,61,21,56,20,49,20,36,27,27,37,22,51,25,58,35,58,45,50,64,58,73,69,74,80,77,74,88,69,91,60,100,58,106,55,110" shape="poly">
+                                <area target="" alt="" title="" href="javascript:void(0)" coords="37,90,28,90,21,87,12,85,3,85,7,77,14,72,21,68,28,69,36,71,42,71,53,69,49,60,41,47,40,33,48,26,57,23,70,23,76,31,81,38,80,51,74,61,66,72,70,81,62,85,50,85,41,87" shape="poly">
+                            </map> -->
+                            <!-- <img src="images/home-mapa/MAPA COMPLETO.png" style="width: 850px;"  usemap="#image_map">
+                            <map name="image_map">
+                                <area alt="" title="" href="" coords="1323,234,1325,236" shape="rect">
+                                <area alt="" title="" href="" coords="1349,109 1412,158 " shape="polygon">
+                                <area alt="" title="" href="" coords="1327,33 1299,64 1275,80 1249,104 1219,118 1263,118 1263,146 1263,158 1313,177 1306,203 1318,222 1337,241 1372,172 1426,161 1467,154 1476,151 1478,142 1476,130 1476,94 1488,83 1523,68 1507,57 1452,59 1422,66 1408,47 1377,24 1346,21 1304,59 " shape="polygon">
+                                <area alt="" title="" href="" coords="1353,231 1389,250 1443,241 1448,215 1457,215 1476,213 1511,217 1561,196 1587,189 1587,168 1599,156 1582,118 1582,80 1559,64 1535,59 1526,61 1502,73 1485,116 1485,128 1493,142 1481,151 1422,154 1393,163 1367,172 1344,194 " shape="polygon">
+                                <area alt="" title="" href="" coords="1622,170 1641,177 1663,184 1686,170 1712,125 1677,71 1641,71 1620,59 1580,83 1575,111 1585,135 " shape="polygon">
+                            </map> -->
+                        </div>
                         <div class = "row">
                             <!-- MAPA MARANHÃO -->                        
                             <div class="col-md-3" style="margin-top: 13;margin-left: 492;">
                                 <div>
                                     <img class="maranhaoImg2" src="images/home-mapa/MAPA + MA + SMALL.png" usemap="#image-ma">
                                     <map id="maranhaoImg2" name="image-ma">
-                                        <area target="" alt="" title="" href="" coords="92,122,80,126,70,129,62,135,60,142,62,150,58,155,48,150,40,143,35,132,46,136,22,122,23,113,26,103,12,103,3,101,10,95,22,91,30,87,41,76,49,69,51,60,55,56,52,47,55,37,60,26,70,24,81,23,88,23,94,32,96,40,94,49,90,60,92,72,107,70,118,70,123,71,134,74,142,76,129,81,122,89,120,96,121,101,121,110,117,117,106,115,97,115" shape="poly">
+                                        <area target="" alt="" title="" href="javascript:void(0)" coords="92,122,80,126,70,129,62,135,60,142,62,150,58,155,48,150,40,143,35,132,46,136,22,122,23,113,26,103,12,103,3,101,10,95,22,91,30,87,41,76,49,69,51,60,55,56,52,47,55,37,60,26,70,24,81,23,88,23,94,32,96,40,94,49,90,60,92,72,107,70,118,70,123,71,134,74,142,76,129,81,122,89,120,96,121,101,121,110,117,117,106,115,97,115" shape="poly">
                                     </map>
                                     <!-- <img class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="148"> -->
                                 </div>
@@ -113,11 +130,10 @@
                             <!-- MAPA PIAUI -->
                             <div class="col-md-3 " style="margin-top: -147;margin-left: 549;">
                                 <div>
-
-                                    <img class="piauiImg2"  src="images/home-mapa/MAPA + PI + SMALL.png" usemap="#image-pi">
                                     <map id="piauiImg2"  name="image-pi">
-                                        <area target="" alt="" title="" href="" coords="79,137,62,135,56,134,48,139,44,146,33,146,23,146,13,144,2,141,2,134,2,127,6,118,15,112,24,110,33,107,40,104,50,105,58,105,64,97,63,87,66,78,70,74,76,70,68,59,63,45,64,36,69,27,79,22,86,22,96,22,104,33,106,39,104,53,97,58,99,64,105,70,106,76,108,84,109,89,110,98,117,102,120,107,117,111,105,124,114,117,112,126,98,126,92,131" shape="poly">
+                                        <area target="" alt="" title="" href="javascript:void(0)" coords="79,137,62,135,56,134,48,139,44,146,33,146,23,146,13,144,2,141,2,134,2,127,6,118,15,112,24,110,33,107,40,104,50,105,58,105,64,97,63,87,66,78,70,74,76,70,68,59,63,45,64,36,69,27,79,22,86,22,96,22,104,33,106,39,104,53,97,58,99,64,105,70,106,76,108,84,109,89,110,98,117,102,120,107,117,111,105,124,114,117,112,126,98,126,92,131" shape="poly">
                                     </map>
+                                    <img class="piauiImg2"  src="images/home-mapa/MAPA + PI + SMALL.png" usemap="#image-pi">
                                     <!-- <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="122"> -->
                                 </div>
                             </div>
@@ -125,10 +141,10 @@
                             <!-- MAPA CEARA -->
                             <div class="col-md-3" style="margin-left: 650;margin-top: -150;">
                                 <div>
-                                    <img class="cearaImg2"  src="images/home-mapa/MAPA + CE + SMALL.png" usemap="#image-ce">
                                     <map id="cearaImg2" name="image-ce">
-                                        <area target="" alt="" title="" href="" coords="46,115,42,111,30,108,8,98,19,104,13,93,13,85,6,78,3,68,16,63,25,61,21,56,20,49,20,36,27,27,37,22,51,25,58,35,58,45,50,64,58,73,69,74,80,77,74,88,69,91,60,100,58,106,55,110" shape="poly">
+                                        <area target="" alt="" title=""  href="javascript:void(0)" coords="46,115,42,111,30,108,8,98,19,104,13,93,13,85,6,78,3,68,16,63,25,61,21,56,20,49,20,36,27,27,37,22,51,25,58,35,58,45,50,64,58,73,69,74,80,77,74,88,69,91,60,100,58,106,55,110" shape="poly">
                                     </map>
+                                    <img class="cearaImg2"  src="images/home-mapa/MAPA + CE + SMALL.png" usemap="#image-ce">
                                     <!-- <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="88"> -->
                                 </div>
                             </div>
@@ -136,10 +152,10 @@
                             <!-- MAPA RIO GRANDE DO NORTE -->
                             <div class="col-md-3" style="margin-left: 712;margin-top: -135;">
                                 <div>
-                                    <img class="rnImg2" src="images/home-mapa/MAPA + RN + SMALL.png" width="82" usemap="#image-rn">
                                     <map id="rnImg2"  name="image-rn">
-                                        <area target="" alt="" title="" href="" coords="37,90,28,90,21,87,12,85,3,85,7,77,14,72,21,68,28,69,36,71,42,71,53,69,49,60,41,47,40,33,48,26,57,23,70,23,76,31,81,38,80,51,74,61,66,72,70,81,62,85,50,85,41,87" shape="poly">
+                                        <area target="" alt="" title="" href="javascript:void(0)" coords="37,90,28,90,21,87,12,85,3,85,7,77,14,72,21,68,28,69,36,71,42,71,53,69,49,60,41,47,40,33,48,26,57,23,70,23,76,31,81,38,80,51,74,61,66,72,70,81,62,85,50,85,41,87" shape="poly">
                                     </map>
+                                    <img class="rnImg2" src="images/home-mapa/MAPA + RN + SMALL.png" width="82" usemap="#image-rn">
                                     <!-- <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="82"> -->
                                 </div>
                             </div>
