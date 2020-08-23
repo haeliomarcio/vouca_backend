@@ -35,7 +35,7 @@
                 <p>Sed pulvinar velit in eros feugiat rhoncus. Nullam lacinia elit quis tortor tempus vulputate dignissim ac purus. Morbi nisi ligula, fringilla aliquam rhoncus nec, convallis commodo risus. In dapibus dolor quis purus iaculis, a interdum est commodo. Cras luctus fermentum ex at sodales. Vestibulum commodo magna vitae suscipit commodo. Duis at ornare urna.</p>
 
                 <h2 class="subtitulo" style="margin-top: 50px;"><strong>Nossa marca</strong></h2>
-                <p>O <strong>símbolo VILAROUCA</strong> é um importante elemento da identidade visual do grupo, contribuindo para transmitir os atributos de sua imagem. Na busca de um caminho criativo, de força conceitual, sua composição foi idealizada a partir da junção de <strong>três elementos:</strong><br /><strong>A letra V</strong>, inicial do nome Vilarouca; a <strong>conexão afetiva</strong> das marcas representado pela imagem do coração; e a árvore que remete a ideia da <strong>genealogia</strong> da famíliaVilarouca.</p>
+                <p>O <strong>símbolo VILAROUCA</strong> é um importante elemento da identidade visual do grupo, contribuindo para transmitir os atributos de sua imagem. Na busca de um caminho criativo, de força conceitual, sua composição foi idealizada a partir da junção de <strong>três elementos:</strong><br /><strong>A letra V</strong>, inicial do nome Vilarouca; a <strong>conexão afetiva</strong> das marcas representada pela imagem do coração; e a árvore que remete a ideia da <strong>genealogia</strong> da família Vilarouca e de <strong>sua responsabilidade socioambiental.</strong></p>
             </div>
         </div>
     </div>

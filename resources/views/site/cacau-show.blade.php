@@ -11,6 +11,18 @@
         background-color: #2D170F !important;
         display: none;
     }
+
+    a {
+        color: #000;
+    }
+
+    a:visited {
+        color: #000;
+    }
+
+    a:link {
+        text-decoration: none;
+    }
 </style>
 @endsection
 @section('content')
@@ -52,6 +64,15 @@
                             </div>
                             <div class="col-sm-10">
                                 <span style="font-size: 24;">Atuando com XXXX PDVS</span>
+                            </div>
+                        </div>
+                        <br />
+                        <div class="row">
+                            <div class="col-sm-2 centro" style="align-items: center;">
+                                <i class="fab fa-whatsapp" style="font-size: 32;"></i>
+                            </div>
+                            <div class="col-sm-10">
+                                <span style="font-size: 24;"><a href="https://api.whatsapp.com/send?phone=5588999010191&text=Ol%C3%A1!" target="_blank">Compre pelo WhatsApp: (88) 99901 0191</a></span>
                             </div>
                         </div>
                     </div>
