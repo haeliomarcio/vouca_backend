@@ -17,6 +17,7 @@ class CreateCurriculumTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('cpf');
+            $table->string('sector')->nullable();
             $table->string('telephone');
             $table->string('email');
             $table->string('cep');

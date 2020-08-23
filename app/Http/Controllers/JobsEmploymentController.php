@@ -29,10 +29,10 @@ class JobsEmploymentController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('title', 'ilike', "%{$search}%")
-                ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('title', 'ilike', "%{$search}%")
-                ->orWhere('description', 'ilike', "%{$search}%")
+            $context = $this->model->where('title', 'like', "%{$search}%")
+                ->orWhere('id', 'like', "%{$search}%")
+                ->orWhere('title', 'like', "%{$search}%")
+                ->orWhere('description', 'like', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);

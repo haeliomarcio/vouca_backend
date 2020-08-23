@@ -26,8 +26,8 @@ class StoresController extends Controller
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
             $context = $this->model
-                ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('email', 'ilike', "%{$search}%")
+                ->orWhere('id', 'like', "%{$search}%")
+                ->orWhere('email', 'like', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);

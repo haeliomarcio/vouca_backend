@@ -1,16 +1,7 @@
 @extends('layouts.site')
 @section('styles')
 <style>
-    h4 {
-        color: #d79122 !important;
-    }
-    h2::after {
-        background-color: #fff !important;
-    }
-    h3::after {
-        top: 114%;
-        width: 65%;
-    }
+   
 
     .searchable-container{margin:20px 0 0 0}
     .searchable-container label.btn-default.active{background-color:#d79122;color:#FFF}
@@ -303,18 +294,31 @@
             axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
             .then(function(response) {
                 for(item of response.data) {
+                    var fone = item.information.replace('(', '').replace(')', '-').replace(' ', '');
+                    var popup = `<h4>${item.name}</h4>`;
+                    popup += `<p class="info-address-map">
+                        <a href="https://www.google.com.br/maps/place//@${item.lat},${item.lng},17z/" target="_blank">
+                            ${item.address}
+                        </a>
+                    </p>`;
+                    popup += `<p class="info-fone-map">
+                        <a href="tel:${fone}">
+                            ${item.information}
+                        </a>
+                    </p>`;
+
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
                     var marker = L.marker([lat, lng], {
                         icon: new LeafIcon({
                             iconUrl: item.image,
-                            iconSize:     [68, 95], // size of the icon
-                            shadowSize:   [50, 64], // size of the shadow
-                            iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
-                            shadowAnchor: [4, 62],  // the same for the shadow
-                            popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAncho
-                        })}).bindPopup(item.information).addTo(map);
+                            iconSize:     [68, 95],
+                            shadowSize:   [50, 64],
+                            iconAnchor:   [22, 94],
+                            shadowAnchor: [4, 62], 
+                            popupAnchor:  [-3, -76]
+                        })}).bindPopup(popup).addTo(map);
                     mapMarkers.push(marker);
                 }
             })

@@ -164,9 +164,21 @@
             }
         });
 
+        var popup = `<h4>Grupo Vilarouca</h4>`;
+        popup += `<p class="info-address-map">
+            <a href="https://www.google.com.br/maps/place//@-6.361741,-39.3002579,17z/" target="_blank">
+                Rua Epitácio Pessoa, 122, Centro, IGUATU-CE CEP 63500-044
+            </a>
+        </p>`;
+        popup += `<p class="info-fone-map">
+            <a href="tel:0800-280-85-25">
+                08002808525
+            </a>
+        </p>`;
+
         var icon = new LeafIcon({iconUrl: "{{url('/images/icon-vilarouca.png')}}"});
                 
-        L.marker([-6.361741, -39.300257], {icon: icon}).bindPopup('Rua Epitácio Pessoa, 122, Centro, IGUATU-CE CEP 63500-044').addTo(map);
+        L.marker([-6.361741, -39.300257], {icon: icon}).bindPopup(popup).addTo(map);
         
     </script>
 @endsection

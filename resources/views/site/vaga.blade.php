@@ -35,10 +35,22 @@
                         {{ csrf_field() }}
                         <input type="hidden" name="jobs_deployment_id" value="{{$job->id}}" />
                         <div class="form-row">
-                            <div class="form-group col-md-12">
+                            <div class="form-group col-md-{{ $job->id !== 1 ? '12' : '8'}}">
                                 <label for="nome" class="required">Nome</label>
                                 <input name="name" type="text" value="{{old('name')}}" class="form-control" id="nome" placeholder="Digite seu nome" required>
                             </div>
+                            <?php if($job->id === 1) { ?>
+                            <div class="form-group col-md-4">
+                                <label for="nome" class="required">Setor</label>
+                                <select name="sector" id="sector"  value="{{old('sector')}}" class="form-control" required>
+                                    <option value="" selected>Selecione</option>
+                                    <option value="Comercial">Comercial</option>
+                                    <option value="Administrativo">Administrativo</option>
+                                    <option value="Logística">Logística</option>
+                                    <option value="Tecnologia">Tecnologia</option>
+                                </select>
+                            </div>
+                            <?php } ?>
                             <div class="form-group col-md-3">
                                 <label for="cpf" class="required">CPF</label>
                                 <input name="cpf" type="text"  value="{{old('cpf')}}" class="form-control" id="cpf" placeholder="000.000.000-00" required>

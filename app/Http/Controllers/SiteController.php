@@ -260,6 +260,11 @@ class SiteController extends Controller
     public function sendCurriculum(SendCurriculumStore $request) {
         $params = request()->input();
         $filename = $request->file('file')->store('', 'site');
+        if($params['id'] === 1) {
+            if(!isset($params['sector']) || empty($params['sector'])) {
+                return back()->with('error', 'Setor Obrigatório');
+            }
+        }
         $params['document_path'] = $filename;
         $params['number'] = $params['number_address'];
         Curriculum::create($params);

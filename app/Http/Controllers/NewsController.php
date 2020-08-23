@@ -28,9 +28,9 @@ class NewsController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('title', 'ilike', "%{$search}%")
-                ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('introduction', 'ilike', "%{$search}%")
+            $context = $this->model->where('title', 'like', "%{$search}%")
+                ->orWhere('id', 'like', "%{$search}%")
+                ->orWhere('introduction', 'like', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);

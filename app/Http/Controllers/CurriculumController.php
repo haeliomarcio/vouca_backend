@@ -28,12 +28,12 @@ class CurriculumController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('name', 'ilike', "%{$search}%")
-                ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('description', 'ilike', "%{$search}%")
-                ->orWhere('address', 'ilike', "%{$search}%")
-                ->orWhere('city', 'ilike', "%{$search}%")
-                ->orWhere('state', 'ilike', "%{$search}%")
+            $context = $this->model->where('name', 'like', "%{$search}%")
+                ->orWhere('id', 'like', "%{$search}%")
+                ->orWhere('description', 'like', "%{$search}%")
+                ->orWhere('address', 'like', "%{$search}%")
+                ->orWhere('city', 'like', "%{$search}%")
+                ->orWhere('state', 'like', "%{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);

@@ -20,9 +20,9 @@ class UsersController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $users = User::where('name', 'ilike', "%{$search}%")
-                ->orWhere('id', 'ilike', "%{$search}%")
-                ->orWhere('email', 'ilike', "%{$search}%")
+            $users = User::where('name', 'like', "%{$search}%")
+                ->orWhere('id', 'like', "%{$search}%")
+                ->orWhere('email', 'like', "%{$search}%")
                 ->paginate(10);
         } else {
             $users = User::paginate(10);

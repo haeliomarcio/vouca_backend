@@ -11,6 +11,7 @@ class Curriculum extends Model
         'id',
         'name',
         'cpf',
+        'sector',
         'telephone',
         'email',
         'cep',

@@ -35,6 +35,43 @@
                 background-color: yellow;
                 border-bottom: 3px solid yellow;
             }
+            .leaflet-popup-content h4 {
+                font-size: 16px;
+                padding-top: 12px;
+                line-height: 0px;
+            }
+            .leaflet-popup-content .info-address-map{
+                color: #444;
+                padding: 5px;
+                text-align: center;
+                font-weight: bold;
+                border: 2px solid #d79122;
+                border-radius: 5px;
+            }
+            
+            .leaflet-popup-content  .info-fone-map{
+                color: #444;
+                text-align: center;
+                padding: 5px;
+                font-weight: bold;
+                border: 2px solid #d79122;
+                border-radius: 5px;
+            }
+            .info-address-map a, .info-fone-map a {
+                color: #444;
+            }
+
+            h4 {
+                color: #d79122 !important;
+            }
+            h2::after {
+                background-color: #fff !important;
+            }
+            h3::after {
+                top: 114%;
+                width: 65%;
+            }
+
         </style>
     </head>
 <body>
@@ -141,21 +178,22 @@
                     </div>
                     <div class="col-lg-4 centro">
                         <div class="grupo">
-                            <p style="font-size: 18px; color: #ffffff;"><strong>MENU</strong></p>
+                            <!-- <p style="font-size: 18px; color: #ffffff;"><strong>MENU</strong></p> -->
                             <p class="menu-footer">
                                 <a href="{{url('/')}}">INÍCIO</a><br />
                                 <a href="{{url('/sobre')}}">GRUPO VILAROUCA</a><br />
                                 <a href="{{url('/marcas')}}">MARCAS</a><br />
                                 <a href="{{url('/lojas')}}">LOJAS</a><br />
-                                <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
-                                <a href="{{url('/faji')}}">FAJI</a><br />
-                                <a href="{{url('/contato')}}">CONTATO</a>
                             </p>
                         </div>
                     </div>
                     <div class="col-lg-4 centro">
                         <div class="grupo">
-                            
+                        <p class="menu-footer">
+                                <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
+                                <a href="{{url('/faji')}}">FAJI</a><br />
+                                <a href="{{url('/contato')}}">CONTATO</a>
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -414,6 +452,32 @@
         $('.oboticarioImg').mouseout(function () {
             $('.rnImg2').removeClass('filterRN2');
         });
+
+        function getPopup(item) {
+            var fone = item.information.replace('(', '').replace(')', '-').replace(' ', '');
+            var popup = `<h4>${item.name}</h4>`;
+            popup += `<p class="info-address-map">
+                <a href="https://www.google.com.br/maps/place//@${item.lat},${item.lng},17z/" target="_blank">
+                    ${item.address}
+                </a>
+            </p>`;
+            popup += `<p class="info-fone-map">
+                <a href="tel:${fone}">
+                    ${item.information}
+                </a>
+            </p>`;
+            return popup;
+        }
     })
 </script>
+<!-- OmniChat web-chat widget -->
+<script>
+    window.omnichatConfig = {
+    retailerId: "ZthMnuoZs4"
+    };
+</script>
+<script defer type="text/javascript">
+    !function(){var t=document.createElement("script");t.type="text/javascript",t.defer=!0,t.src="https://static.omni.chat/web-chat/web-chat.min.js",t.onload=function(){OmniChatWebChat.init(window.omnichatConfig)};var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
+</script>
+<!-- OmniChat web-chat widget -->
 </html>

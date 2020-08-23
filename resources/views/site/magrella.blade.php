@@ -112,6 +112,19 @@
             axios.get(`{{url('/find-store/')}}?store=MAGRELLA`)
             .then(function(response) {
                 for(item of response.data) {
+
+                    var fone = item.information.replace('(', '').replace(')', '-').replace(' ', '');
+                    var popup = `<h4>MAGRELLA</h4>`;
+                    popup += `<p class="info-address-map">
+                        <a href="https://www.google.com.br/maps/place//@${item.lat},${item.lng},17z/" target="_blank">
+                            ${item.address}
+                        </a>
+                    </p>`;
+                    popup += `<p class="info-fone-map">
+                        <a href="tel:${fone}">
+                            ${item.information}
+                        </a>
+                    </p>`;
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
@@ -122,7 +135,7 @@
                             iconAnchor:   [22, 94], 
                             shadowAnchor: [4, 62],  
                             popupAnchor:  [-3, -76] 
-                        })}).bindPopup(item.information).addTo(map);
+                        })}).bindPopup(popup).addTo(map);
                     mapMarkers.push(marker);
                 }
             })
