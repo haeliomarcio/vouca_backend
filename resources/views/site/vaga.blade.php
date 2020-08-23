@@ -48,6 +48,7 @@
                                     <option value="Administrativo">Administrativo</option>
                                     <option value="Logística">Logística</option>
                                     <option value="Tecnologia">Tecnologia</option>
+                                    <option value="Financeiro">Financeiro</option>
                                 </select>
                             </div>
                             <?php } ?>

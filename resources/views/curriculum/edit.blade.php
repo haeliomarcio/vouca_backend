@@ -8,10 +8,16 @@
             <br />
             <form>
                 <div class="form-row">
-                    <div class="form-group col-md-12">
+                    <div class="form-group col-md-{{$data->id === 1 ? '8' : '12'}}">
                         <label for="nome">Nome</label>
                         <input name="name" type="text" disabled value="{{$data->name}}" class="form-control" id="nome" placeholder="Digite seu nome" required>
                     </div>
+                    <?php if($data->id === 1) { ?>
+                        <div class="form-group col-md-{{$data->id === 1 ? '8' : '12'}}">
+                            <label for="nome">Setor</label>
+                            <input name="name" type="text" disabled value="{{$data->sector}}" class="form-control">
+                        </div>
+                    <?php } ?>
                     <div class="form-group col-md-3">
                         <label for="cpf">CPF</label>
                         <input name="cpf" type="text" disabled  value="{{$data->cpf}}" class="form-control" id="cpf" placeholder="000.000.000-00" required>
