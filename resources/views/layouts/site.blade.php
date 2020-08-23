@@ -115,6 +115,9 @@
                         <li class="nav-item">
                             <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Contato</a>
                         </li>
+                        <li class="nav-item">
+                            <a href="{{url('/logout')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Sair</a>
+                        </li>
                         <li class="nav-item sociais centro">
                             <a href="https://www.facebook.com/grupovilarouca" target="_blank" class="nav-link font-weight-bold" style="font-size: 16px;">
                                 <i class="fab fa-facebook-square"></i>

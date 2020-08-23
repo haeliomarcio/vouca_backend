@@ -8,6 +8,8 @@ Route::get('login', [ 'as' => 'login', 'uses' => 'AuthenticateController@login']
 // Route::get('login', 'AuthenticateController@login');
 Route::get('/logout', 'AuthenticateController@logout');
 
+Route::middleware(['auth'])->group(function () {
+
 Route::get('/', 'SiteController@index');
 Route::get('/sobre', 'SiteController@sobre');
 Route::get('/marcas', 'SiteController@marcas');
@@ -39,6 +41,10 @@ Route::prefix('states')->group(function () {
 Route::get('/email', function() {
     return view('emails.contato');
 });
+
+});
+
+
 Route::middleware(['auth'])->group(function () {
     Route::prefix('dashboard')->group(function () {
         Route::get('/', 'DashboardController@index');
