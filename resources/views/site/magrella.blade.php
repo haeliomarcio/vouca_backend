@@ -12,15 +12,15 @@
         display: none;
     }
 
-    a {
+    .link-black a {
         color: #000;
     }
 
-    a:visited {
+    .link-black a:visited {
         color: #000;
     }
 
-    a:link {
+    .link-black a:link {
         text-decoration: none;
     }
 </style>
@@ -73,7 +73,7 @@
                                 <i class="fab fa-whatsapp" style="font-size: 32;"></i>
                             </div>
                             <div class="col-sm-10">
-                                <span style="font-size: 24;"><a href="https://api.whatsapp.com/send?phone=5588999010191&text=Ol%C3%A1!" target="_blank">Compre pelo WhatsApp: (88) 99901 0191</a></span>
+                                <span class="link-black" style="font-size: 24;"><a href="https://api.whatsapp.com/send?phone=5588999010191&text=Ol%C3%A1!" target="_blank">Compre pelo WhatsApp: (88) 99901 0191</a></span>
                             </div>
                         </div>
                     </div>

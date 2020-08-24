@@ -139,7 +139,7 @@
         <!-- Footer Início -->
         <div class="row footer-logos" style="width: 100%;">
             <div class="col-sm-4">
-                <img src="/images/footer-bg.png" style="width: 100%;">
+                <img src="/images/footer-bg.png" style="width: 80%;">
             </div>
             <div class="col-sm-8 centro" style="align-items: center;">
                 <div class="row">

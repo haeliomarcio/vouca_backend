@@ -177,25 +177,25 @@
                 <div class="row">
                     <div class="col-6 col-md-3">
                         <div>
-                            <img  class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="100%">
+                            <img  class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="80%">
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3" >
                         <div class=" mt-1 ml-4">
-                            <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="100%">
+                            <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="80%">
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3">
                         <div class=" mt-1 ml-4">
-                            <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="100%">
+                            <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="80%">
                         </div>
                     </div>
 
                     <div class="col-6 col-md-3">
                         <div class=" mt-1 ml-4">
-                            <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="100%">
+                            <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="80%">
                         </div>
                     </div>
                 </div>	
@@ -224,7 +224,7 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-12" style="height: 400px; margin-top: 85px; background: url('../images/area-atuacao-bg.png') no-repeat center center; background-size: cover;">
+                    <div class="col-md-12" style="height: 400px; margin-top: 35px; background: url('../images/area-atuacao-bg.png') no-repeat center center; background-size: cover;">
                         <div style="margin-left: 20px;">
                             <div class="row" style="margin-top: 50;">
                                 <div class="col">
