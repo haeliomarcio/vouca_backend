@@ -290,7 +290,7 @@
     $(document).ready(function () {
 
         /////////* CEARA *//////
-        $('#cearaImg2').mouseenter(function () {
+        $('#mapper #ce').mouseenter(function () {
             $('.cacau-show').show('slow');
             $('.magrella').show('slow');
             $('.tim').show('slow');
@@ -299,7 +299,7 @@
             $('.rnImg2').addClass('filterRN2');
 
         });
-        $('#cearaImg2').mouseout(function () {
+        $('#mapper #ce').mouseout(function () {
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
             $('.rnImg2').removeClass('filterRN2');
@@ -307,7 +307,7 @@
 
 
         ///////* MARANHAO *///////
-        $('#maranhaoImg2').mouseenter(function () {
+        $('#mapper #ma').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -320,7 +320,7 @@
             $('.rnImg2').addClass('filterRN2');
         });
 
-        $('#maranhaoImg2').mouseout(function () {
+        $('#mapper #ma').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
@@ -335,7 +335,7 @@
 
 
         ///////* PIAUI *///////
-        $('#piauiImg2').mouseenter(function () {
+        $('#mapper #pi').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -348,7 +348,7 @@
             $('.rnImg2').addClass('filterRN2');
         });
 
-        $('#piauiImg2').mouseout(function () {
+        $('#mapper #pi').mouseout(function () {
         //                                $('.cacau-show').show('slow');
         //                                $('.magrella').show('slow');
         //                                $('.tim').show('slow');
@@ -364,7 +364,7 @@
 
 
         ///////* RIO-GRANDE-DO-NORTE *///////
-        $('#rnImg2').mouseenter(function () {
+        $('#mapper #rn').mouseenter(function () {
         //                                $('.cacau-show').hide('slow');
         //                                $('.magrella').hide('slow');
         //                                $('.tim').hide('slow');
@@ -379,7 +379,7 @@
             $('.piauiImg2').addClass('filterPiaui2');
         });
 
-        $('#rnImg2').mouseout(function () {
+        $('#mapper #rn').mouseout(function () {
             $('.cacau-show').removeClass('marcaInativo');
             $('.magrella').removeClass('marcaInativo');
             $('.tim').removeClass('marcaInativo');

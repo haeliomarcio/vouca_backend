@@ -512,3 +512,11 @@ img.map, map area{
     top: -2px;
     opacity: 0;
 }
+
+#mapper {
+    position: absolute;
+    left: -58px;
+    top: -10px;
+    opacity: 0.1;
+}
+
