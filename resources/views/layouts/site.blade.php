@@ -172,7 +172,8 @@
                         <div class="grupo">
                             <a class="logo" href="{{url('/')}}">Grupo Vilarouca</a>
                             <p class="copyright">
-                                © Grupo Vilarouca. Todos os direitos reservados.
+                                © Grupo Vilarouca. Todos os direitos reservados. 
+                                <a href="/dashboard"><img src="images/cadeado.png" width="10px" /></a>
                             </p>
                             <p class="credits">
                                 Desenvolvido por <a href="https://www.tecnologiagw.com" target="_blank">GW Tecnologia</a>
@@ -195,11 +196,13 @@
                         <p class="menu-footer">
                                 <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
                                 <a href="{{url('/faji')}}">FAJI</a><br />
-                                <a href="{{url('/contato')}}">CONTATO</a>
+                                <a href="{{url('/contato')}}">CONTATO</a> <br />
+                                <a href="{{url('/dashboard')}}">GESTOR</a>
                             </p>
                         </div>
                     </div>
                 </div>
+
             </div>
         </footer>
         <!-- Footer Fim -->

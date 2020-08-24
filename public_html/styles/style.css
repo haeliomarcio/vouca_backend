@@ -520,3 +520,12 @@ img.map, map area{
     opacity: 0.1;
 }
 
+@media only screen and (max-width: 500px) {
+    .navbar .container a.navbar-brand{ 
+        margin: 0 auto;
+    }
+    .navbar {
+        height: 150px !important;
+    }
+    
+  }
