@@ -16,11 +16,10 @@
         </div>
 
         <div class="container" style="background-color: #fff; margin-top: 50px;">
-            <div class="container container-sobre">
+            <div class="container container-sobre container-marcas">
                 <!--
                 <h3 class="subtitulo"><strong>Marcas</strong></h3>
                 -->
-
                         <div class="row">
                             <a href="{{url('/o-boticario')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">

@@ -137,7 +137,7 @@
 
         <br />
         <!-- Footer Início -->
-        <div class="row" style="width: 100%;">
+        <div class="row footer-logos" style="width: 100%;">
             <div class="col-sm-4">
                 <img src="/images/footer-bg.png" style="width: 100%;">
             </div>
@@ -180,7 +180,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 centro">
+                    <div class="col-lg-4 col-md-4 col-6 centro">
                         <div class="grupo">
                             <!-- <p style="font-size: 18px; color: #ffffff;"><strong>MENU</strong></p> -->
                             <p class="menu-footer">
@@ -191,7 +191,7 @@
                             </p>
                         </div>
                     </div>
-                    <div class="col-lg-4 centro">
+                    <div class="col-lg-4 col-md-4 col-6 centro">
                         <div class="grupo">
                         <p class="menu-footer">
                                 <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />

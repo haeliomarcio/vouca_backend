@@ -527,5 +527,33 @@ img.map, map area{
     .navbar {
         height: 150px !important;
     }
+    .titulo {
+        margin-left: -70px;
+        transition: margin 1s;
+    }
+    .row .marcas {
+        margin: 0 auto;
+    }
+    .container-marcas .row a .col .row{
+        margin: 0 auto;
+    }
+    .container-sobre{
+        padding: 5px;
+    }
+    .logos .row div {
+        margin-bottom: 50px;
+    }
+    /* .maranhaoImg2 { 
+        width: 200px;
+    } */
+    .footer-logos {
+        display: none;
+    }
+    .footer .logo {
+        margin: 0 auto 25px;
+    }
+    .footer .copyright, .footer .credits {
+        text-align: center;
+    }
     
   }

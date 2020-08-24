@@ -175,32 +175,32 @@
         <section class = "mt-5 sectionMapasMobile section-maps" style="border-bottom: 3px solid #d79122;">
             <div class = "container-fluid" style="margin-top: 35px;">
                 <div class="row">
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div>
                             <img  class="maranhaoImg2" src = "images/home-mapa/MAPA + MA.png" width="100%">
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-6 col-md-3" >
                         <div class=" mt-1 ml-4">
                             <img  class="piauiImg2" src = "images/home-mapa/MAPA + PI.png" width="100%">
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class=" mt-1 ml-4">
                             <img  class="cearaImg2" src = "images/home-mapa/MAPA + CE.png" width="100%">
                         </div>
                     </div>
 
-                    <div class="col-3">
+                    <div class="col-6 col-md-3">
                         <div class=" mt-1 ml-4">
                             <img  class="rnImg2" src = "images/home-mapa/MAPA + RN.png" width="100%">
                         </div>
                     </div>
                 </div>	
                 <br /><br /><br />
-                <div class="container">
+                <div class="container logos">
                     <div class = "row">
                         <div class="col-md-2 col-6">
                             <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" >
