@@ -133,7 +133,9 @@
             </div>
         </nav>
         <!-- Menu Fim -->
-        @yield('content')
+        <div id="content-page">
+            @yield('content')
+        </div>
 
         <br />
         <!-- Footer Início -->

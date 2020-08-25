@@ -14,7 +14,10 @@
     font-family: vilaRoucaUltra;
     src: url(../fonts/UniviaPro-Ultra.woff);
 }
-
+@font-face {
+    font-family: vilaRoucaRegular;
+    src: url(../fonts/UniviaPro-Regular.ttf);
+}
 
 /* Remover margens da página */
 html, body {
@@ -557,3 +560,7 @@ img.map, map area{
     }
     
   }
+
+  #content-page p,  #content-page span, #content-page a {
+    font-family: vilaRoucaRegular !important;
+}
