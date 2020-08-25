@@ -187,42 +187,6 @@
                 </div>
             </div>
 
-            <!--
-            <form>
-                <div class="row">
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Estados</label>
-                            <select id="state_id" name="state_id" value="" class="form-control">
-                                <option value="">Todos</option>
-                                @foreach($states as $state)
-                                    <option value="{{$state->id}}">{{$state->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Cidades</label>
-                            <select id="city_id" name="city_id" name="" value="" class="form-control">
-                                <option value="">Todos</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="form-group">
-                            <label>Lojas</label>
-                            <select name="" value="" class="form-control">
-                                <option value="">Todos</option>
-                                @foreach($stores as $store)
-                                    <option value="{{$store->id}}">{{$store->name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div>
-                </div>
-            </form>
-            -->
         </div>
         <div id="map" style="width:100%; height: 600px;"></div>
     </div>
@@ -246,29 +210,15 @@
                 fillOpacity: 0.7
             };
         }
-        // L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        //     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        // }).addTo(map);
-
-        // var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-        //         attribution: 'GrupoVilarouca'
-        // }).addTo(map);    
         var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
                 attribution: 'GrupoVilarouca'
         }).addTo(map);    
-        // var positron = L.tileLayer('https://cartocdn_{s}.global.ssl.fastly.net/base-eco/{z}/{x}/{y}.png', {
-        //         attribution: 'GrupoVilarouca'
-        // }).addTo(map);    
+        
         
         var mapMarkers = [];
         var LeafIcon = L.Icon.extend({
             options: {
-                // shadowUrl: 'leaf-shadow.png',
-                // iconSize:     [40, 55],                
-                // shadowSize:   [50, 64],
-                // iconAnchor:   [10, 60],
-                // shadowAnchor: [4, 62],
-                // popupAnchor:  [-3, -76]
+                
             }
         });
         
@@ -283,6 +233,7 @@
             var ceara = $("#ceara").prop('checked');
             var maranhao = $("#maranhao").prop('checked');
             var piaui = $("#piaui").prop('checked');
+            var rn = $("#rn").prop('checked');
 
             var boticario = $("#logo_boticario").prop('checked');
             var cacaushow = $("#logo_cacaushow").prop('checked');
@@ -291,7 +242,7 @@
             var crocs = $("#logo_crocs").prop('checked');
             var magrella = $("#logo_magrella").prop('checked');
 
-            axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
+            axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&rn=${rn}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
             .then(function(response) {
                 for(item of response.data) {
                     var fone = item.information.replace('(', '').replace(')', '-').replace(' ', '');
@@ -357,6 +308,11 @@
         }
 
         listStores();
+
+        $("#rn").change(function() {
+            removeAllMarker();
+            listStores();
+        });
 
         $("#ceara").change(function() {
             removeAllMarker();

@@ -27,9 +27,8 @@ class BrandsController extends Controller
     {
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
-            $context = $this->model->where('title', 'like', "%{$search}%")
-                ->orWhere('id', 'like', "%{$search}%")
-                ->orWhere('name', 'like', "%{$search}%")
+            $context = $this->model->where('name', 'like', "{$search}%")
+                ->orWhere('id', 'like', "{$search}%")
                 ->paginate(10);
         } else {
             $context = $this->model->paginate(10);

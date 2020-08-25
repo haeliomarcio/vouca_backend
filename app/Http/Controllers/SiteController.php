@@ -92,6 +92,11 @@ class SiteController extends Controller
                     $query->orWhere('sta.name', 'like', '%Piauí%');
                 }
             })
+            ->when($params, function($query, $params) {
+                if(isset($params['rn']) &&  !empty($params['rn']) && $params['rn'] == 'true') {
+                    $query->orWhere('sta.name', 'like', '%Rio Grande do Norte%');
+                }
+            })
             ->where(function($query) use ($params){
                 $query->when($params, function($query, $params) {
                     if(isset($params['boticario']) &&  !empty($params['boticario']) && $params['boticario'] == 'true') {

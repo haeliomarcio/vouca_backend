@@ -28,7 +28,7 @@
     <br /><br /><br />
     <div class="row">
         <div class="col-md-4 offset-md-4">
-            <form action="/authenticate" method="POST" class="form-signin">
+            <form action="{{url('authenticate')}}" method="POST" class="form-signin">
                 @csrf
                 <div class="text-center mb-4">
                     <!-- <img class="mb-4" src="/docs/4.5/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->

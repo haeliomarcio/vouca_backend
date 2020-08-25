@@ -31,15 +31,15 @@
             <h2 class="titulo"><strong>O Boticário</strong></h2>
         </div>
 
-        <div class="container" style="background-color: #fff; margin-top: 100px;">
-            <div class="container container-sobre">
+        <div class="container" style="background-color: #fff; margin-top: 100px; padding-top: 100px;">
+            <!-- <div class="container container-sobre"> -->
                 <div class="row centro" style="margin-bottom: 10px;">
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 col-md-8">
                         <div style="width: 90%;">
                             <img class="img-fluid" src="images/lojas/boticario-loja.png">
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-sm-4 col-md-4">
                         <div class="row">
                             <div class="col-sm-2 centro" style="align-items: center;">
                                 <i class="fas fa-award" style="font-size: 32;"></i>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            <!-- </div> -->
         </div>
         <div id="map" style="width:100%; height: 600px;"></div>
     </div>
@@ -90,8 +90,8 @@
             scrollWheelZoom: false
         });
 
-        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-                attribution: '©OpenStreetMap, ©CartoDB'
+        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
+                attribution: 'GrupoVilarouca'
         }).addTo(map);    
 
         var mapMarkers = [];
