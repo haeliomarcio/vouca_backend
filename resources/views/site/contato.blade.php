@@ -150,8 +150,8 @@
             scrollWheelZoom: false
         });
 
-        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-                attribution: '©OpenStreetMap, ©CartoDB'
+        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
+                attribution: 'GrupoVilarouca'
         }).addTo(map);    
 
         var LeafIcon = L.Icon.extend({

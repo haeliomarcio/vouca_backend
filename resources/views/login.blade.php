@@ -38,10 +38,10 @@
                 </div>
 
                 <div class="form-group">
-                    <input type="email" value="teste@teste.com.br" name="email" id="inputEmail" class="form-control" placeholder="Login" required autofocus>
+                    <input type="email" value="" name="email" id="inputEmail" class="form-control" placeholder="Login" required autofocus>
                 </div>
                 <div class="form-group">
-                    <input type="password"  value="123456" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+                    <input type="password"  value="" name="password" id="inputPassword" class="form-control" placeholder="Senha" required>
                 </div>
                 <div class="checkbox mb-3">
                     <!-- <label>
