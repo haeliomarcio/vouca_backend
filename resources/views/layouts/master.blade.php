@@ -91,10 +91,12 @@
             <a href="{{url('/dashboard/curriculum')}}" class="nav-link">
               <i class="nav-icon fas fa-file-alt"></i>Currículos</a>
           </li>
-          <li class="nav-item">
-            <a href="{{url('/dashboard/users')}}" class="nav-link">
-              <i class="nav-icon fas fa-users"></i>Usuários</a>
-          </li>
+          @if(auth()->user()->type === 'admin')
+            <li class="nav-item">
+              <a href="{{url('/dashboard/users')}}" class="nav-link">
+                <i class="nav-icon fas fa-users"></i>Usuários</a>
+            </li>
+          @endif
           <li class="nav-item">
             <a href="{{url('/logout')}}" class="nav-link">
               <i class="nav-icon fas fa-sign-out-alt"></i>Sair</a>

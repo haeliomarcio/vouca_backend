@@ -822,9 +822,16 @@ class DatabaseSeeder extends Seeder
         ];
 
         DB::table('users')->insert([
+            'name' => 'Super Admin',
+            'email' => 'admin@admin.com.br',
+            'password' => Hash::make('admin@123'),
+            'type' => 'admin',
+        ]);
+        DB::table('users')->insert([
             'name' => 'Max',
             'email' => 'teste@teste.com.br',
-            'password' => Hash::make('123456'),
+            'password' => Hash::make('teste@123'),
+            'type' => 'editor',
         ]);
         // Estados
         foreach($states as $key => $s) {

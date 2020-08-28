@@ -10,13 +10,15 @@
             @include('helpers.messages')
             <form method="post" action="{{url('/dashboard/users/store')}}">
                 {{ csrf_field() }}
-                <div class="form-group">
-                    <label for="inputName">Nome <span class="required">*</span></label>
-                    <input name="name"  value="{{old('name')}}" type="text" class="form-control" id="inputName" placeholder="Nome">
-                </div>
-                <div class="form-group">
-                    <label for="inputEmail">Email <span class="required">*</span></label>
-                    <input name="email"  value="{{old('email')}}" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                <div class="row">
+                    <div class="col">
+                        <label for="inputName">Nome <span class="required">*</span></label>
+                        <input name="name"  value="{{old('name')}}" type="text" class="form-control" id="inputName" placeholder="Nome">
+                    </div>
+                    <div class="col">
+                        <label for="inputEmail">Email <span class="required">*</span></label>
+                        <input name="email"  value="{{old('email')}}" type="email" class="form-control" id="inputEmail" placeholder="name@example.com">
+                    </div>
                 </div>
                 <div class="row">
                     <div class="col">
@@ -26,6 +28,14 @@
                     <div class="col">
                         <label for="inputConfirmaSenha">Confirmar Senha <span class="required">*</span></label>
                         <input name="password_confirmation" value="{{old('password_confirmation')}}" type="password" class="form-control" id="inputConfirmaSenha" placeholder="**********">
+                    </div>
+                    <div class="col">
+                        <label for="inputPerfil">Perfil <span class="required">*</span></label>
+                        <select name="type" class="form-control">
+                            <option value="">Selecione</option>
+                            <option value="admin">Administrador</option>
+                            <option value="editor">Editor</option>
+                        </select>
                     </div>
                 </div>
                 <br />

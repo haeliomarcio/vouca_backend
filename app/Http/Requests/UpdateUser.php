@@ -21,6 +21,7 @@ class UpdateUser extends FormRequest
         return [
             'name' => 'required|min:3',
             'email' => 'required|unique:users,email,' . $this->route('id'),
+            'type' => 'required',
         ];
     }
 
@@ -31,6 +32,7 @@ class UpdateUser extends FormRequest
             'name' => 'Nome',
             'password' => 'Senha',
             'password_confirmation' => 'Confirma Senha',
+            'type' => 'Perfil',
         ];
     }
 }

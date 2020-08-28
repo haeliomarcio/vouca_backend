@@ -27,7 +27,8 @@ class StoreUser extends FormRequest
             'name' => 'required|min:3',
             'email' => 'required|unique:users',
             'password' => 'required|min:6',
-            'password_confirmation' => 'required|confirmed|min:6'
+            'password_confirmation' => 'required|confirmed|min:6',
+            'type' => 'required',
         ];
     }
 
@@ -38,6 +39,7 @@ class StoreUser extends FormRequest
             'name' => 'Nome',
             'password' => 'Senha',
             'password_confirmation' => 'Confirma Senha',
+            'type' => 'Perfil',
         ];
     }
 }
