@@ -35,44 +35,44 @@
             <div class="container container-sobre">
 
                 <div class="row centro" style="margin-bottom: 10px;">
-                    <div class="col-sm-8">
+                    <div class="col-md-8">
                         <div style="width: 90%;">
                             <img class="img-fluid" src="images/lojas/magrella-loja.png">
                         </div>
                     </div>
-                    <div class="col-sm-4">
+                    <div class="col-md-4">
                         <div class="row">
-                            <div class="col-sm-2 centro" style="align-items: center;">
+                            <div class="col-2 centro" style="align-items: center;">
                                 <i class="fas fa-award" style="font-size: 32;"></i>
                             </div>
-                            <div class="col-sm-10">
+                            <div class="col-10">
                                 <span style="font-size: 24;">Parceria desde XXXX</span>
                             </div>
                         </div>
                         <br />
                         <div class="row">
-                            <div class="col-sm-2 centro" style="align-items: center;">
+                            <div class="col-2 centro" style="align-items: center;">
                                 <i class="fas fa-map-marked-alt" style="font-size: 32;"></i>
                             </div>
-                            <div class="col-sm-10">
+                            <div class="col-10">
                                 <span style="font-size: 24;">Presente nos Estados: XXXXX</span>
                             </div>
                         </div>
                         <br />
                         <div class="row">
-                            <div class="col-sm-2 centro" style="align-items: center;">
+                            <div class="col-2 centro" style="align-items: center;">
                                 <i class="fas fa-funnel-dollar" style="font-size: 32;"></i>
                             </div>
-                            <div class="col-sm-10">
+                            <div class="col-10">
                                 <span style="font-size: 24;">Atuando com XXXX PDVS</span>
                             </div>
                         </div>
                         <br />
                         <div class="row">
-                            <div class="col-sm-2 centro" style="align-items: center;">
+                            <div class="col-2 centro" style="align-items: center;">
                                 <i class="fab fa-whatsapp" style="font-size: 32;"></i>
                             </div>
-                            <div class="col-sm-10">
+                            <div class="col-10">
                                 <span class="link-black" style="font-size: 24;"><a href="https://api.whatsapp.com/send?phone=5588999010191&text=Ol%C3%A1!" target="_blank">Compre pelo WhatsApp: (88) 99901 0191</a></span>
                             </div>
                         </div>

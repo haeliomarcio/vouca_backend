@@ -10,7 +10,7 @@
         <link rel="stylesheet" type="text/css" href="{{url('/styles/bootstrap.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{url('/styles/font-awesome.min.css')}}">
         <link rel="stylesheet" type="text/css" href="{{url('/styles/style.css')}}">
-        <link rel="stylesheet" type="text/css" href="{{url('/styles/timeline.css')}}">
+        <link rel="stylesheet" type="text/css" href="{{url('/styles/timeline2.css')}}">
 
         <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
         <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
@@ -488,5 +488,6 @@
 <script defer type="text/javascript">
     !function(){var t=document.createElement("script");t.type="text/javascript",t.defer=!0,t.src="https://static.omni.chat/web-chat/web-chat.min.js",t.onload=function(){OmniChatWebChat.init(window.omnichatConfig)};var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
 </script>
+<script src="/js/timeline.js"></script>
 <!-- OmniChat web-chat widget -->
 </html>

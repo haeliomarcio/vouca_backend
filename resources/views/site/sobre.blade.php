@@ -38,10 +38,29 @@
                 <p>O <strong>símbolo VILAROUCA</strong> é um importante elemento da identidade visual do grupo, contribuindo para transmitir os atributos de sua imagem. Na busca de um caminho criativo, de força conceitual, sua composição foi idealizada a partir da junção de <strong>três elementos:</strong><br /><strong>A letra V</strong>, inicial do nome Vilarouca; a <strong>conexão afetiva</strong> das marcas representada pela imagem do coração; e a árvore que remete a ideia da <strong>genealogia</strong> da família Vilarouca e de <strong>sua responsabilidade socioambiental.</strong></p>
                 
                 <!-- TIMELINE -->
-                @include('site.timeline')
+                @include('site.timeline2')
 
 
             </div>
         </div>
     </div>
+@endsection
+@section('scripts_bottom')
+    <script>
+        var position = 0;
+        $('#prevTimeline').click(function() {
+            var ele = document.getElementById("timeline-horizontal");
+            if(ele.scrollLeft) {
+                position = ele.scrollLeft;
+                $('#timeline-horizontal').animate({scrollLeft: position - 500}, 800);
+            }
+        });
+        $('#nextTimeline').click(function() {
+            var ele = document.getElementById("timeline-horizontal");
+            if((ele.scrollLeft + 100) < ele.scrollWidth) {
+                position = ele.scrollLeft;
+                $('#timeline-horizontal').animate({scrollLeft: position + 500}, 800);
+            }
+        });
+    </script>
 @endsection
