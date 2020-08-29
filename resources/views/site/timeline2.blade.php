@@ -12,14 +12,14 @@
                             <!-- <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p> -->
                         </div>
                         <div class="timeline-body">
-                            <img src="{{url('/images/marcas/marcas/magrella.png')}}" />
+                            <img src="{{url('/images/marcas/marcas/magrella.png')}}"  />
                         </div>
                     </div>
                 </li>
                 <!-- 02 -->
                 <li class="timeline-item">
                     <div class="timeline-badge info">1990</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">1ª Loja O Boticário (Em Iguatú)</h4>
                         </div>
@@ -43,7 +43,7 @@
                 <!-- 04 -->
                 <li class="timeline-item">
                     <div class="timeline-badge warning">1992</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 Abertura do Escritório admistrativo
@@ -71,7 +71,7 @@
                 <!-- 06 -->
                 <li class="timeline-item">
                     <div class="timeline-badge primary">1994</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 Mudança de ponto da Magrella Collection
@@ -99,7 +99,7 @@
                 <!-- 08 -->
                 <li class="timeline-item">
                     <div class="timeline-badge success">2006</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 AREZZO São Luis
@@ -127,7 +127,7 @@
                 <!-- 10 -->
                 <li class="timeline-item">
                     <div class="timeline-badge danger">2007</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 AREZZO Teresina PI
@@ -155,7 +155,7 @@
                 <!-- 12 -->
                 <li class="timeline-item">
                     <div class="timeline-badge info">2010</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 Cacau Show CE
@@ -183,7 +183,7 @@
                 <!-- 14 -->
                 <li class="timeline-item">
                     <div class="timeline-badge warning">2014</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 1ª Venda Direta do O Boticário (CE)
@@ -213,7 +213,7 @@
                 <!-- 16 -->
                 <li class="timeline-item">
                     <div class="timeline-badge primary">2018</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 1ª Usina Solor CE
@@ -243,7 +243,7 @@
                 <!-- 17 -->
                 <li class="timeline-item">
                     <div class="timeline-badge success">2018</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 Usina Solar PI
@@ -273,7 +273,7 @@
                 <!-- 19 -->
                 <li class="timeline-item">
                     <div class="timeline-badge danger">2020</div>
-                    <div class="timeline-panel">
+                    <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 CROCS Teresina
