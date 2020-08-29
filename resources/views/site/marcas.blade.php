@@ -21,6 +21,19 @@
                 <h3 class="subtitulo"><strong>Marcas</strong></h3>
                 -->
                         <div class="row">
+                            <a href="{{url('/arezzo')}}">
+                                <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
+                                    <div class="row">
+                                        <div class="limite">
+                                            <img class="marcas" src="images/marcas/lojas/arezzo-banner.png">
+                                            <div class="overlay arezzo-color">
+                                                <img class="marcas" src="images/marcas/lojas/arezzo-sem-fundo.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
                             <a href="{{url('/o-boticario')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
@@ -47,34 +60,9 @@
                                 </div>
                             </a>
 
-                            <a href="{{url('/arezzo')}}">
-                                <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
-                                    <div class="row">
-                                        <div class="limite">
-                                            <img class="marcas" src="images/marcas/lojas/arezzo-banner.png">
-                                            <div class="overlay arezzo-color">
-                                                <img class="marcas" src="images/marcas/lojas/arezzo-sem-fundo.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
                         </div>
 
                         <div class="row">
-                            <a href="{{url('/tim')}}">
-                                <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
-                                    <div class="row">
-                                        <div class="limite">
-                                            <img class="marcas" src="images/marcas/lojas/tim-banner.png">
-                                            <div class="overlay tim-color">
-                                                <img class="marcas" src="images/marcas/lojas/tim-sem-fundo.png">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </a>
-
                             <a href="{{url('/crocs')}}">
                                 <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
                                     <div class="row">
@@ -100,6 +88,20 @@
                                     </div>
                                 </div>
                             </a>
+
+                            <a href="{{url('/tim')}}">
+                                <div class="col" style="margin: 2.5 2.5 2.5 2.5;">
+                                    <div class="row">
+                                        <div class="limite">
+                                            <img class="marcas" src="images/marcas/lojas/tim-banner.png">
+                                            <div class="overlay tim-color">
+                                                <img class="marcas" src="images/marcas/lojas/tim-sem-fundo.png">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
                         </div>
                 
             

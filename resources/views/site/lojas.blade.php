@@ -116,32 +116,7 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="items col-sm-6" style="float: left;">
-                                    <div class="info-block block-info clearfix">
-                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
-                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                                <div class="bizcontent">
-                                                    <input type="checkbox"  id="logo_magrella" name="var_id[]" autocomplete="off" value="">
-                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                    <img class="img-fluid" id="img_magrella" src="images/marcas/marcas/magrella.png">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="items col-sm-6" style="float: left;">
-                                    <div class="info-block block-info clearfix">
-                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
-                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
-                                                <div class="bizcontent">
-                                                    <input type="checkbox" id="logo_cacaushow" name="var_id[]" autocomplete="off" value="">
-                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
-                                                    <img class="img-fluid" id="img_cacaushow" src="images/marcas/marcas/cacau-show.png">
-                                                </div>
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
+
                                 <div class="items col-sm-6" style="float: left;">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
@@ -155,6 +130,21 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox" id="logo_cacaushow" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_cacaushow" src="images/marcas/marcas/cacau-show.png">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+
                                 <div class="items col-sm-6" style="float: left;">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizlocmoduleselect" style="width: 90%; height: 73px;">
@@ -168,6 +158,21 @@
                                         </div>
                                     </div>
                                 </div>
+
+                                <div class="items col-sm-6" style="float: left;">
+                                    <div class="info-block block-info clearfix">
+                                        <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">
+                                            <label class="btn btn-default" style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                                                <div class="bizcontent">
+                                                    <input type="checkbox"  id="logo_magrella" name="var_id[]" autocomplete="off" value="">
+                                                    <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
+                                                    <img class="img-fluid" id="img_magrella" src="images/marcas/marcas/magrella.png">
+                                                </div>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <div class="items col-sm-6" style="float: left;">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect" style="width: 90%; height: 73px;">

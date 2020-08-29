@@ -19,6 +19,11 @@
                     </a>
                 </div>
                 <div class="carousel-item">
+                    <a href="{{url('/o-boticario')}}">
+                        <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
+                    </a>
+                </div>
+                <div class="carousel-item">
                     <a href="{{url('/cacau-show')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_3.png" alt="Cacau Show">
                     </a>
@@ -31,11 +36,6 @@
                 <div class="carousel-item">
                     <a href="{{url('/magrella')}}">
                         <img class="d-block w-100" src="images/home-slider/slider_7.png" alt="Magrella Collection">
-                    </a>
-                </div>
-                <div class="carousel-item">
-                    <a href="{{url('/o-boticario')}}">
-                        <img class="d-block w-100" src="images/home-slider/slider_2.png" alt="O Boticário">
                     </a>
                 </div>
                 <div class="carousel-item">
@@ -69,6 +69,9 @@
                             <div class = "col mx-auto text-center arezzo" style="height: 70px; align-items: center;display: flex;">
                                 <img class="arezzoImg" src = "images/marcas/marcas/arezzo.png" style="width: 100px;">
                             </div>
+                            <div class = "col mx-auto text-center oboticario" style="height: 70px; align-items: center;display: flex;">
+                                <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" style="width: 100px;">
+                            </div>
                             <div class = "col mx-auto text-center cacau-show" style="height: 70px; align-items: center;display: flex;">
                                 <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" style="width: 100px;">
                             </div>
@@ -77,9 +80,6 @@
                             </div>
                             <div class = "col mx-auto text-center magrella" style="height: 70px; align-items: center;display: flex;">
                                 <img class="magrellaImg" src = "images/marcas/marcas/magrella.png" style="width: 100px;">
-                            </div>
-                            <div class = "col mx-auto text-center oboticario" style="height: 70px; align-items: center;display: flex;">
-                                <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" style="width: 100px;">
                             </div>
                             <div class = "col mx-auto text-center tim" style="height: 70px; align-items: center;display: flex;">
                                 <img class="timImg" src = "images/marcas/marcas/tim.png" style="width: 100px;">
@@ -203,14 +203,14 @@
                 <div class="container logos">
                     <div class = "row">
                         <div class="col-md-2 col-6">
+                        <img class="arezzoImg" src = "images/marcas/marcas/arezzo.png" >
+                        </div>
+                        <div class="col-md-2 col-6">
                             <img class="oboticarioImg" src = "images/marcas/marcas/boticario.png" >
                             <br />
                         </div>
                         <div class="col-md-2 col-6">
-                        <img class="arezzoImg" src = "images/marcas/marcas/arezzo.png" >
-                        </div>
-                        <div class="col-md-2 col-6">
-                            <img class="timImg" src = "images/marcas/marcas/tim.png" >
+                            <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" >
                         </div>
                         <div class="col-md-2 col-6">
                             <img class="crocsImg" src = "images/marcas/marcas/crocs.png" >
@@ -219,7 +219,7 @@
                             <img class="magrellaImg" src = "images/marcas/marcas/magrella.png" >
                         </div>
                         <div class="col-md-2 col-6">
-                            <img class="cacau-showImg" src = "images/marcas/marcas/cacau-show.png" >
+                            <img class="timImg" src = "images/marcas/marcas/tim.png" >
                         </div>
                     </div>
                 </div>

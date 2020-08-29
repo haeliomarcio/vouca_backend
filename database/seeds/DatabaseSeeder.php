@@ -833,6 +833,13 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('teste@123'),
             'type' => 'editor',
         ]);
+        DB::table('users')->insert([
+            'name' => 'Admin',
+            'email' => 'admin@grupovilarouca.com.br',
+            'password' => Hash::make('b0t1c4r10'),
+            'type' => 'admin',
+        ]);
+
         // Estados
         foreach($states as $key => $s) {
             DB::table('state')->insert([
@@ -984,8 +991,8 @@ class DatabaseSeeder extends Seeder
                 'address' => 'RUA:RODRIGUES JUNIOR, 1227, CENTRO',
                 'information' => '(88) 3412-1117',
                 'city_id' => '149',
-                'lat' => -14.2350040,
-                'lng' => -51.9252800,
+                'lat' => -4.969869,
+                'lng' => -39.014793,
             ],
             [
                 'brand_id' => 5,
@@ -1128,8 +1135,8 @@ class DatabaseSeeder extends Seeder
                 'address' => 'RUA DR. RUI MAIA, 541 CENTRO',
                 'information' => '(88) 3412-1062',
                 'city_id' => '149',
-                'lat' => -14.2350040,
-                'lng' => -51.9252800,
+                'lat' => -4.966295,
+                'lng' => -39.018568,
             ],
             [
                 'brand_id' => 5,

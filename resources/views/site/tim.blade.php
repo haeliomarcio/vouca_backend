@@ -13,11 +13,11 @@
     }
 
     .link-black a {
-        color: #000;
+        color: #212529;
     }
 
     .link-black a:visited {
-        color: #000;
+        color: #212529;
     }
 
     .link-black a:link {
@@ -45,7 +45,7 @@
                                 <i class="fas fa-award" style="font-size: 32;"></i>
                             </div>
                             <div class="col-10">
-                                <span style="font-size: 24;">Parceria desde XXXX</span>
+                                <span style="font-size: 24;">Parceria desde 2014</span>
                             </div>
                         </div>
                         <br />
@@ -54,7 +54,7 @@
                                 <i class="fas fa-map-marked-alt" style="font-size: 32;"></i>
                             </div>
                             <div class="col-10">
-                                <span style="font-size: 24;">Presente nos Estados: XXXXX</span>
+                                <span style="font-size: 24;">Presente no Estado: CE</span>
                             </div>
                         </div>
                         <br />
@@ -63,7 +63,7 @@
                                 <i class="fas fa-funnel-dollar" style="font-size: 32;"></i>
                             </div>
                             <div class="col-10">
-                                <span style="font-size: 24;">Atuando com XXXX PDVS</span>
+                                <span style="font-size: 24;">Atuando com 1 PDV</span>
                             </div>
                         </div>
                         <br />
