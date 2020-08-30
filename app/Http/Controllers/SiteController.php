@@ -77,26 +77,42 @@ class SiteController extends Controller
             ->join('city as cit', 'cit.id', 'sto.city_id')
             ->join('state as sta', 'sta.id', 'cit.state_id')
             ->join('brand as bra', 'bra.id', 'sto.brand_id')
-            ->when($params, function($query, $params) {
-                if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
-                    $query->orWhere('sta.name', 'like', '%Ceará%');
-                }
+            ->where(function($query) use ($params){
+                $query->when($params, function($query, $params) {
+                    if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
+                        $query->orWhere('sta.name', 'like', '%Ceará%');
+                    }
+                    if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
+                        $query->orWhere('sta.name', 'like', '%Maranhão%');
+                    }
+                    if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
+                        $query->orWhere('sta.name', 'like', '%Piauí%');
+                    }
+                    if(isset($params['rn']) &&  !empty($params['rn']) && $params['rn'] == 'true') {
+                        $query->orWhere('sta.name', 'like', '%Rio Grande do Norte%');
+                    }
+                });
             })
-            ->when($params, function($query, $params) {
-                if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
-                    $query->orWhere('sta.name', 'like', '%Maranhão%');
-                }
-            })
-            ->when($params, function($query, $params) {
-                if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
-                    $query->orWhere('sta.name', 'like', '%Piauí%');
-                }
-            })
-            ->when($params, function($query, $params) {
-                if(isset($params['rn']) &&  !empty($params['rn']) && $params['rn'] == 'true') {
-                    $query->orWhere('sta.name', 'like', '%Rio Grande do Norte%');
-                }
-            })
+            // ->when($params, function($query, $params) {
+            //     if(isset($params['ceara']) && !empty($params['ceara']) && $params['ceara'] == 'true') {                    
+            //         $query->orWhere('sta.name', 'like', '%Ceará%');
+            //     }
+            // })
+            // ->when($params, function($query, $params) {
+            //     if(isset($params['maranhao']) &&  !empty($params['maranhao']) && $params['maranhao'] == 'true') {
+            //         $query->orWhere('sta.name', 'like', '%Maranhão%');
+            //     }
+            // })
+            // ->when($params, function($query, $params) {
+            //     if(isset($params['piaui']) &&  !empty($params['piaui']) && $params['piaui'] == 'true') {
+            //         $query->orWhere('sta.name', 'like', '%Piauí%');
+            //     }
+            // })
+            // ->when($params, function($query, $params) {
+            //     if(isset($params['rn']) &&  !empty($params['rn']) && $params['rn'] == 'true') {
+            //         $query->orWhere('sta.name', 'like', '%Rio Grande do Norte%');
+            //     }
+            // })
             ->where(function($query) use ($params){
                 $query->when($params, function($query, $params) {
                     if(isset($params['boticario']) &&  !empty($params['boticario']) && $params['boticario'] == 'true') {
@@ -132,7 +148,7 @@ class SiteController extends Controller
             
             ->get();
 
-        // dd(DB::getQueryLog());
+         // dd(DB::getQueryLog());
         return response()->json($stores, 200);
     }
 

@@ -1,33 +1,27 @@
-@extends('layouts.site')
-@section('styles')
-<style>
-    .header {
-        background: #8a8a8a;
-    }
+<style type="text/css">
+.header {
+  background: #8a8a8a;
+}
+.header .columns {
+  padding-bottom: 0;
+}
+.header p {
+  color: #fff;
+  margin-bottom: 0;
+}
+.header .wrapper-inner {
+  padding: 20px; /*controls the height of the header*/
+}
 
-    .header .columns {
-        padding-bottom: 0;
-    }
+.header .container {
+  background: #8a8a8a;
+}
 
-    .header p {
-        color: #fff;
-        margin-bottom: 0;
-    }
+.wrapper.secondary {
+  background: #f3f3f3;
+}
 
-    .header .wrapper-inner {
-        padding: 20px; /*controls the height of the header*/
-    }
-
-    .header .container {
-        background: #8a8a8a;
-    }
-
-    .wrapper.secondary {
-        background: #f3f3f3;
-    }
 </style>
-@endsection
-@section('content')
 <!-- move the above styles into your custom stylesheet -->
 
 
@@ -51,7 +45,7 @@
   <row>
     <columns>
       
-      <h1>Hi, Susan Calvin</h1>
+      <h1>Olá, {{$data->nome}}</h1>
       <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Magni, iste, amet consequatur a veniam.</p>
       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut optio nulla et, fugiat. Maiores accusantium nostrum asperiores provident, quam modi ex inventore dolores id aspernatur architecto odio minima perferendis, explicabo. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quos quasi itaque beatae natus fugit provident delectus, magnam laudantium odio corrupti sit quam. Optio aut ut repudiandae velit distinctio asperiores?</p>
       <callout class="primary">
@@ -81,4 +75,3 @@
   </wrapper>
 
 </container>
-@endsection
