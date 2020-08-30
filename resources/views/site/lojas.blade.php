@@ -188,7 +188,10 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div>              
+                </div>
+                <div class="col-sm-3">
+                    <div id="quantidade"></div>
                 </div>
             </div>
 
@@ -249,6 +252,7 @@
 
             axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&rn=${rn}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
             .then(function(response) {
+                $("#quantidade").html(`<br /><h4 class="subtitulo">${response.data.length} LOJAS</h4>`);
                 for(item of response.data) {
                     var fone = item.information.replace('(', '').replace(')', '-').replace(' ', '');
                     var popup = `<h4>${item.name}</h4>`;
