@@ -939,6 +939,14 @@ class DatabaseSeeder extends Seeder
                 'lng' => -42.7890252,
             ],
             [
+                'brand_id' => 3,
+                'address' => 'AV MARECHAL CASTELO BRANCO, 911 - Quiosque',
+                'information' => '(86) 31225159',
+                'city_id' => '614',
+                'lat' => -5.076806,
+                'lng' => -42.802325,
+            ],
+            [
                 'brand_id' => 2,
                 'address' => 'RUA: FLORIANO PEIXOTO, 506 CENTRO',
                 'information' => '(88) 98841-3457',
