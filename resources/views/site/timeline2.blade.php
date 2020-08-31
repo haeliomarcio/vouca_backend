@@ -216,7 +216,7 @@
                     <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                1ª Usina Solor CE
+                                Usina Solar CE
                             </h4>
                         </div>
                         <div class="timeline-body">

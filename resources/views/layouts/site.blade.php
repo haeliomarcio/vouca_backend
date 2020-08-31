@@ -92,26 +92,26 @@
                 </button>
 
                 <div id="menu" class="collapse navbar-collapse" style="background-color: #d79122; z-index: 1000;">
-                    <ul class="navbar-nav ml-auto  nav-menu">
+                    <ul class="navbar-nav ml-auto  nav-menu" style="display: flex; align-items: center;">
                         <!--
                         <li class="nav-item">
                             <a href="{{url('/')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Início</a>
                         </li>
                         -->
                         <li class="nav-item">
-                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Grupo Vilarouca</a>
+                            <a href="{{url('/sobre')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Grupo<br />Vilarouca</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/marcas')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Marcas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Lojas</a>
+                            <a href="{{url('/lojas')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Encontre<br />Nossas Lojas</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Trabalhe Conosco</a>
+                            <a href="{{url('/trabalhe-conosco')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Trabalhe<br />Conosco</a>
                         </li>
                         <li class="nav-item">
-                            <a href="{{url('/faji')}}" class="nav-link font-weight-bold" style="font-size: 16px;">FAJI</a>
+                            <a href="{{url('/faji')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Fundação</a>
                         </li>
                         <li class="nav-item">
                             <a href="{{url('/contato')}}" class="nav-link font-weight-bold" style="font-size: 16px;">Contato</a>
@@ -190,7 +190,7 @@
                                 <a href="{{url('/')}}">INÍCIO</a><br />
                                 <a href="{{url('/sobre')}}">GRUPO VILAROUCA</a><br />
                                 <a href="{{url('/marcas')}}">MARCAS</a><br />
-                                <a href="{{url('/lojas')}}">LOJAS</a><br />
+                                <a href="{{url('/lojas')}}">ENCONTRE NOSSAS LOJAS</a><br />
                             </p>
                         </div>
                     </div>
@@ -198,7 +198,7 @@
                         <div class="grupo">
                         <p class="menu-footer">
                                 <a href="{{url('/trabalhe-conosco')}}">TRABALHE CONOSCO</a><br />
-                                <a href="{{url('/faji')}}">FAJI</a><br />
+                                <a href="{{url('/faji')}}">FUNDAÇÃO</a><br />
                                 <a href="{{url('/contato')}}">CONTATO</a> <br />
                                 <a href="{{url('/dashboard')}}">GESTOR</a>
                             </p>
