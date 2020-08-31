@@ -197,6 +197,19 @@
 
         </div>
         <div id="map" style="width:100%; height: 600px;"></div>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Endereço</th>
+                    <th>LAT</th>
+                    <th>LNG</th>
+                </tr>
+            </thead>
+            <tbody id="tabela">
+            </tbody>
+        </table>
     </div>
 @endsection
 @section('scripts_bottom')
@@ -249,7 +262,7 @@
             var tim = $("#logo_tim").prop('checked');
             var crocs = $("#logo_crocs").prop('checked');
             var magrella = $("#logo_magrella").prop('checked');
-
+            var table = '';
             axios.get(`{{url('/list-lojas/')}}?ceara=${ceara}&maranhao=${maranhao}&piaui=${piaui}&rn=${rn}&boticario=${boticario}&cacaushow=${cacaushow}&arezzo=${arezzo}&tim=${tim}&crocs=${crocs}&magrella=${magrella}`)
             .then(function(response) {
                 $("#quantidade").html(`<br /><h4 class="subtitulo">${response.data.length} LOJAS</h4>`);
@@ -267,6 +280,14 @@
                         </a>
                     </p>`;
 
+                    table += '<tr>';
+                    table += '<td>' + item.id + '</td>';
+                    table += '<td>' + item.name + '</td>';
+                    table += '<td>' + item.address + '</td>';
+                    table += '<td>' + item.lat + '</td>';
+                    table += '<td>' + item.lng + '</td>';
+                    table += '</tr>';
+
                     var lat = parseFloat(item.lat);
                     var lng = parseFloat(item.lng);
                     var name = item.name;
@@ -281,6 +302,8 @@
                         })}).bindPopup(popup).addTo(map);
                     mapMarkers.push(marker);
                 }
+
+                $("#tabela").html(table);
             })
             .catch(function(error){
                 console.log(error);
