@@ -30,7 +30,7 @@
                     <img src="images/simbolo-grupo-vilarouca.png" style="width: 100%;">
                 </div>
                 
-                <p style="margin-top: 30px;">Em 1983, o casal José de Sá e Cleonice Vilarouca, decidem abrir seu primeiro negócio. A Magrella Decorações, uma pequena loja de artigos de decoração que ficava localizada no centro de Iguatu, interior do Ceará. Aos poucos a loja foi diversificando seus produtos, passando também a vender roupas e perfumes.</p>
+                <p style="margin-top: 30px;">Em 1983, o casal José de Sá Vilarouca e Cleonice Vilarouca, decidem abrir seu primeiro negócio. A Magrella Decorações, uma pequena loja de artigos de decoração que ficava localizada no centro de Iguatu, interior do Ceará. Aos poucos a loja foi diversificando seus produtos, passando também a vender roupas e perfumes.</p>
                 <p>Em 1990, apenas 3 anos após a criação da ABF (Associação Brasileira de Franchising – 1987), o casal decide vender sua casa própria, para abrir sua primeira franquia O Boticário, marca ainda pouco conhecida nacionalmente.</p>
                 <p>Com foco no negócio e sempre engajando pessoas, nesse mesmo ano começou a expansão pelo Estado do CE, e em 2 anos já eram 6 lojas. Então em 1993, decidem alçar voos maiores, e começa a expansão para o Estado do PI, iniciando pela cidade de Parnaíba.</p>
                 <p>A partir daí, não parou mais, vieram as marcas AREZZO, Cacau Show, TIM e CROCS. Em 2018, montou sua primeira usina solar, se tornando auto sustentável no Estado do CE, e em 2019 veio a segunda no Estado do PI.</p>
