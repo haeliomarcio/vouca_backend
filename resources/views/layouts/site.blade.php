@@ -395,7 +395,6 @@
             $('.crocs').removeClass('marcaInativo');
             $('.arezzo').removeClass('marcaInativo');
 
-
             $('.cearaImg2').removeClass('filterCeara2');
             $('.maranhaoImg2').removeClass('filterMaranhao2');
             $('.piauiImg2').removeClass('filterPiaui2');
@@ -454,14 +453,6 @@
             $('.rnImg2').addClass('filterRN2');
         });
         $('.crocsImg').mouseout(function () {
-            $('.rnImg2').removeClass('filterRN2');
-        });
-
-        //////* O BOTICARIO *////////
-        $('.oboticarioImg').mouseenter(function () {
-            $('.rnImg2').addClass('filterRN2');
-        });
-        $('.oboticarioImg').mouseout(function () {
             $('.rnImg2').removeClass('filterRN2');
         });
 
