@@ -205,7 +205,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/logo.png')}}" width="100px"/>
+                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="100px"/>
                         </div>
                     </div>
                 </li>

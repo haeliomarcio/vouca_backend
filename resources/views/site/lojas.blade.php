@@ -190,14 +190,14 @@
                         </div>
                     </div>              
                 </div>
-                <div class="col-sm-3">
+                <!-- <div class="col-sm-3">
                     <div id="quantidade"></div>
-                </div>
+                </div> -->
             </div>
 
         </div>
         <div id="map" style="width:100%; height: 600px;"></div>
-        <table>
+        <!-- <table>
             <thead>
                 <tr>
                     <th>ID</th>
@@ -209,14 +209,22 @@
             </thead>
             <tbody id="tabela">
             </tbody>
-        </table>
+        </table> -->
     </div>
 @endsection
 @section('scripts_bottom')
     <script>
-        // var map = L.map('map').setView([-4.053263, -43.0394255], 6);
+        var latLngDefault = [-4.053263, -43.0394255];
+        var llCeara = [-5.3361761,-39.1719466];
+        var llMaranhao = [-5.7028802, -48.0908014];
+        var llPiaui = [-6.9505047,-43.7894149];
+        var llRN = [-5.9447353,-36.7092643];
+        var zoom = 6;
+
+        var mapMarkers = [];
+
         var map = L.map('map', {
-            center: [-4.053263, -43.0394255],
+            center: latLngDefault,
             zoom: 6,
             scrollWheelZoom: false,
         });
@@ -231,31 +239,47 @@
                 fillOpacity: 0.7
             };
         }
-        var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
-                attribution: 'GrupoVilarouca'
-        }).addTo(map);    
-        
-        
-        var mapMarkers = [];
+
         var LeafIcon = L.Icon.extend({
-            options: {
-                
-            }
+            options: {}
         });
-        
-        var arezzo = new LeafIcon({iconUrl: '/icons/arezzo.png'});
-        var boticario = new LeafIcon({iconUrl: '/icons/boticario.png'});
-        var cacauShow = new LeafIcon({iconUrl: '/icons/cacau-show.png'});
-        var crocs = new LeafIcon({iconUrl: '/icons/crocs.png'});
-        var magrella = new LeafIcon({iconUrl: '/Icons/magrella.png'});
-        var tim = new LeafIcon({iconUrl: '/icons/tim.png'});
-        
+
         function listStores() {  
+            
+            var ceara = $("#ceara").prop('checked');
+            var maranhao = $("#maranhao").prop('checked');
+            var piaui = $("#piaui").prop('checked');
+            var rn = $("#rn").prop('checked');
+            zoom = 6;
+            if(ceara) {
+                latLngDefault = llCeara;
+                zoom = 7;
+            }
+            if(maranhao) {
+                latLngDefault = llMaranhao;
+                zoom = 6;
+            }
+            if(piaui) {
+                latLngDefault = llPiaui;
+                zoom = 6;
+            }
+            if(rn) {
+                latLngDefault = llRN;
+                zoom = 8;
+            }
+            map.setView(new L.LatLng(latLngDefault[0], latLngDefault[1]), zoom, { animation: true });
+            var positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager_labels_under/{z}/{x}/{y}.png', {
+                attribution: 'GrupoVilarouca'
+            }).addTo(map);
+
             var ceara = $("#ceara").prop('checked');
             var maranhao = $("#maranhao").prop('checked');
             var piaui = $("#piaui").prop('checked');
             var rn = $("#rn").prop('checked');
 
+            var defaultLatLng = [-4.053263, -43.0394255];
+            var defaultZoom = 12;
+            
             var boticario = $("#logo_boticario").prop('checked');
             var cacaushow = $("#logo_cacaushow").prop('checked');
             var arezzo = $("#logo_arezzo").prop('checked');

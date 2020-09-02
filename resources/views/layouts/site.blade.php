@@ -219,6 +219,9 @@
 <script type="text/javascript" src="/js/style.js"></script>
 <script src="/js/jquery.mask.min.js"></script>
 <script>
+    var LeafIcon = L.Icon.extend({
+        options: {}
+    });
     var icon_arezzo = new LeafIcon({iconUrl: '/images/icons/arezzo.png'});
     var icon_boticario = new LeafIcon({iconUrl: '/images/icons/boticario.png'});
     var icon_cacauShow = new LeafIcon({iconUrl: '/images/icons/cacau-show.png'});
