@@ -11,7 +11,7 @@
                     @include('helpers.form-search')
                 </div>
                 <div class="col-md-6 text-right">
-                    <a href="{{url('/dashboard/stores/create')}}" class="btn btn-success">Nova Loja</a>
+                    <a href="{{url('/dashboard/brands/create')}}" class="btn btn-success">Nova Loja</a>
                 </div>
             </div>
             <br />

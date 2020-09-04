@@ -42,9 +42,9 @@
                                 <div class="items col-sm-12">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                            <label class="btn btn-default">
+                                            <label id="btn-ceara" class="btn btn-default active">
                                                 <div class="bizcontent">
-                                                    <input type="checkbox" id="ceara" name="ceara" autocomplete="off" value="">
+                                                    <input type="radio" checked="true" id="ceara" name="ceara" autocomplete="off" value="">
                                                     <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                     <h6 style="font-family: vilaRoucaBold;">CEARÁ</h6>
                                                 </div>
@@ -55,9 +55,9 @@
                                 <div class="items col-sm-12">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                            <label class="btn btn-default">
+                                            <label id="btn-maranhao" class="btn btn-default">
                                                 <div class="bizcontent">
-                                                    <input type="checkbox" id="maranhao" name="maranhao" autocomplete="off" value="">
+                                                    <input type="radio" id="maranhao" name="maranhao" autocomplete="off" value="">
                                                     <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                     <h6 style="font-family: vilaRoucaBold;">MARANHÃO</h6>
                                                 </div>
@@ -68,9 +68,9 @@
                                 <div class="items col-sm-12">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                            <label class="btn btn-default">
+                                            <label  id="btn-piaui" class="btn btn-default">
                                                 <div class="bizcontent">
-                                                    <input type="checkbox" id="piaui" name="piaui" name="var_id[]" autocomplete="off" value="">
+                                                    <input type="radio" id="piaui" name="piaui" name="var_id[]" autocomplete="off" value="">
                                                     <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                     <h6 style="font-family: vilaRoucaBold;">PIAUÍ</h6>
                                                 </div>
@@ -81,9 +81,9 @@
                                 <div class="items col-sm-12">
                                     <div class="info-block block-info clearfix">
                                         <div data-toggle="buttons" class="btn-group bizmoduleselect">
-                                            <label class="btn btn-default">
+                                            <label id="btn-rn"  class="btn btn-default">
                                                 <div class="bizcontent">
-                                                    <input type="checkbox" id="rn" name="rn" name="var_id[]" autocomplete="off" value="">
+                                                    <input type="radio" id="rn" name="rn" name="var_id[]" autocomplete="off" value="">
                                                     <span class="glyphicon glyphicon-ok glyphicon-lg"></span>
                                                     <h6 style="font-family: vilaRoucaBold;">RIO GRANDE DO NORTE</h6>
                                                 </div>
@@ -214,12 +214,14 @@
 @endsection
 @section('scripts_bottom')
     <script>
-        var latLngDefault = [-4.053263, -43.0394255];
+        // var latLngDefault = [-4.053263, -43.0394255];
+        var latLngDefault = [-5.3361761,-39.1719466];
         var llCeara = [-5.3361761,-39.1719466];
         var llMaranhao = [-5.7028802, -48.0908014];
         var llPiaui = [-6.9505047,-43.7894149];
         var llRN = [-5.9447353,-36.7092643];
         var zoom = 6;
+
 
         var mapMarkers = [];
 
@@ -334,6 +336,13 @@
             });
         }
 
+        function removeMarcacoesEstados() {
+            $("#ceara").prop('checked', false);
+            $("#maranhao").prop('checked', false);
+            $("#piaui").prop('checked', false);
+            $("#rn").prop('checked', false);
+        }
+
         function removeAllMarker() {
             for(var i = 0; i < mapMarkers.length; i++){
                 map.removeLayer(mapMarkers[i]);
@@ -363,22 +372,50 @@
             }
         }
 
+
         listStores();
 
         $("#rn").change(function() {
-            removeAllMarker();
-            listStores();
+            $("#ceara").prop('checked', false);
+            $("#maranhao").prop('checked', false);
+            $("#piaui").prop('checked', false);
+            $("#btn-ceara").removeClass('active');
+            $("#btn-maranhao").removeClass('active');
+            $("#btn-piaui").removeClass('active');
+            setTimeout(() => {
+                removeAllMarker();
+                listStores();
+            }, 500);
+            
         });
 
         $("#ceara").change(function() {
+            $("#maranhao").prop('checked', false);
+            $("#piaui").prop('checked', false);
+            $("#rn").prop('checked', false);
+            $("#btn-maranhao").removeClass('active');
+            $("#btn-piaui").removeClass('active');
+            $("#btn-rn").removeClass('active');
             removeAllMarker();
             listStores();
         });
         $("#maranhao").change(function() {
+            $("#ceara").prop('checked', false);
+            $("#piaui").prop('checked', false);
+            $("#rn").prop('checked', false);
+            $("#btn-ceara").removeClass('active');
+            $("#btn-piaui").removeClass('active');
+            $("#btn-rn").removeClass('active');
             removeAllMarker();
             listStores();
         });
         $("#piaui").change(function() {
+            $("#ceara").prop('checked', false);
+            $("#maranhao").prop('checked', false);
+            $("#rn").prop('checked', false);
+            $("#btn-ceara").removeClass('active');
+            $("#btn-maranhao").removeClass('active');
+            $("#btn-rn").removeClass('active');
             removeAllMarker();
             listStores();
         });
@@ -405,15 +442,16 @@
             });
         });
 
-        $(function() {
-            $('#search').on('keyup', function() {
-                var pattern = $(this).val();
-                $('.searchable-container .items').hide();
-                $('.searchable-container .items').filter(function() {
-                    return $(this).text().match(new RegExp(pattern, 'i'));
-                }).show();
-            });
-        });
+        // $(function() {
+        //     $('#search').on('keyup', function() {
+        //         var pattern = $(this).val();
+        //         $('.searchable-container .items').hide();
+        //         $('.searchable-container .items').filter(function() {
+        //             return $(this).text().match(new RegExp(pattern, 'i'));
+        //         }).show();
+        //     });
+        // });
+
 
         $("#logo_boticario").change(function() {
             var check = $(this).prop('checked');
