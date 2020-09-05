@@ -8,7 +8,7 @@
         <div class="card-body">
             <br />
             @include('helpers.messages')
-            <form method="POST" action="{{url('/dashboard/brands/update/'.$data->id)}}">
+            <form method="POST" action="{{url('/dashboard/brands/update/'.$data->id)}}"  enctype="multipart/form-data">
             {{ csrf_field() }}
                 <div class="form-group">
                     <label for="name">Nome <span class="required">*</span></label>

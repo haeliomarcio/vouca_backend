@@ -9,8 +9,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Hash;
 use App\User;
-use Illuminate\Support\Facades\Gate;
-use Illuminate\Support\Facades\Auth;
+
 
 class UsersController extends Controller
 {
@@ -25,10 +24,9 @@ class UsersController extends Controller
      */
     public function index(Request $request)
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
-        $this->services->isCheckPermission('users', 'admin');
         if($request->input('search') && !empty($request->input('search'))) {
             $search = $request->input('search');
             $users = User::where('name', 'like', "%{$search}%")
@@ -48,8 +46,8 @@ class UsersController extends Controller
      */
     public function create()
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
         return view('users.new');
     }
@@ -62,8 +60,8 @@ class UsersController extends Controller
      */
     public function store(StoreUser $request)
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
         User::create($request);
         return redirect('users.list')->with('success', 'Usuário criado com sucesso.');
@@ -88,8 +86,8 @@ class UsersController extends Controller
      */
     public function edit($id)
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
         $user = User::find($id);
         return view('users.edit', ['user' => $user]);
@@ -104,8 +102,8 @@ class UsersController extends Controller
      */
     public function update(UpdateUser $request, $id)
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
         $user = User::find($id);
         if($request->input('password')) {
@@ -135,8 +133,8 @@ class UsersController extends Controller
      */
     public function destroy($id)
     {
-        if (Gate::denies('check-admin')) {
-            return view('not-permission');
+        if ($this->services->isCheckPermission('users', 'admin')) {
+            return $this->services->redirectUserNotAuthorization();
         }
         $user = User::find($id);
         

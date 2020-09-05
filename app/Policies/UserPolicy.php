@@ -14,12 +14,13 @@ class UserPolicy
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(User $user)
     {
-        //
+        
     }
 
     public function checkAdmin(User $user) {
-        return $user->type == 'admin';
+        return false;
+        return $user->type != 'admin';
     }
 }

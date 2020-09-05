@@ -100,8 +100,8 @@ class BrandsController extends Controller
         $context = $this->model->find($id);
         $params = $request->all();
         if($request->file('image')) {
-            if(file_exists(public_path('icons/'.$context->image_path))) {
-                unlink(public_path('icons/'.$context->image_path));
+            if(file_exists(public_path('icons/'.$context->image))) {
+                unlink(public_path('icons/'.$context->image));
             }
             $filename = $request->file('image')->store('', 'icons');
             $params['image'] = 'icons/'.$filename;
@@ -121,7 +121,7 @@ class BrandsController extends Controller
         $context = $this->model->find($id);
         if($context) {
             if($context->delete()) {
-                Storage::disk('icons')->delete($context->path_image);
+                Storage::disk('icons')->delete($context->image);
                 return back()
                 ->with('success', 'Marca '. $context->name. ' removido com sucesso');
             }

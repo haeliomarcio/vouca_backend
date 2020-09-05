@@ -25,7 +25,7 @@ class StoreBrands extends FormRequest
     {
         return [
             'name' => 'required',
-            'image' => 'required|mimes:png',
+            'image' => 'required',
         ];
     }
 
