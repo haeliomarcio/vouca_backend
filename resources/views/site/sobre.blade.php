@@ -9,6 +9,9 @@
     }  
 </style>
 @endsection
+@section('scripts_top')
+    <script src="{{url('js/dragscroll-master/dragscroll.js')}}"></script>
+@endsection
 @section('content')
     <div class="wrap">
         <div class="content" style="margin-top: 50px; margin-left: 90px">
