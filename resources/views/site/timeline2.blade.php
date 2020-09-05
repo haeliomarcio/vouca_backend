@@ -12,7 +12,7 @@
                             <!-- <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p> -->
                         </div>
                         <div class="timeline-body">
-                            <img src="{{url('/images/marcas/marcas/magrella.png')}}"  />
+                            <!-- <img src="{{url('/images/marcas/marcas/magrella.png')}}"  /> -->
                         </div>
                     </div>
                 </li>
@@ -60,7 +60,7 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                Início da expansão O Botiocário para p PI
+                                Início da expansão O Boticário para p PI
                             </h4>
                         </div>
                         <div class="timeline-body">
@@ -74,11 +74,12 @@
                     <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                Mudança de ponto da Magrella Collection
+                                <!-- Mudança de ponto da Magrella Collection -->
+                                Revitalização e relocalização da Magrella
                             </h4>
                         </div>
                         <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/magrella.png')}}" />
+                            <!-- <img src="{{url('/images/marcas/marcas/magrella.png')}}" /> -->
                         </div>
                     </div>
                 </li>
@@ -144,11 +145,12 @@
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                Nova mudança de ponto da Magrella Collection (MEGA)
+                                <!-- Nova mudança de ponto da Magrella Collection (MEGA) -->
+                                Nova relocalização e abertura da Mega Store - Magrella Collection
                             </h4>
                         </div>
                         <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/magrella.png')}}" width="100px" />
+                            <img src="{{url('/images/marcas/marcas/magrella.png')}}" width="100px" />
                         </div>
                     </div>
                 </li>
@@ -205,7 +207,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="100px"/>
+                        <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="100px"/>
                         </div>
                     </div>
                 </li>
