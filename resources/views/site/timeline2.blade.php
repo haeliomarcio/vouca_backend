@@ -23,8 +23,9 @@
                         <div class="timeline-heading">
                             <h4 class="timeline-title">1ª Loja O Boticário (Em Iguatú)</h4>
                         </div>
-                        <div class="timeline-body">
-                            <img src="{{url('/images/marcas/marcas/boticario.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/boticario.png')}}"  width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -35,8 +36,9 @@
                         <div class="timeline-heading">
                             <h4 class="timeline-title">Início da expansão O Boticário para CE</h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" />
+                        <div class="timeline-body text-center">
+                        <br />
+                        <img src="{{url('/images/marcas/marcas/boticario.png')}}"  width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -49,8 +51,8 @@
                                 Abertura do Escritório admistrativo
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" />
+                        <div class="timeline-body text-center">
+                        <img src="{{url('/images/grupo-vilarouca-antigo.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -63,8 +65,9 @@
                                 Início da expansão O Boticário para p PI
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" />
+                        <div class="timeline-body text-center">
+                        <br />
+                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -78,7 +81,7 @@
                                 Revitalização e relocalização da Magrella
                             </h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body text-center">
                             <!-- <img src="{{url('/images/marcas/marcas/magrella.png')}}" /> -->
                         </div>
                     </div>
@@ -92,7 +95,7 @@
                                 Fundação da FAJI 
                             </h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body text-center">
                         <img src="{{url('/images/marcas/marcas/faji.png')}}" width="100px" />
                         </div>
                     </div>
@@ -106,8 +109,9 @@
                                 AREZZO São Luis
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/arezzo.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -120,7 +124,7 @@
                                 Rádio MaisFM (FAJI)
                             </h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body text-center">
                         <img src="{{url('/images/marcas/marcas/maisfm.jpeg')}}" width="100px" />
                         </div>
                     </div>
@@ -134,11 +138,13 @@
                                 AREZZO Teresina PI
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="100px" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
+
                 <!-- 11 -->
                 <li class="timeline-item">
                     <div class="timeline-badge primary">2010</div>
@@ -149,11 +155,12 @@
                                 Nova relocalização e abertura da Mega Store - Magrella Collection
                             </h4>
                         </div>
-                        <div class="timeline-body">
+                        <div class="timeline-body text-center">
                             <img src="{{url('/images/marcas/marcas/magrella.png')}}" width="100px" />
                         </div>
                     </div>
                 </li>
+
                 <!-- 12 -->
                 <li class="timeline-item">
                     <div class="timeline-badge info">2010</div>
@@ -163,11 +170,13 @@
                                 Cacau Show CE
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/cacau-show.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/cacau-show.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
+
                 <!-- 13 -->
                 <li class="timeline-item">
                     <div class="timeline-badge success">2014</div>
@@ -177,8 +186,9 @@
                                 TIM Iguatú
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/tim.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/tim.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -191,8 +201,9 @@
                                 1ª Venda Direta do O Boticário (CE)
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -206,8 +217,9 @@
                                 Expansão da Venda Direta
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="100px"/>
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -218,56 +230,60 @@
                     <div class="timeline-panel outer">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                Usina Solar CE
+                                1ª Usina Solar no Estado do CE
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="100px" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="200px" />
                         </div>
                     </div>
                 </li>
 
-                <!-- 17 -->
+                <!-- 16 -->
                 <li class="timeline-item">
-                    <div class="timeline-badge info">2018</div>
+                    <div class="timeline-badge info">2019</div>
                     <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
-                                CROCS São Luis
+                                2ª Usina Solar no Estado do PI
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/crocs.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="200px" />
                         </div>
                     </div>
                 </li>
 
                 <!-- 17 -->
                 <li class="timeline-item">
-                    <div class="timeline-badge success">2018</div>
+                    <div class="timeline-badge success">2019</div>
                     <div class="timeline-panel outer">
-                        <div class="timeline-heading">
-                            <h4 class="timeline-title">
-                                Usina Solar PI
-                            </h4>
-                        </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="100px" />
-                        </div>
-                    </div>
-                </li>
-
-                 <!-- 18 -->
-                 <li class="timeline-item">
-                    <div class="timeline-badge warning">2019</div>
-                    <div class="timeline-panel">
                         <div class="timeline-heading">
                             <h4 class="timeline-title">
                                 CROCS Fortaleza
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/crocs.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/crocs.png')}}" width="200px" />
+                        </div>
+                    </div>
+                </li>
+
+                 <!-- 17 -->
+                 <li class="timeline-item">
+                    <div class="timeline-badge warning">2019</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">
+                                AREZZO Iguatu
+                            </h4>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -281,8 +297,40 @@
                                 CROCS Teresina
                             </h4>
                         </div>
-                        <div class="timeline-body">
-                        <img src="{{url('/images/marcas/marcas/crocs.png')}}" />
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/crocs.png')}}" width="200px" />
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 20 -->
+                <li class="timeline-item">
+                    <div class="timeline-badge primary">2020</div>
+                    <div class="timeline-panel">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">
+                                O Boticário RN
+                            </h4>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <br />
+                            <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="200px" />
+                        </div>
+                    </div>
+                </li>
+
+                <!-- 21 -->
+                <li class="timeline-item">
+                    <div class="timeline-badge info">2020</div>
+                    <div class="timeline-panel outer">
+                        <div class="timeline-heading">
+                            <h4 class="timeline-title">
+                                Criação da NOVA marca do Grupo Vilarouca
+                            </h4>
+                        </div>
+                        <div class="timeline-body text-center">
+                            <img src="{{url('/images/marcas/marcas/logo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
