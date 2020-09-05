@@ -19,8 +19,8 @@ class CreateStoreTable extends Migration
             $table->text('information');
             $table->string('address');
             $table->unsignedBigInteger('city_id');
-            $table->float('lat');
-            $table->float('lng');
+            $table->string('lat');
+            $table->string('lng');
             $table->timestamps();
             $table->foreign('brand_id')->references('id')->on('brand');
             $table->foreign('city_id')->references('id')->on('city');
