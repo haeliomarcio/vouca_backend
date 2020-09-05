@@ -480,7 +480,16 @@
     };
 </script>
 <script defer type="text/javascript">
-    !function(){var t=document.createElement("script");t.type="text/javascript",t.defer=!0,t.src="https://static.omni.chat/web-chat/web-chat.min.js",t.onload=function(){OmniChatWebChat.init(window.omnichatConfig)};var e=document.getElementsByTagName("script")[0];e.parentNode.insertBefore(t,e)}();
+    !function(){
+        var t = document.createElement("script");
+        t.type="text/javascript",t.defer=!0,
+        t.src="https://static.omni.chat/web-chat/web-chat.min.js",
+        t.onload=function(){OmniChatWebChat.init(window.omnichatConfig)
+    };
+        
+    var e = document.getElementsByTagName("script")[0];
+    e.parentNode.insertBefore(t,e)}();
+
 </script>
 <script src="/js/timeline.js"></script>
 <!-- OmniChat web-chat widget -->
