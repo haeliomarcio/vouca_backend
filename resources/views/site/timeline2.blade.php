@@ -12,7 +12,7 @@
                             <!-- <p><small class="text-muted"><i class="glyphicon glyphicon-time"></i> 11 hours ago via Twitter</small></p> -->
                         </div>
                         <div class="timeline-body">
-                            <!-- <img src="{{url('/images/marcas/marcas/magrella.png')}}"  /> -->
+                            <!-- <img src="{{url('/images/timeline/magrella.png')}}"  /> -->
                         </div>
                     </div>
                 </li>
@@ -24,8 +24,7 @@
                             <h4 class="timeline-title">1ª Loja O Boticário (Em Iguatú)</h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/boticario.png')}}"  width="200px"/>
+                            <img src="{{url('/images/timeline/o-boticario.png')}}"  width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -37,8 +36,7 @@
                             <h4 class="timeline-title">Início da expansão O Boticário para CE</h4>
                         </div>
                         <div class="timeline-body text-center">
-                        <br />
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}"  width="200px"/>
+                            <img src="{{url('/images/timeline/o-boticario.png')}}"  width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -52,7 +50,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                        <img src="{{url('/images/grupo-vilarouca-antigo.png')}}" width="200px"/>
+                            <img src="{{url('/images/grupo-vilarouca-antigo.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -66,8 +64,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                        <br />
-                        <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="200px"/>
+                            <img src="{{url('/images/timeline/o-boticario.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -82,7 +79,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <!-- <img src="{{url('/images/marcas/marcas/magrella.png')}}" /> -->
+                            <!-- <img src="{{url('/images/timeline/magrella.png')}}" /> -->
                         </div>
                     </div>
                 </li>
@@ -96,7 +93,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                        <img src="{{url('/images/marcas/marcas/faji.png')}}" width="100px" />
+                            <img src="{{url('/images/timeline/faji.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -110,8 +107,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -125,7 +121,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                        <img src="{{url('/images/marcas/marcas/maisfm.jpeg')}}" width="100px" />
+                            <img src="{{url('/images/timeline/maisfm.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -139,8 +135,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -156,7 +151,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <img src="{{url('/images/marcas/marcas/magrella.png')}}" width="100px" />
+                            <img src="{{url('/images/timeline/magrella.png')}}" width="100px" />
                         </div>
                     </div>
                 </li>
@@ -171,8 +166,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/cacau-show.png')}}" width="200px"/>
+                            <img src="{{url('/images/timeline/cacau-show.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -187,8 +181,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/tim.png')}}" width="200px"/>
+                            <img src="{{url('/images/timeline/tim.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -202,8 +195,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="200px"/>
+                            <img src="{{url('/images/timeline/o-boticario.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -218,8 +210,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/oboticario-new.png')}}" width="200px"/>
+                            <img src="{{url('/images/timeline/o-boticario.png')}}" width="200px"/>
                         </div>
                     </div>
                 </li>
@@ -234,8 +225,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="200px" />
+                            <img src="{{url('/images/timeline/usina.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -250,8 +240,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/usina.jpg')}}" width="200px" />
+                            <img src="{{url('/images/timeline/usina.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -266,8 +255,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/crocs.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/crocs.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -282,8 +270,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/arezzo.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/arezzo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -298,8 +285,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/crocs.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/crocs.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -314,8 +300,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <br />
-                            <img src="{{url('/images/marcas/marcas/boticario.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/o-boticario.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
@@ -330,7 +315,7 @@
                             </h4>
                         </div>
                         <div class="timeline-body text-center">
-                            <img src="{{url('/images/marcas/marcas/logo.png')}}" width="200px" />
+                            <img src="{{url('/images/timeline/logo.png')}}" width="200px" />
                         </div>
                     </div>
                 </li>
