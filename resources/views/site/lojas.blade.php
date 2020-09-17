@@ -217,7 +217,7 @@
         // var latLngDefault = [-4.053263, -43.0394255];
         var latLngDefault = [-5.3361761,-39.1719466];
         var llCeara = [-5.3361761,-39.1719466];
-        var llMaranhao = [-5.7028802, -48.0908014];
+        var llMaranhao = [-2.6265885,-43.4642073];
         var llPiaui = [-6.9505047,-43.7894149];
         var llRN = [-5.9447353,-36.7092643];
         var zoom = 6;
@@ -259,7 +259,7 @@
             }
             if(maranhao) {
                 latLngDefault = llMaranhao;
-                zoom = 6;
+                zoom = 8;
             }
             if(piaui) {
                 latLngDefault = llPiaui;
