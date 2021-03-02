@@ -2,10 +2,11 @@
 @section('styles')
 <style>
     h2 {
-        color: #d79122 !important;
+        color: #E05E3B !important;
     }
     h2::after {
-        background-color: #d79122 !important;
+        background-color: #E05E3B !important;
+        display: none;
     }  
 </style>
 @endsection
@@ -40,7 +41,11 @@
                 <p>Incrível né? Assim, nasceu o Grupo Vilarouca. Hoje, multifranqueado, já somos mais de 50 pontos de vendas, operando Grandes Marcas, presente em 4 estados do Nordeste, e com muito orgulho, gerando cerca de 400 empregos diretos.</p>
 
                 <h2 class="subtitulo" style="margin-top: 50px;"><strong>Nossa marca</strong></h2>
-                <p>O <strong>símbolo VILAROUCA</strong> é um importante elemento da identidade visual do grupo, contribuindo para transmitir os atributos de sua imagem. Na busca de um caminho criativo, de força conceitual, sua composição foi idealizada a partir da junção de <strong>três elementos:</strong><br /><strong>A letra V</strong>, inicial do nome Vilarouca; a <strong>conexão afetiva</strong> das marcas representada pela imagem do coração; e a árvore que remete a ideia da <strong>genealogia</strong> da família Vilarouca e de <strong>sua responsabilidade socioambiental.</strong></p>
+                <div class="centro">
+                    <img src="images/simbolo-grupo-vilarouca-2.png" style="width: 100%;">
+                </div>
+                <br />
+                <p>A <strong>nova identidade do grupo Vilarouca</strong> é a congruência entre os elementos que durante toda essa jornada se provaram os mais importantes para o sucesso do Grupo como um todo: a <strong>solidificação</strong> de um grupo que só aumenta a cada ciclo, o <strong>escudo</strong> que referencia a solidez da família e por fim o claro senso de <strong>liderança</strong> que está presente na busca do próximo voo! Esse três elementos estão reunidos em um escudo que destaca uma comunidade de pessoas com o mesmo objetivo.</p>
                 
                 <!-- TIMELINE -->
                 <h2 class="subtitulo" style="margin-top: 50px;"><strong>Timeline</strong></h2>

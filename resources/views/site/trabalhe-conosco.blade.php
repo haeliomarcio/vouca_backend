@@ -2,10 +2,11 @@
 @section('styles')
 <style>
     h2 {
-        color: #d79122 !important;
+        color: #E05E3B !important;
     }
     h2::after {
-        background-color: #d79122 !important;
+        background-color: #E05E3B !important;
+        display: none;
     }  
     h3 {
         color: #0a6961 !important;

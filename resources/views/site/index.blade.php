@@ -1,7 +1,7 @@
 @extends('layouts.site')
 @section('content')
      <!-- Slider Início -->
-     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000" style="border-bottom: 3px solid #d79122;">
+     <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="5000" style="border-bottom: 3px solid #074866;">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <a href="{{url('/sobre')}}">
@@ -61,7 +61,7 @@
         <!-- Slider Fim -->
 
         <!-- Mapas Início -->
-        <section class = "mt-5 sectionMapas" style="border-bottom: 3px solid #d79122;">
+        <section class = "mt-5 sectionMapas" style="border-bottom: 3px solid #074866;">
             <div class = "container-fluid">
                 <div class = "row align-items-center">
                     <div class="col-sm-8 offset-2">
@@ -172,7 +172,7 @@
             </div><!-- .container-fluid -->
         </section>
 
-        <section class = "mt-5 sectionMapasMobile section-maps" style="border-bottom: 3px solid #d79122;">
+        <section class = "mt-5 sectionMapasMobile section-maps" style="border-bottom: 3px solid #074866;">
             <div class = "container-fluid" style="margin-top: 35px;">
                 <div class="row">
                     <div class="col-6 col-md-3">

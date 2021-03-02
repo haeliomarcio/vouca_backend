@@ -46,7 +46,7 @@
                 padding: 5px;
                 text-align: center;
                 font-weight: bold;
-                border: 2px solid #d79122;
+                border: 2px solid #E05E3B;
                 border-radius: 5px;
             }
             
@@ -55,7 +55,7 @@
                 text-align: center;
                 padding: 5px;
                 font-weight: bold;
-                border: 2px solid #d79122;
+                border: 2px solid #E05E3B;
                 border-radius: 5px;
             }
             .info-address-map a, .info-fone-map a {
@@ -63,7 +63,7 @@
             }
 
             h4 {
-                color: #d79122 !important;
+                color: #E05E3B !important;
             }
             h2::after {
                 background-color: #fff !important;
@@ -79,10 +79,10 @@
     <div class="container-fluid" style="padding: 0;">
         
         <!-- Menu Início -->
-        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #d79122; height: 120px;">
+        <nav class="navbar navbar-expand-lg navbar-light navegacao" style="background-color: #074866; height: 120px;">
             <div class="container">
                 <a href="{{url('/')}}" class="navbar-brand">
-                    <img src="{{url('images/logo-nova-white.png')}}" height="70">
+                    <img src="{{url('images/logo-nova.png')}}" height="70">
 
                 </a>
                 <button class="navbar-toggler custom" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Menu Colapso">  
@@ -91,7 +91,7 @@
                     </span>
                 </button>
 
-                <div id="menu" class="collapse navbar-collapse" style="background-color: #d79122; z-index: 1000;">
+                <div id="menu" class="collapse navbar-collapse" style="background-color: #074866; z-index: 1000;">
                     <ul class="navbar-nav ml-auto  nav-menu" style="display: flex; align-items: center;">
                         <!--
                         <li class="nav-item">

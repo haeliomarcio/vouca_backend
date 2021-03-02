@@ -1,22 +1,22 @@
 @font-face {
     font-family: vilaRoucaBold;
-    src: url(../fonts/UniviaPro-Bold.woff);
+    src: url(../fonts/Montserrat-Bold.ttf);
 }
 @font-face {
     font-family: vilaRoucaLight;
-    src: url(../fonts/UniviaPro-Light.woff);
+    src: url(../fonts/Montserrat-Light.ttf);
 }
 @font-face {
     font-family: vilaRoucaBook;
-    src: url(../fonts/UniviaPro-Book.woff2);
+    src: url(../fonts/Montserrat-SemiBold.ttf);
 }
 @font-face {
     font-family: vilaRoucaUltra;
-    src: url(../fonts/UniviaPro-Ultra.woff);
+    src: url(../fonts/Montserrat-Bold.ttf);
 }
 @font-face {
     font-family: vilaRoucaRegular;
-    src: url(../fonts/UniviaPro-Regular.ttf);
+    src: url(../fonts/Montserrat-Regular.ttf);
 }
 
 /* Remover margens da página */
@@ -29,7 +29,7 @@ html, body {
 
 /* Cor da borda do menu e alinhamento do texto */
 .navegacao {
-    box-shadow: 1px 2px #d79122;
+    box-shadow: 1px 2px #E05E3B;
     text-align: center;
 }
 
@@ -146,19 +146,19 @@ html, body {
     margin: 0 0 10px;
     font-size: 12px;
     letter-spacing: 3px;
-    color: #d79122;
+    color: #E05E3B;
 }
 
 .chamada {
     display: block;
     width: 100%;
-    color: #d79122;
+    color: #E05E3B;
 }
 
 .complemento-footer {
     width: 100%;
     padding: 20px 0;
-    background: #f0f0f0;
+    background: #F0E6D6;
     overflow: hidden;
     display: block;
     border: 0;
@@ -170,7 +170,7 @@ html, body {
 .footer {
     width: 100%;
     padding: 60px 0;
-    background: #333333;
+    background: #E05E3B;
     overflow: hidden;
     display: block;
     border: 0;
